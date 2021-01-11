@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "d-tabs": "/dist/tabs/index"
+  }
+}
