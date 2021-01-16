@@ -1,0 +1,24 @@
+<d-drawer model:show="{{drawerShow1}}" title="default drawer" bindcancel="cancel" bindconfirm="confirm">
+  <view slot="content">
+    <image wx:for="{{imgs}}" wx:key="*this" src="{{item}}" mode="aspectFit" style="width:100%;"></image>
+  </view>
+</d-drawer>
+<d-drawer model:show="{{drawerShow2}}" contentPostionTop="40">
+  <view slot="header" class="custom-header">自定义头部</view>
+  <view slot="content">
+    <image wx:for="{{imgs}}" wx:key="*this" src="{{item}}" mode="aspectFit" style="width:100%;"></image>
+  </view>
+</d-drawer>
+
+<pageCard pageName="drawer">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+  <exampleCard title="默认" des=''>
+    <d-button  catchtap="toogleDrawer1">show default drawer</d-button>
+  </exampleCard>
+  <exampleCard title="自定义头部" des=''>
+    <d-button catchtap="toogleDrawer2">show custom header drawer</d-button>
+  </exampleCard>
+  <space height="500" />
+
+</pageCard>

@@ -1,0 +1,57 @@
+<view style="padding-bottom: {{isShowKeyboard?452:0}}rpx;">
+<pageCard pageName="smsCodeInput">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+
+  <exampleCard title="类型" des='type = "box", "snap", "line"'>
+    <d-smsCodeInput focus="{{focus0}}" data-flag="0" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" value="1" />
+    <space />
+    <d-smsCodeInput focus="{{focus1}}" data-flag="1" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="line" value="12"  />
+    <space />
+    <d-smsCodeInput focus="{{focus2}}" data-flag="2" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" value="123"  />
+  </exampleCard>
+
+  <exampleCard title="验证码长度" des='smsCodeLength = 4'>
+    <d-smsCodeInput focus="{{focus3}}" data-flag="3" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" smsCodeLength="{{4}}"  />
+    <space />
+    <d-smsCodeInput focus="{{focus4}}" data-flag="4" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="line" smsCodeLength="{{4}}" />
+    <space />
+    <d-smsCodeInput focus="{{focus5}}" data-flag="5" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" smsCodeLength="{{4}}" />
+  </exampleCard>
+
+  <exampleCard title="验证码行排齐方式" des='justify = "between", "around", "center"'>
+    <d-smsCodeInput focus="{{focus6}}" data-flag="6" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" justify="between" />
+    <space />
+    <d-smsCodeInput focus="{{focus7}}" data-flag="7" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" justify="around" />
+    <space />
+    <d-smsCodeInput focus="{{focus8}}" data-flag="8" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap"  justify="center" />
+  </exampleCard>
+
+  <exampleCard title="光标" des='showCursor = true | false \n cursorStyle = ""'>
+    <d-smsCodeInput focus="{{focus9}}" data-flag="9" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" showCursor = "{{false}}" />
+    <space />
+    <d-smsCodeInput focus="{{focus10}}" data-flag="10" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="line" showCursor = "{{false}}"  />
+    <space />
+    <d-smsCodeInput focus="{{focus11}}" data-flag="11" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" cursorStyle = "width:20rpx;color:#C12682;border-radius:10rpx;"  />
+  </exampleCard>
+
+  <exampleCard title="自定义输入框的样式" des='inputWidth，inputColor，inputActiveColor，inputRadius'>
+    <d-smsCodeInput focus="{{focus12}}" data-flag="12" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur"  type="box" inputRadius="0" inputWidth="1" inputColor="#D4F2F1" justify="center"  />
+    <space />
+    <d-smsCodeInput focus="{{focus13}}" data-flag="13" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="line" inputRadius="5" inputWidth="10" inputColor="#DAF1CF" inputActiveColor="#1B9E0D"  />
+    <space />
+    <d-smsCodeInput focus="{{focus14}}" data-flag="14" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" inputRadius="5" inputWidth="10" inputColor="#D1EEFD" inputActiveColor="#008EDD"  />
+  </exampleCard>
+
+  <exampleCard title="自定义数字文本的样式" des='textStyle = "width:48rpx;height:48rpx;line-height:48rpx;color:#00A19C;font-size:20px"'>
+    <d-smsCodeInput focus="{{focus15}}" data-flag="15" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" textStyle="width:48rpx;height:48rpx;line-height:48rpx;color:#00A19C;font-size:20px;" />
+    <space />
+    <d-smsCodeInput focus="{{focus16}}" data-flag="16" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="line" textStyle="height:48rpx;line-height:48rpx;color:#00A19C;font-size:20px;"  />
+    <space />
+    <d-smsCodeInput focus="{{focus17}}" data-flag="17" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" textStyle="width:48rpx;height:48rpx;line-height:48rpx;color:#00A19C;font-size:20px;"  />
+  </exampleCard>
+
+
+  
+</pageCard>
+</view>

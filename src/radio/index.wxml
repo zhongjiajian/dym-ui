@@ -1,0 +1,16 @@
+<view
+ class="d-radio"
+ catchtap="change"
+ style="opacity:{{disabled?0.6:1}};"
+>
+	<view class="d-radio-out" style="width: {{size}}rpx;height:{{size}}rpx;color: {{disabled?color:(checked?activeColor:color)}};background-color:{{disabled?'#ECECEC':''}};">
+		<view class="d-radio-inner" style="background-color: {{checked?(disabled?color:activeColor):'transparent'}};"></view>
+		<view class="d-radio-hot-area" style="width:{{hotAreaSize}}rpx;height:{{hotAreaSize}}rpx;">
+
+		</view>
+	</view>
+	<view class="d-radio-slot">
+		<slot/>
+	</view>
+</view>
+

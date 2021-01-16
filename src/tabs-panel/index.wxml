@@ -1,0 +1,4 @@
+<view class="d-tabs-panel {{mark==target||mark==from?'move':''}}" style='transform: translate3d({{mark==active?0:(mark>active?"100%":"-100%")}},0,0)'>
+	<slot></slot>
+</view>
+

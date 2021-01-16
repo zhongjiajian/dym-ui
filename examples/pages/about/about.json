@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+  "d-tag": "/dist/tag",
+  "d-list": "/dist/list",
+  "d-button": "/dist/button",
+  "d-drawer": "/dist/drawer"
+  }
+}

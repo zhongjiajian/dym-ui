@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+    "pageCard": "/components/pageCard",
+    "exampleCard": "/components/exampleCard",
+    "space": "/components/space"
+    }
+  }

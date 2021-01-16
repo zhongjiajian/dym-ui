@@ -1,0 +1,7 @@
+.my-button-class{
+  background-color: #D4F2F1 !important;
+  line-height: 98rpx;
+}
+.d-button-hover-class{
+  background-color: #a5d4d2 !important;
+}

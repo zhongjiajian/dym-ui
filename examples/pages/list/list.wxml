@@ -1,0 +1,50 @@
+<pageCard pageName="list">
+  <exampleCard title="默认" des='<d-list>导航一</d-list>\n<d-list>导航二</d-list>'>
+    <d-list>导航一</d-list>
+    <d-list>导航二</d-list>
+  </exampleCard>
+  <exampleCard title="不显示箭头" des='showArrow = false'>
+    <d-list showArrow="{{false}}">导航一</d-list>
+    <d-list showArrow="{{false}}">导航二</d-list>
+  </exampleCard>
+  <exampleCard title="不显示分割线" des='showLine = false'>
+    <d-list showLine="{{false}}">导航一</d-list>
+    <d-list showLine="{{false}}">导航二</d-list>
+  </exampleCard>
+  <exampleCard title="分割线位置" des='lineType = "left"、"center"、"right"'>
+    <d-list lineType="left">导航一</d-list>
+    <d-list lineType="left">导航二</d-list>
+  </exampleCard>
+  <exampleCard title="自定义分割线样式" des='lineStyle = "width: 80%; background-color:#00A19C;"'>
+    <d-list lineStyle="width: 80%;background-color:#00A19C;">导航一</d-list>
+    <d-list lineStyle="width: 80%;background-color:#00A19C;">导航二</d-list>
+  </exampleCard>
+  <exampleCard title="自定义hover样式" des='{{example6Des}}'>
+    <d-list d-hover-class="d-list-hover-class">
+      <text class="d-list-n">导航一</text>
+    </d-list>
+    <d-list d-hover-class="d-list-hover-class">
+      <text class="d-list-n">导航二</text>
+    </d-list>
+  </exampleCard>
+  <exampleCard title="示例" des=''>
+    <d-list>
+      <view class="d-list-for-example-n">
+        <d-icon name="home" />
+        <text>首页</text>
+      </view>
+    </d-list>
+    <d-list>
+      <view class="d-list-for-example-n">
+        <d-icon name="settings" />
+        <text>设置</text>
+      </view>
+    </d-list>
+    <d-list showLine="{{false}}">
+      <view class="d-list-for-example-n">
+        <d-icon name="search" />
+        <text>搜索</text>
+      </view>
+    </d-list>
+  </exampleCard>
+</pageCard>

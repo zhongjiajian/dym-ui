@@ -1,0 +1,11 @@
+
+<view class="d-ec">
+  <view wx:if="{{title}}" class="d-ex-h" catchtap="togglePane">
+    <d-icon name="{{paneShrink?'arrow_drop_down':'arrow_right'}}" />
+    <text class="d-ex-t">{{title}}</text>
+  </view>
+  <text user-select selectable wx:if="{{des}}" class="d-ex-des {{paneShrink?'shrink':''}}">{{des}}</text>
+  <view class="d-ex-s-w {{paneShrink?'shrink':''}}" >
+    <slot />
+  </view>
+</view>

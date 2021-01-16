@@ -1,0 +1,65 @@
+@import "../common/reset.css";
+
+
+.d-tabs .tabs {
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    font-size: 0;
+  }
+  .d-tabs .tabs.tabs-scroll-no{
+    display: flex;
+    justify-content: space-around;
+    overflow-x: auto;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+  
+
+  .d-tabs .tabs .tab {
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    padding:0 16px;
+    height: 100%;
+  }
+  .d-tabs .tabs .tab-text{
+    display: inline-block;
+
+  }
+  .d-tabs .tabs .tab.firstTab{
+    margin-left: 8px;
+  }
+  
+  .d-tabs .tabs .tab.lastTab{
+    margin-right: 8px;
+  }
+  
+
+  
+  .d-tabs .tab-panel {
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+  }
+  
+  .d-tabs .d-tabs-panel-list {
+    overflow: hidden;
+    position: relative;
+  
+  }
+  
+  .d-tabs  .indicator {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    border-radius: 1px;
+    will-change: transform;
+  }
+  .d-tabs  .indicator.move{
+    transition: all 0.4s;
+  }
+  

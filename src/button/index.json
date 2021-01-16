@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "styleIsolation": "isolated",
+    "usingComponents": {
+      "d-loading": "../loading/index",
+      "d-icon": "../icon/index"
+    }
+  }

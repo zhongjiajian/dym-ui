@@ -1,0 +1,6 @@
+<view class="d-page">
+  <view class="d-page-t">
+    <d-tag name="{{pageName}}" />
+  </view>
+  <slot />
+</view>

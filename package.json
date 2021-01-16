@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/zhongjiajian/dym-ui.git"
   },
   "author": "Lin Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/"
+    "url": "https://github.com/zhongjiajian/dym-ui/issues"
   },
   "miniprogram": "dist",
   "files": [

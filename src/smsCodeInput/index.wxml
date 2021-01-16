@@ -1,0 +1,43 @@
+<view class="d-sms-code-input {{focus?'focus':''}}" bindtap="focus">
+	<view wx:if="{{type==='line'}}" class="code-wrapp {{type}}">
+		<block wx:for="{{smsCodeLength}}" wx:key="index">
+			<text  class="code-item {{value.length==index?'active':''}}"
+            style="width:{{100/smsCodeLength}}%;{{textStyle}}">{{value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
+			</text>
+		</block>
+	</view>
+	<view wx:elif="{{type==='snap'}}" class="code-wrapp {{type}} {{justify}}">
+		<block wx:for="{{smsCodeLength}}" wx:key="index">
+			<text  class="code-item {{value.length==index?'active':''}}"
+            style="width:98rpx;{{textStyle}};">{{value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
+			<text class="snapBottomLine" style="height:{{inputWidth}}rpx;border-radius:{{inputRadius}}rpx;background-color:{{value.length > index ?inputActiveColor:inputColor}};"></text>
+			</text>
+		</block>
+	</view>
+	<view wx:else class="code-wrapp {{type}} {{justify}}">
+		<block wx:for="{{smsCodeLength}}" wx:key="index">
+			<text  class="code-item {{value.length==index?'active':''}}"
+            style="width:98rpx;border-style: solid;{{textStyle}};border-width:{{inputWidth}}rpx;border-radius:{{inputRadius}}rpx;border-color:{{value.length>index?inputActiveColor:inputColor}};">{{value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
+			</text>
+		</block>
+	</view>
+	<view
+	 wx:if="{{type==='line'}}"
+	 class="lineBottomLine"
+	 style="height:{{inputWidth}}rpx;border-radius:{{inputRadius}}rpx;background-color:{{value.length===smsCodeLength?inputActiveColor:inputColor}};"
+	></view>
+
+</view>
+
+<view
+ class="d-keyboard {{keyboardAnimation?'a':''}}"
+ style="z-index:{{keyboardZIndex}};bottom:{{focus?keyboardFixBottom:'-452'}}rpx;"
+ id="d-keybord-1611026643897"
+>
+	<keyboard
+	 bind:hide="blur"
+	 bind:addInput="addInput"
+	 bind:deleteInput="deleteInput"
+	/>
+</view>
+

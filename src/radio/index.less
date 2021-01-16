@@ -1,0 +1,37 @@
+@import "../common/reset.css";
+:host{
+    font-size: 0;
+}
+.d-radio{
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.d-radio-out{
+    border: 4rpx solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.d-radio-inner{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+
+}
+.d-radio-slot{
+    display: flex;
+    align-items: center;
+}
+
+// 点击热区
+.d-radio-hot-area{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }

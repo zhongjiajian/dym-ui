@@ -1,0 +1,4 @@
+.custom-header{
+  line-height: 40rpx;
+  color: #00A19C;
+}

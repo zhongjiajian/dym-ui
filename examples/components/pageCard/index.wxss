@@ -1,0 +1,8 @@
+.d-page{
+  padding-bottom: 40rpx;
+}
+.d-page-t{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0 10rpx;
+}

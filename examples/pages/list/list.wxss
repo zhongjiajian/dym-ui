@@ -1,0 +1,20 @@
+.d-list-hover-class{
+  background-color: #D4F2F1;
+}
+.d-list-hover-class .d-list-n{
+  color: #00A19C;
+}
+.d-list-hover-class :before{
+  color: #00A19C;
+}
+.d-list-for-example-n{
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  height: 90rpx;
+}
+.d-list-for-example-n > text{
+  line-height: 40rpx;
+  padding-left: 20rpx;
+  color: #00A19C;
+}

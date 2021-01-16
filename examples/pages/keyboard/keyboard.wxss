@@ -1,0 +1,6 @@
+.d-native-input{
+  border: 2rpx solid #00A19C;
+  height: 74rpx;
+  padding-left: 40rpx;
+  padding-right: 70rpx;
+}

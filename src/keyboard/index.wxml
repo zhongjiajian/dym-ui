@@ -1,0 +1,109 @@
+<!-- 键盘总高度为452rpx -->
+<view>
+	<view
+	 hover-class="hover"
+	 class="hideBtn"
+	 catchtap="hide"
+	>
+		<text class="arrow"></text>
+	</view>
+
+	<view class="keysWrapper">
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="1"
+		 class="item item-1"
+		>1
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="2"
+		 class="item item-2"
+		>2
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="3"
+		 class="item item-3"
+		>3
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="4"
+		 class="item item-4"
+		>4
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="5"
+		 class="item item-5"
+		>5
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="6"
+		 class="item item-6"
+		>6
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="7"
+		 class="item item-7"
+		>7
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="8"
+		 class="item item-8"
+		>8
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="9"
+		 class="item item-9"
+		>9
+		</view>
+		<view class="item item-10">
+			<view
+			 hover-class="hover"
+			 class="dig"
+			 wx:if="{{type==='digit'}}"
+			 catchtap="addInput"
+			 data-data="."
+			>·
+			</view>
+			<view
+			 hover-class="hover"
+			 class="x"
+			 wx:elif="{{type==='idcard'}}"
+			 catchtap="addInput"
+			 data-data="X"
+			>X
+			</view>
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="addInput"
+		 data-data="0"
+		 class="item item-11"
+		>0
+		</view>
+		<view
+		 hover-class="hover"
+		 catchtap="deleteInput"
+		 class="item item-12"
+		>
+			<image class="delete" src="../static/images/delete.png"></image>
+		</view>
+	</view>
+</view>
+

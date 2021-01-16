@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "pageCard": "/components/pageCard/index",
+    "exampleCard": "/components/exampleCard/index",
+    "d-tag": "/dist/tag/index"
+  }
+}

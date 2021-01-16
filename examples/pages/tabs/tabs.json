@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+  "pageCard": "/components/pageCard",
+  "exampleCard": "/components/exampleCard",
+  "space": "/components/space",
+  "d-tabs": "/dist/tabs",
+  "d-tabs-panel": "/dist/tabs-panel"
+  }
+}

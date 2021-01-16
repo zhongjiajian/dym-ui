@@ -1,0 +1,17 @@
+<pageCard pageName="icon">
+  <view class="d-longFocusInput-wrap">
+    <input class="custom-class-input" value="{{inputValue}}" bindinput="bindinput" confirm-type="search">
+    <d-icon class="custom-class-slot" name="clear" color="#7E7E7E" bindtap="clear" />
+    </input>
+    <d-icon size="60" name="search" class="search" catchtap="search" />
+  </view>
+
+  <exampleCard title="所有图标" des='{{example1Des}}'>
+    <view class="d-ec-c">
+      <view class="d-icon-item" wx:for="{{iconNames}}" wx:key="item">
+        <d-icon name="{{item}}" />
+        <text class="d-icon-name">{{item}}</text>
+      </view>
+    </view>
+  </exampleCard>
+</pageCard>

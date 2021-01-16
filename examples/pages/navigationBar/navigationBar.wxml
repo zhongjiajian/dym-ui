@@ -1,0 +1,21 @@
+<d-navigationBar back="{{back}}" home="{{home}}" title="navigationBar"  iconTheme="{{iconTheme}}" backgroundColor="{{backgroundColor}}" homePagePath="/pages/index/index" >
+</d-navigationBar>
+<pageCard pageName="navigationBar">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+  <exampleCard title="背景色" des='backgroundColor = "#00A19C"'>
+    <d-button data-flag="#1B9E0D" catchtap="setBackgroundColor">#1B9E0D</d-button>
+    <space />
+    <d-button data-flag="#00A19C" catchtap="setBackgroundColor">#00A19C</d-button>
+  </exampleCard>
+  <exampleCard title="返回和主页icon" des='back = true | false \n home = true | false'>
+    <d-button catchtap="toogleBack">black = true | false</d-button>
+    <space />
+    <d-button  catchtap="toogleHome">home = true | false</d-button>
+  </exampleCard>
+  <exampleCard title="icon颜色" des='iconTheme = "white","black"'>
+    <d-button data-flag="black" catchtap="setIconTheme">black</d-button>
+    <space />
+    <d-button data-flag="white" catchtap="setIconTheme">white</d-button>
+  </exampleCard>
+</pageCard>

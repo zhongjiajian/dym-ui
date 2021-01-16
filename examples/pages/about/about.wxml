@@ -1,0 +1,34 @@
+<view class="version">
+  <text class="t">最新版本</text>
+  <d-tag name="v{{currrentVersion}}" style="line-height: 30rpx;font-size: 20rpx;" />
+</view>
+<view class="guides">
+  <d-list wx:for="{{guides}}" wx:key="title" showArrow="{{false}}" disabledHover>
+    <view class="item">
+      <text class="t">{{item.title}}</text>
+      <text class="des" user-select selectable>{{item.content}}</text>
+    </view>
+  </d-list>
+</view>
+
+<view class="changeLog">
+  <view class="t">更新日志</view>
+  <view class="c">
+    <view wx:for="{{changeLog}}" wx:key="version" class="change-log-wrap">
+      <d-button custom-class='change-log-btn' catchtap="showChangeLogDes" data-index="{{index}}">v{{item.version}}
+        ({{item.time}})</d-button>
+      <d-drawer confirmText="" title="v{{item.version}}" show="{{item.showDes}}" data-index="{{index}}"
+        bindcancel="hideChangeLogDes">
+        <view slot="content" class="change-log-des">
+          <view class="update-time">{{item.time}}</view>
+          <view class="update-item" wx:for="{{item.des}}" wx:for-index="updateItemIndex" wx:for-item="updateItem" wx:key="*this">
+            <text>{{updateItemIndex+1}}.</text>
+            <text>{{updateItem}}</text>
+          </view>
+        </view>
+      </d-drawer>
+    </view>
+  </view>
+
+
+</view>

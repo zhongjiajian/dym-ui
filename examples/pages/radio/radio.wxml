@@ -1,0 +1,41 @@
+<pageCard pageName="radio">
+  <exampleCard title="默认" des='checked = true | false'>
+    <view class="d-ec-c-c">
+      <d-radio>my name is radio</d-radio>
+    </view>
+  </exampleCard>
+  <exampleCard title="禁用" des='disabled = true | false'>
+    <view class="d-ec-c-a">
+      <d-radio disabled checked>checked=true</d-radio>
+      <d-radio disabled >checked=false</d-radio>
+    </view>
+  </exampleCard>
+  <exampleCard title="颜色" des='color = "rgba(0,0,0,0.25)"'>
+    <view class="d-ec-c-a">
+      <d-radio color="rgba(0,0,0,0.25)">rgba(0,0,0,0.25)</d-radio>
+      <d-radio color="#D4F2F1">#D4F2F1</d-radio>
+      <d-radio color="#DAF1CF">#DAF1CF</d-radio>
+    </view>
+  </exampleCard>
+  <exampleCard title="选中时的颜色" des='activeColor = "#00A19C"'>
+    <view class="d-ec-c-a">
+      <d-radio activeColor="#00A19C" checked>#00A19C</d-radio>
+      <d-radio activeColor="#1B9E0D" checked>#1B9E0D</d-radio>
+      <d-radio activeColor="#008EDD" checked>#008EDD</d-radio>
+    </view>
+  </exampleCard>
+  <exampleCard title="大小" des='size = "32" (rpx)'>
+    <view class="d-ec-c-a">
+      <d-radio size="32" >32</d-radio>
+      <d-radio size="50" >50</d-radio>
+      <d-radio size="60" >60</d-radio>
+    </view>
+  </exampleCard>
+  <exampleCard title="点击热区大小" des='hotAreaSize = "32" (rpx)'>
+    <view class="d-ec-c-a">
+      <d-radio hotAreaSize="32" >32</d-radio>
+      <d-radio hotAreaSize="50" >50</d-radio>
+      <d-radio hotAreaSize="200" >200</d-radio>
+    </view>
+  </exampleCard>
+</pageCard>

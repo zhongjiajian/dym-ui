@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "pageCard": "/components/pageCard/index",
+    "exampleCard": "/components/exampleCard/index",
+    "d-list": "/dist/list/index",
+    "d-icon": "/dist/icon/index"
+  }
+}

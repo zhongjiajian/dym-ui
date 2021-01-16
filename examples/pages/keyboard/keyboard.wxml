@@ -1,0 +1,14 @@
+<pageCard pageName="keyboard">
+  <exampleCard title="原生input组件中的数字键盘" des='点击下方输入框体验原生效果'>
+    <input type="number" adjust-position  class="d-native-input">
+    </input>
+  </exampleCard>
+  <exampleCard title="Doc" des='{{example1Des}}'>
+    <space />
+    <d-keyboard  bind:hide="hideKeyboard"
+  bind:addInput="addInput" bind:deleteInput="deleteInput"  />
+    <space height="100" />
+  </exampleCard>
+</pageCard>
+
+

@@ -1,0 +1,25 @@
+<view style="padding-bottom: {{isShowKeyboard?452:0}}rpx;">
+  <pageCard pageName="phoneNumberInput">
+    <exampleCard title="Doc" des='{{example1Des}}'>
+    </exampleCard>
+    <exampleCard title="示例(点击下方输入框体验)" des='{{example2Des}}'>
+      <d-phoneNumberInput focus="{{focus0}}" data-flag="0" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" value='100861008610086' />
+      <space />
+      <view class="d-ec-c-c">
+        <view style="width: 60%;">
+          <d-phoneNumberInput focus="{{focus1}}" data-flag="1" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" 
+            value='10086100861' 
+            height="58"
+            textStyle="font-size: 24px;letter-spacing: 2rpx;font-family:fantasy,serif,monospace,cursive;"  
+            groupSpacing = "40" 
+            bottomLineStyle = "height:12rpx;border-radius:6rpx;background-color:#E1DEF6;"                 
+            bottomLineActiveStyle = "background-color:#443AAD;"
+            cursorStyle = "color:#E1DEF6;height:24px;width:6rpx;border-radius: 4rpx;"
+            cursorActiveStyle = "color:#443AAD"
+            clearStyle="background-color: #E1DEF6;font-size: 13px;color: #443AAD;border-radius: 50%;width: 36rpx;line-height: 36rpx;"/>
+        </view>
+      </view>
+      <space />
+    </exampleCard>
+  </pageCard>
+</view>

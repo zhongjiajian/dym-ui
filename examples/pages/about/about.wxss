@@ -1,0 +1,61 @@
+.t{
+  color: #00A19C;
+}
+.version{
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.version .t{
+  margin-right: 20rpx;
+}
+
+.guides .item{
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 0rpx 0rpx 8%;
+}
+.guides .item .des{
+  padding-top: 8rpx;
+}
+
+
+.changeLog .t{
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+.changeLog .c{
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
+.change-log-wrap{
+  width: 100%;
+}
+.change-log-wrap:not(:last-child){
+  margin-top: 20rpx;
+}
+.change-log-btn{
+  border: 1px solid #D4F2F1;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.change-log-des .update-time{
+  padding: 20rpx 0;
+  text-align: center;
+}
+.change-log-des .update-item{
+  padding: 4rpx 20rpx;
+  display: flex;
+}
+.change-log-des .update-item text:first-child{
+  min-width: 30rpx;
+}
+
+.change-log-des .update-item text:last-child{
+  word-break: break-all;
+}

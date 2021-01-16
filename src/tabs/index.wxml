@@ -1,3 +1,48 @@
-<view>
-  tabs
+<view class="d-tabs">
+	<scroll-view
+	 wx:if="{{tabsScrollable}}"
+	 class='tabs'
+	 style="background-color:{{tabsBackgroundColor}};height:{{tabsHeight}}px;line-height:{{tabsHeight}}px;{{tabsStyle}}"
+	 scroll-x
+	 scroll-with-animation
+	 scroll-left="{{scrollLeft}}"
+	>
+		<view
+		 class='tab {{innerActive==index?" active":""}} {{index==0?" firstTab":""}} {{index==tabs.length-1?" lastTab":""}}'
+		 wx:for="{{tabs}}"
+		 wx:key="index"
+		 data-flag="{{index}}"
+		 catchtap='changeTab'
+		>
+			<view class="tab-text" style="color:{{innerActive==index?activeTextColor:defaultTextColor}}">
+				{{item}}
+			</view>
+		</view>
+		<view class='indicator {{indicatorMove?"move":""}}' style="top:{{tabsHeight - 2}}px;background-color:{{indicatorColor}};width:{{lineWidth}}px;transform:translate3d({{widthTranslateX}}px,0,0);"></view>
+
+	</scroll-view>
+
+	<view
+	 wx:else
+	 class='tabs tabs-scroll-no'
+	 style="background-color:{{tabsBackgroundColor}};height:{{tabsHeight}}px;line-height:{{tabsHeight}}px;{{tabsStyle}}"
+	>
+		<view
+		 class='tab {{innerActive==index?" active":""}}'
+		 wx:for="{{tabs}}"
+		 wx:key="index"
+		 data-flag="{{index}}"
+		 catchtap='changeTab'
+		>
+			<view class="tab-text" style="color:{{innerActive==index?activeTextColor:defaultTextColor}}">
+				{{item}}
+			</view>
+		</view>
+		<view class='indicator {{indicatorMove?"move":""}}' style="top:{{tabsHeight - 2}}px;background-color:{{indicatorColor}};width:{{lineWidth}}px;transform:translate3d({{widthTranslateX}}px,0,0);"></view>
+
+	</view>
+	<view class='d-tabs-panel-list' style='{{tabsPanelStyle}}'>
+		<slot/>
+	</view>
 </view>
+

@@ -1,1 +1,26 @@
-/* pages/index/index.wxss */
+.d-page-h {
+  padding-top: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-page-t {
+  font-size: 40rpx;
+  font-weight: bold;
+  -webkit-text-fill-color: #00A19C;
+  margin-right: 20rpx;
+}
+
+.d-page-d {
+  font-size: 24rpx;
+  color: #999;
+  padding: 10rpx 30rpx 20rpx;
+}
+
+.d-list-n {
+  line-height: 92rpx;
+  font-size: 28rpx;
+  color: #333;
+  padding-left: 28rpx;
+}

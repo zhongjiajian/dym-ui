@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "d-tabs": "/dist/tabs/index"
+    "d-tag": "/dist/tag/index",
+    "d-list": "/dist/list/index"
   }
 }

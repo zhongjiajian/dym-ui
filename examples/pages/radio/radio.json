@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+  "pageCard": "/components/pageCard/index",
+  "exampleCard": "/components/exampleCard",
+  "d-radio": "/dist/radio/index"
+  }
+}

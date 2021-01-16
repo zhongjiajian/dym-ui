@@ -1,0 +1,41 @@
+<view
+ class="d-drawer-mask {{animation?'animation':''}}"
+ style="z-index:{{zIndex - 1}};transform: translate3d(0,{{show?0:'100%'}},0);opacity:{{translateY?(1-translateY/windowHeight):show?1:0}};"
+ catchtouchmove="maskTouchMove"
+ catchtap="maskTap"
+>
+</view>
+<view
+ class="d-drawer  {{animation?'animation':''}}"
+ catchtouchend="touchEnd"
+ catchtouchmove="touchMove"
+ style="z-index: {{zIndex}};top:{{fixTop}}px;background-color:{{backgroundColor}};transform: translate3d(0,{{translateY?translateY+'px':(show?0:'100%')}},0);"
+>
+	<view wx:if="{{title}}" class="header">
+		<text class="title" >{{title}}</text>
+
+		<view class="btns">
+			<view
+			 class="cancel"
+			 catchtap="cancel"
+			 hover-class="hover-class"
+			>{{cancelText}}
+			</view>
+			<view
+			 class="confirm"
+			 catchtap="confirm"
+			 hover-class="hover-class"
+			>{{confirmText}}
+			</view>
+		</view>
+	</view>
+	<slot wx:else name="header" />
+	<scroll-view
+	 scroll-y
+	 class="scroll-view"
+	 style="top:{{contentPostionTop}}rpx;"
+	>
+		<slot name="content" />
+	</scroll-view>
+</view>
+

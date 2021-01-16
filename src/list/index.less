@@ -1,0 +1,34 @@
+@import "../common/reset.css";
+
+.line-wrap{
+    display: flex;
+}
+.line-wrap.line-type-center{
+    justify-content: center;
+}
+.line-wrap.line-type-left{
+    justify-content: flex-start;
+}
+.line-wrap.line-type-right{
+    justify-content: flex-end;
+}
+
+.line{
+    height: 1px;
+    transform: scaleY(.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 92%;
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.arrow{
+    margin-right: 18rpx;
+}
+.content-slot{
+    flex: 1 1 auto;
+}
+.hover-class{
+    opacity: .5;
+}

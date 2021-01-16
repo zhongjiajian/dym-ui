@@ -1,0 +1,26 @@
+<view
+ id="{{id}}"
+ class="d-phone-number-input {{focus?'focus':''}}"
+ bindtap="focus"
+>
+	<view class="code-wrap" style="height: {{height}}rpx;">
+		<block wx:for="{{value + 'i'}}" wx:key="index">
+			<text  wx:if="{{value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===11?cursorActiveStyle:''}}"></text>
+			<text  wx:else class="code-item" style="margin-right: {{index===2||index===6?groupSpacing:0}}rpx;color: #000;{{textStyle}}">{{item}}</text>
+		</block>
+		<text wx:if="{{clear && value.length===11}}" class="clear" bindtap="clear" style="{{clearStyle}}">×</text>
+	</view>
+	<view class="bottomLine" style="{{bottomLineStyle}}{{value.length===11?bottomLineActiveStyle:''}}"></view>
+</view>
+<view
+ class="d-keyboard {{keyboardAnimation?'a':''}}"
+ style="z-index:{{keyboardZIndex}};bottom:{{focus?keyboardFixBottom:'-452'}}rpx;"
+ id="d-keybord-1611026643897"
+>
+	<keyboard
+	 bind:hide="blur"
+	 bind:addInput="addInput"
+	 bind:deleteInput="deleteInput"
+	/>
+</view>
+

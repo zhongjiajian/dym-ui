@@ -1,0 +1,2 @@
+<view class="d-icon {{ name === '' ? '' : 'icon-' +  name }}" style="font-size:{{ size ? size:''}}rpx;color:{{  color? color:'' }};line-height:{{ size ? size+'rpx':'unset'}};" />
+

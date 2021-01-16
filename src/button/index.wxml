@@ -1,0 +1,26 @@
+<view>
+	<button
+	 class="custom-class d-button-native"
+	 hover-class="{{isCustomHoverClass?'d-hover-class':''}}"
+	 style="color:{{textColor}};"
+	 size="{{size}}"
+	 type="{{type}}"
+	 plain="{{plain}}"
+	 disabled="{{disabled}}"
+	>
+		<view class="d-mr10 d-button-loading-wrap" wx:if="{{loading}}">
+			<d-loading size="{{loadingSize}}" color="{{textColor}}" />
+		</view>
+		<view class="d-mr10 d-button-icon-wrap" wx:if="{{icon}}">
+			<d-icon
+			 name="{{icon}}"
+			 size="{{iconSize}}"
+			 color="{{textColor}}"
+			/>
+		</view>
+		<view style="color:{{textColor}};">
+			<slot/>
+		</view>
+	</button>
+</view>
+

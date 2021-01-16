@@ -1,4 +1,64 @@
-/**app.wxss**/
-page{
-  background-color: #f3f3f3;
+view, button, text, image, input, navigator, textarea, scroll-view, movable-area,
+swiper, icon, rich-text, progress, checkbox-group, checkbox, form, label, picker,
+picker-view, radio-group, radio, slider, switch, audio, video, camera,
+live-player, live-pusher, map, open-data, canvas, web-view {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #333;
+  font-size: 24rpx;
 }
+
+page{
+  background-color: #f5f5f5;
+}
+.d-ec-c{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+}
+.d-ec-c-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.d-ec-c-a{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* 空白站位 */
+.space-placeholder{
+  height: 20rpx;
+}
+/* 
+{
+  bgc: "#D4F2F1",
+  c: "#00A19C"
+},
+{
+  bgc: "#DAF1CF",
+  c: "#1B9E0D"
+},
+{
+  bgc: "#D1EEFD",
+  c: "#008EDD"
+},
+{
+  bgc: "#E1DEF6",
+  c: "#443AAD"
+},
+{
+  bgc: "#F5DCEA",
+  c: "#C12682"
+},
+{
+  bgc: "#FFDADA",
+  c: "#E02020"
+},
+{
+  bgc:"#ECECEC",
+  c:"#7E7E7E"
+} */
