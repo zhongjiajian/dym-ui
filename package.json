@@ -1,11 +1,18 @@
 {
   "name": "dym-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A high quality UI components library with MiniProgram",
   "main": "app.js",
   "directories": {
     "example": "examples"
   },
+  "keywords": [
+    "小程序",
+    "微信小程序",
+    "miniprogram",
+    "phone input",
+    "sms code"
+  ],
   "scripts": {
     "dev": "gulp -f build/index.js dev",
     "build": "gulp -f build/index.js build",

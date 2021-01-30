@@ -15,10 +15,6 @@ CustomPage({
         content:'https://www.npmjs.com/package/dym-ui',
       },
       {
-        title: 'github地址',
-        content:'https://github.com/zhongjiajian/dym-ui',
-      },
-      {
         title: 'web文档',
         content:'devloping...',
       }
