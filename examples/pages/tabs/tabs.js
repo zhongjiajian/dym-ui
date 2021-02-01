@@ -13,7 +13,7 @@ CustomPage({
     indicatorColor = "#fff" (选中项下划线颜色)
     active = 0 (激活tab索引)
 
-    tabs-pane组件属性：
+    tabs-panel组件属性：
     mark = 0，1，2... (标识)
     active = 0 (激活tab索引)
     

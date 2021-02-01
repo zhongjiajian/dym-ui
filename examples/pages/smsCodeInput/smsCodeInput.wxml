@@ -3,7 +3,7 @@
   <exampleCard title="Doc" des='{{example1Des}}'>
   </exampleCard>
 
-  <exampleCard title="类型" des='type = "box", "snap", "line"'>
+  <exampleCard title="类型" des='type = "box", "line", "snap"'>
     <d-smsCodeInput focus="{{focus0}}" data-flag="0" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" value="1" />
     <space />
     <d-smsCodeInput focus="{{focus1}}" data-flag="1" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="line" value="12"  />

@@ -1,10 +1,12 @@
 <pageCard pageName="tag">
-  <exampleCard title="默认样式" des='name = "my name is tag"'>
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+  <exampleCard title="默认" des='name = "my name is tag"'>
     <view class="d-ec-c-c">
       <d-tag name="my name is tag" />
     </view>
   </exampleCard>
-  <exampleCard title="自定义样式" des='{{example2Des}}'>
+  <exampleCard title="自定义样式组" des='{{example2Des}}'>
     <view class="d-ec-c-a">
       <d-tag  name="状态一" styles="{{example2Styles}}" />
       <d-tag  name="状态二" styles="{{example2Styles}}" />
