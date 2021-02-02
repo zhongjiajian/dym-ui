@@ -1,23 +1,23 @@
-<view class="d-sms-code-input {{focus?'focus':''}}" bindtap="focus">
+<view class="d-sms-code-input {{focus?'focus':''}} {{password?'password':''}}" bindtap="focus">
 	<view wx:if="{{type==='line'}}" class="code-wrapp {{type}}">
 		<block wx:for="{{smsCodeLength}}" wx:key="index">
-			<text  class="code-item {{value.length==index?'active':''}}"
-            style="width:{{100/smsCodeLength}}%;{{textStyle}}">{{value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
+			<text  class="code-item {{value.length==index?'active':''}}  {{value[index]?'hasValue':''}}"
+            style="width:{{100/smsCodeLength}}%;{{textStyle}}">{{password?'':value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
 			</text>
 		</block>
 	</view>
 	<view wx:elif="{{type==='snap'}}" class="code-wrapp {{type}} {{justify}}">
 		<block wx:for="{{smsCodeLength}}" wx:key="index">
-			<text  class="code-item {{value.length==index?'active':''}}"
-            style="width:98rpx;{{textStyle}};">{{value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
+			<text  class="code-item {{value.length==index?'active':''}} {{value[index]?'hasValue':''}}"
+            style="width:98rpx;{{textStyle}};">{{password?'':value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
 			<text class="snapBottomLine" style="height:{{inputWidth}}rpx;border-radius:{{inputRadius}}rpx;background-color:{{value.length > index ?inputActiveColor:inputColor}};"></text>
 			</text>
 		</block>
 	</view>
 	<view wx:else class="code-wrapp {{type}} {{justify}}">
 		<block wx:for="{{smsCodeLength}}" wx:key="index">
-			<text  class="code-item {{value.length==index?'active':''}}"
-            style="width:98rpx;border-style: solid;{{textStyle}};border-width:{{inputWidth}}rpx;border-radius:{{inputRadius}}rpx;border-color:{{value.length>index?inputActiveColor:inputColor}};">{{value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
+			<text  class="code-item {{value.length==index?'active':''}}  {{value[index]?'hasValue':''}}"
+            style="width:98rpx;border-style: solid;{{textStyle}};border-width:{{inputWidth}}rpx;border-radius:{{inputRadius}}rpx;border-color:{{value.length>index?inputActiveColor:inputColor}};">{{password?'':value[index]}}<text  wx:if="{{showCursor && value.length == index}}" class="cursor" style="color:#000;{{cursorStyle}}{{value.length===smsCodeLength?cursorActiveStyle:''}}"></text>
 			</text>
 		</block>
 	</view>

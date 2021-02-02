@@ -40,7 +40,8 @@
   </exampleCard>
 
   <exampleCard title="全屏加载 <loading-fullScreen />" des='{{example1Des}}'>
-    <d-loading-fullScreen mask="{{false}}" wx:if="{{showLoadingFullScreen}}" />
     <d-button catchtap="toogleLfS">show or hide loading-fullScreen</d-button>
   </exampleCard>
 </pageCard>
+
+<d-loading-fullScreen class="d-loading-fullScreen" />

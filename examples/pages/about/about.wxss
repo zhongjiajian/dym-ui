@@ -52,10 +52,12 @@
   padding: 4rpx 20rpx;
   display: flex;
 }
+.change-log-des .update-item text{
+  font-size: 14px;
+}
 .change-log-des .update-item text:first-child{
   min-width: 30rpx;
 }
-
 .change-log-des .update-item text:last-child{
   word-break: break-all;
 }

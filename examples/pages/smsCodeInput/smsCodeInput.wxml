@@ -51,6 +51,13 @@
     <d-smsCodeInput focus="{{focus17}}" data-flag="17" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" textStyle="width:48rpx;height:48rpx;line-height:48rpx;color:#00A19C;font-size:20px;"  />
   </exampleCard>
 
+  <exampleCard title="密码" des='password = true | false'>
+    <d-smsCodeInput password  focus="{{focus18}}" data-flag="18" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" value="1" />
+    <space />
+    <d-smsCodeInput password  focus="{{focus19}}" data-flag="19" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="line" value="12"  />
+    <space />
+    <d-smsCodeInput password  focus="{{focus20}}" data-flag="20" bindinput="inputChange" bindfocus="inputFocus" bindblur="inputBlur" type="snap" value="123"  />
+  </exampleCard>
 
   
 </pageCard>

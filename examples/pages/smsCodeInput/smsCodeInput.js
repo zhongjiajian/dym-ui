@@ -20,6 +20,7 @@ CustomPage({
     justify = 'between', 'around', 'center' (验证码行排齐方式)
     showCursor = true | false (是否显示光标)
     cursorStyle = "color: #00A19C" (光标的样式)
+    password = true | false 
 
     键盘属性
     keyboardZIndex = "999997" (键盘的定位层级)
@@ -51,13 +52,16 @@ CustomPage({
     focus15:false,
     focus16:false,
     focus17:false,
+    focus18:false,
+    focus19:false,
+    focus20:false,
   },
   inputChange(e){
     console.log(e.detail);
   },
   inputFocus(e){
     const flag = e.currentTarget.dataset.flag;
-    for(let i = 0;i<18;i++){
+    for(let i = 0;i<21;i++){
       const k = 'focus' + i;
       if (flag == i) {
         this.setData({

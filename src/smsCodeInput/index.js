@@ -14,6 +14,10 @@ Component({
             options: ["line", "snap", "box"],
             value: 'box'
         },
+        password: {
+            type:Boolean,
+            value:false
+        },
         smsCodeLength: {
             type: Number,
             value: 6

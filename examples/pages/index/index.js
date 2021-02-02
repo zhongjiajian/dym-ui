@@ -64,7 +64,12 @@ CustomPage({
         name: 'tabs',
         chinese: '标签页/选项卡',
         navigateUrl: '/pages/tabs/tabs'
-      }
+      },
+      {
+        name: 'toast',
+        chinese: '提示',
+        navigateUrl: '/pages/toast/toast'
+      },
     ]
   },
   nav(e){

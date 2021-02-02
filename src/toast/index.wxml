@@ -1,0 +1,12 @@
+<view class="d-toast" wx:if="{{show}}">
+	<view class="content" style="z-index:{{zIndex - 1}};">
+		<text class="title">{{title}}</text>
+	</view>
+	<view
+	 wx:if="{{mask}}"
+	 class="d-mask"
+	 style="z-index:{{zIndex}};"
+	 catchtouchmove="catchtouchmove"
+	></view>
+</view>
+

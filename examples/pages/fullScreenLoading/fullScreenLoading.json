@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "pageCard": "/components/pageCard/index",
-    "exampleCard": "/components/exampleCard/index",
-    "d-loading": "/dist/loading/index"
-  }
-}

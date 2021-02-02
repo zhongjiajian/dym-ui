@@ -1,10 +1,11 @@
+import { typeofIt } from '../utils/utils.js';
 Component({
 
   properties: {
     title: String,
     mask:{
       type:Boolean,
-      value:true
+      value:false
     },
     zIndex:{
       type: String,
@@ -13,10 +14,25 @@ Component({
     }
   },
   data: {
-
+    show: false
   },
 
   methods: {
-    catchtouchmove(){}
+    catchtouchmove(){},
+    show(option){
+      if(typeofIt(option) === 'object'){
+        option.show = true;
+      }else{
+        option = {
+          show: true
+        }
+      }
+      this.setData(option);
+    },
+    hide(){
+      this.setData({
+        show: false
+      });
+    }
   }
 })

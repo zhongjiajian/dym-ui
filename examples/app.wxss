@@ -2,11 +2,9 @@ view, button, text, image, input, navigator, textarea, scroll-view, movable-area
 swiper, icon, rich-text, progress, checkbox-group, checkbox, form, label, picker,
 picker-view, radio-group, radio, slider, switch, audio, video, camera,
 live-player, live-pusher, map, open-data, canvas, web-view {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+
   color: #333;
-  font-size: 24rpx;
+  font-size: 12px;
 }
 
 page{

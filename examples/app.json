@@ -13,7 +13,8 @@
     "pages/smsCodeInput/smsCodeInput",
     "pages/drawer/drawer",
     "pages/navigationBar/navigationBar",
-    "pages/tabs/tabs"
+    "pages/tabs/tabs",
+    "pages/toast/toast"
   ],
   "window": {
     "backgroundTextStyle": "light",
