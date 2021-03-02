@@ -29,12 +29,12 @@
 }
 .changeLog .c{
   display: flex;
-  flex-flow: column-reverse nowrap;
+  flex-flow: column nowrap;
 }
 .change-log-wrap{
   width: 100%;
 }
-.change-log-wrap:not(:last-child){
+.change-log-wrap:not(:first-child){
   margin-top: 20rpx;
 }
 .change-log-btn{

@@ -175,6 +175,7 @@ Component({
     this.getWindowWidth();
     if (this.properties.active == 0) {
       this.initLineStyle(this.properties.active);
+      this.data.firstFlag = false;
     }
     this.triggerEvent('changeTab', this.properties.active);
   },

@@ -3,7 +3,7 @@ import changeLog from '../../dist/utils/changeLog';
 CustomPage({
 
   data:{
-    currrentVersion: changeLog.slice(-1)[0].version,
+    currrentVersion: changeLog[0].version,
     changeLog: changeLog,
     guides:[
       {

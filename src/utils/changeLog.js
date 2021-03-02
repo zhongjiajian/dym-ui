@@ -9,21 +9,6 @@
 // revert: 撤销上一次的commit
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
-
-    {
-        time: '2021-01-30',
-        version: '1.0.0',
-        des: [
-            "初始版本"
-        ]
-    },
-    {
-        time: '2021-02-01',
-        version: '1.0.2',
-        des: [
-            "chore: 小程序用例修改，README修改"
-        ]
-    },
     {
         time: '2021-02-02',
         version: '1.1.0',
@@ -35,5 +20,21 @@ export default [
             "feat: 新增toast组件",
         ]
     },
-    
+    {
+        time: '2021-02-01',
+        version: '1.0.2',
+        des: [
+            "chore: 小程序用例修改，README修改"
+        ]
+    },
+
+    {
+        time: '2021-01-30',
+        version: '1.0.0',
+        des: [
+            "初始版本"
+        ]
+    },
+
+
 ]

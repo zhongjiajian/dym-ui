@@ -2,7 +2,7 @@ import CustomPage from '../../utils/page';
 import changeLog from '../../dist/utils/changeLog';
 CustomPage({
   data:{
-    currrentVersion: changeLog.slice(-1)[0].version,
+    currrentVersion: changeLog[0].version,
     components:[
       {
         name: 'loading',
