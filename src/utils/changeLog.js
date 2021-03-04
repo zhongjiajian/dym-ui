@@ -10,6 +10,15 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
     {
+        time: '',
+        version: '1.2.0',
+        des: [
+            "fix: 修复tabs组价已知问题",
+            "refactor: drawer组件contentPostionTop属性改为contentPositionTop",
+            "feat: drawer组件新增bindhidden事件，新增disableDraw、disableMaskTap属性",
+        ]
+    },
+    {
         time: '2021-02-02',
         version: '1.1.0',
         des: [

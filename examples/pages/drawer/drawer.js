@@ -20,10 +20,13 @@ CustomPage({
     cancelText = "返回"
     confirmText = "确定"
     backgroundColor = "#f5f5f5"
-    
+    disableDraw = true | false
+    disableMaskTap = true | false
+
     事件：
     bindcancel (点击返回触发)
     bindconfirm (点击确定触发)
+    bindhidden（隐藏时触发）
 
     插槽：
     slot = "header" (头部)

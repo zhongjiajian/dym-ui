@@ -38,6 +38,14 @@ Component({
             type: String,
             value: '确定'
         },
+        disableDraw:{
+            type: Boolean,
+            value: false
+        },
+        disableMaskTap:{
+            type: Boolean,
+            value: false
+        }
     },
     data: {
         windowHeight: 900,
@@ -53,14 +61,16 @@ Component({
             this.setData({
                 windowHeight: systemInfo.windowHeight
             })
-
         }
     },
     methods: {
         maskTouchMove() { },
         maskTap() {
+            if(this.properties.disableMaskTap) return;
             this.setData({
                 show: false
+            },()=>{
+                this.triggerEvent('hidden');
             });
         },
         cancel() {
@@ -70,6 +80,7 @@ Component({
             this.triggerEvent('confirm');
         },
         touchMove(event) {
+            if(this.properties.disableDraw) return;
             var touch = event.touches[0] || event.changedTouches[0];
             if (!this.data.startY) {
                 this.data.startY = touch.clientY || touch.pageY;
@@ -87,6 +98,7 @@ Component({
 
         },
         touchEnd(event) {
+            if(this.properties.disableDraw) return;
             if(!this.data.startY) return;
             var touch = event.changedTouches[0] || event.touches[0];
             this.data.endY = touch.clientY || touch.pageY;
@@ -95,6 +107,8 @@ Component({
                     animation: true,
                     translateY: 0, 
                     show: false
+                },()=>{
+                    this.triggerEvent('hidden');
                 })
             }else{
                 this.setData({
