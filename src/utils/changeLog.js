@@ -10,8 +10,19 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
     {
-        time: '',
-        version: '1.2.0',
+        time: '2021-03-11',
+        version: '1.3.0',
+        des: [
+            "perf: keyboard组件体验优化",
+            "feat: radio组件新增bindchange事件",
+            "feat: tabs组件新增textStyle属性",
+            "feat: loading-fullScreen组件新增show属性",
+            "feat: drawer组件新增titleStyle、cancelTextStyle、confirmTextStyle属性"
+        ]
+    },
+    {
+        time: '2021-03-04',
+        version: '1.2.1',
         des: [
             "fix: 修复tabs组价已知问题",
             "refactor: drawer组件contentPostionTop属性改为contentPositionTop",

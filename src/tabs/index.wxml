@@ -14,7 +14,7 @@
 		 data-flag="{{index}}"
 		 catchtap='changeTab'
 		>
-			<view class="tab-text" style="color:{{innerActive==index?activeTextColor:defaultTextColor}}">
+			<view class="tab-text" style="{{textStyle}};color:{{innerActive==index?activeTextColor:defaultTextColor}}">
 				{{item}}
 			</view>
 		</view>
@@ -34,7 +34,7 @@
 		 data-flag="{{index}}"
 		 catchtap='changeTab'
 		>
-			<view class="tab-text" style="color:{{innerActive==index?activeTextColor:defaultTextColor}}">
+			<view class="tab-text" style="{{textStyle}};color:{{innerActive==index?activeTextColor:defaultTextColor}}">
 				{{item}}
 			</view>
 		</view>

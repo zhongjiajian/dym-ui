@@ -8,6 +8,7 @@ CustomPage({
     tabsHeight = 40 (选项卡的高度，px)
     tabsStyle = "" (选项卡样式)
     tabsPanelStyle = "" (选项卡内容面板的样式)
+    textlStyle = "" (文字的样式)
     activeTextColor = "#fff" (选中项字体颜色)
     defaultTextColor = "#666" (未选中项字体颜色)
     indicatorColor = "#fff" (选中项下划线颜色)

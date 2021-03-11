@@ -2,6 +2,7 @@ import CustomPage from '../../utils/page';
 CustomPage({
   data:{
     example1Des:`属性：
+    show = true | false
     title = "" 
     mask = true | false
 

@@ -3,7 +3,7 @@
   <d-tag name="v{{currrentVersion}}" style="line-height: 30rpx;font-size: 20rpx;background-color: #ECECEC;color: #7E7E7E;" />
 </view>
 
-<view class="d-page-d">大易小程序组件库 - easy UI components，如果你需要的只是一款简洁的组件库，如果你不想在阅读API上花费太多时间，那这款也许适合你</view>
+<view class="d-page-d">大易小程序组件库 - easy and special UI components</view>
 
 <view>
 

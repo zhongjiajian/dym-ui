@@ -2,6 +2,7 @@
 <view>
 	<view
 	 hover-class="hover"
+	 hover-stay-time="150"
 	 class="hideBtn"
 	 catchtap="hide"
 	>
@@ -11,6 +12,7 @@
 	<view class="keysWrapper">
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="1"
 		 class="item item-1"
@@ -18,6 +20,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="2"
 		 class="item item-2"
@@ -25,6 +28,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="3"
 		 class="item item-3"
@@ -32,6 +36,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="4"
 		 class="item item-4"
@@ -39,6 +44,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="5"
 		 class="item item-5"
@@ -46,6 +52,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="6"
 		 class="item item-6"
@@ -53,6 +60,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="7"
 		 class="item item-7"
@@ -60,6 +68,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="8"
 		 class="item item-8"
@@ -67,6 +76,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="9"
 		 class="item item-9"
@@ -75,6 +85,7 @@
 		<view class="item item-10">
 			<view
 			 hover-class="hover"
+			 hover-stay-time="150"
 			 class="dig"
 			 wx:if="{{type==='digit'}}"
 			 catchtap="addInput"
@@ -83,6 +94,7 @@
 			</view>
 			<view
 			 hover-class="hover"
+			 hover-stay-time="150"
 			 class="x"
 			 wx:elif="{{type==='idcard'}}"
 			 catchtap="addInput"
@@ -92,6 +104,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="addInput"
 		 data-data="0"
 		 class="item item-11"
@@ -99,6 +112,7 @@
 		</view>
 		<view
 		 hover-class="hover"
+		 hover-stay-time="150"
 		 catchtap="deleteInput"
 		 class="item item-12"
 		>

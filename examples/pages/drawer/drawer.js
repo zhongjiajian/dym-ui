@@ -15,13 +15,17 @@ CustomPage({
     show = true | false
     zIndex = 999996
     fixTop = 64 (window顶部到组件顶部的距离，px)
-    contentPostionTop = 116 (组件顶部到content顶部的距离，rpx)
+    contentPositionTop = 116 (组件顶部到content顶部的距离，rpx)
     title = ""
+    titleStyle = ""
     cancelText = "返回"
+    cancelTextStyle = ""
     confirmText = "确定"
+    confirmTextStyle = ""
     backgroundColor = "#f5f5f5"
     disableDraw = true | false
     disableMaskTap = true | false
+    disableAnimation = true | false
 
     事件：
     bindcancel (点击返回触发)

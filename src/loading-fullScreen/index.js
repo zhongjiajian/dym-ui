@@ -2,6 +2,10 @@ import { typeofIt } from '../utils/utils.js';
 Component({
 
   properties: {
+    show:{
+      type:Boolean,
+      value:false
+    },
     title: String,
     mask:{
       type:Boolean,
@@ -12,9 +16,6 @@ Component({
       optionalTypes: [Number],
       value: 999999
     }
-  },
-  data: {
-    show: false
   },
 
   methods: {

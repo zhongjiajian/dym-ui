@@ -3,7 +3,7 @@
     <image wx:for="{{imgs}}" wx:key="*this" src="{{item}}" mode="aspectFit" style="width:100%;"></image>
   </view>
 </d-drawer>
-<d-drawer model:show="{{drawerShow2}}" contentPostionTop="40">
+<d-drawer model:show="{{drawerShow2}}" contentPositionTop="40">
   <view slot="header" class="custom-header">自定义头部</view>
   <view slot="content">
     <image wx:for="{{imgs}}" wx:key="*this" src="{{item}}" mode="aspectFit" style="width:100%;"></image>

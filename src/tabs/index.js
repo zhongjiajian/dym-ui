@@ -43,7 +43,10 @@ Component({
       type: String,
       value: ''
     },
-
+    textStyle: {
+      type: String,
+      value: ''
+    },
     activeTextColor: {
       type: String,
       value: '#fff'

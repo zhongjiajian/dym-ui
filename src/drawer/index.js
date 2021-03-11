@@ -17,7 +17,7 @@ Component({
             optionalTypes: [Number],
             value: 64
         },
-        contentPostionTop: {
+        contentPositionTop: {
             type: String,
             optionalTypes: [Number],
             value: 116
@@ -30,19 +30,35 @@ Component({
             type: String,
             value: ''
         },
+        titleStyle:{
+            type:String,
+            value:''
+        },
         cancelText: {
             type: String,
             value: '返回'
         },
+        cancelTextStyle: {
+            type: String,
+            value: ''
+        },
         confirmText: {
             type: String,
             value: '确定'
+        },
+        confirmTextStyle: {
+            type: String,
+            value: ''
         },
         disableDraw:{
             type: Boolean,
             value: false
         },
         disableMaskTap:{
+            type: Boolean,
+            value: false
+        },
+        disableAnimation:{
             type: Boolean,
             value: false
         }
