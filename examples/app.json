@@ -14,7 +14,9 @@
     "pages/drawer/drawer",
     "pages/navigationBar/navigationBar",
     "pages/tabs/tabs",
-    "pages/toast/toast"
+    "pages/toast/toast",
+    "pages/popover/popover",
+    "pages/timePicker/timePicker"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,16 @@
+<view class="d-popover">
+	<view
+	 class="d-popover-self custom-class {{placement}} {{disableAnimation?'':'animation'}}"
+	 wx:if="{{show}}"
+	 style="background-color:{{backgroundColor}};opacity:{{opacity}};z-index:{{zIndex}};"
+	 catchtap="hidePopover"
+	>
+		<view class="arrow {{mainPlacement}}" style="border-{{mainPlacement}}-color:{{backgroundColor}};{{subOffsetStyle}}"></view>
+		<text wx:if="{{text}}" class="text">{{text}}</text>
+		<slot wx:else name="content" />
+	</view>
+	<view class="d-popover-slot-wrap">
+		<slot/>
+	</view>
+</view>
+

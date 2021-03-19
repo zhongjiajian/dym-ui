@@ -1,0 +1,144 @@
+<drawer
+ disableDraw
+ backgroundColor="#fff"
+ fixTop="{{fixTop}}"
+ model:show="{{show}}"
+ title="{{title}}"
+ titleStyle="{{titleStyle}}"
+ cancelText="{{cancelText}}"
+ cancelTextStyle="{{cancelTextStyle}}"
+ confirmText="{{confirmText}}"
+ confirmTextStyle="{{confirmTextStyle}}"
+ bindcancel="cancel"
+ bindconfirm="confirm"
+ bindhidden="hidden"
+>
+	<view slot="content">
+		<slot name="before" />
+		<picker-view
+		 indicator-class="indicator-class"
+		 style="height:384px"
+		 class="picker-view-class"
+		 value="{{innerVal}}"
+		 bindchange="bindChange"
+		>
+			<block wx:if="{{type=='year'}}">
+				<picker-view-column>
+					<view
+					 wx:for="{{years}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}
+					</view>
+				</picker-view-column>
+			</block>
+			<block wx:elif="{{type=='year-month'}}">
+				<picker-view-column>
+					<view
+					 wx:for="{{years}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{months}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}月
+					</view>
+				</picker-view-column>
+			</block>
+			<block wx:elif="{{type=='year-month-date'}}">
+				<picker-view-column>
+					<view
+					 wx:for="{{years}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{months}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}月
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{dates}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}日
+					</view>
+				</picker-view-column>
+			</block>
+			<block wx:elif="{{type=='time'}}">
+				<picker-view-column>
+					<view
+					 wx:for="{{hours}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}时
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{minutes}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}分
+					</view>
+				</picker-view-column>
+			</block>
+			<block wx:else>
+				<picker-view-column>
+					<view
+					 wx:for="{{years}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{months}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}月
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{dates}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}日
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{hours}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}时
+					</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view
+					 wx:for="{{minutes}}"
+					 wx:key="*this"
+					 class="itemWrapper"
+					>{{item}}分
+					</view>
+				</picker-view-column>
+			</block>
+
+		</picker-view>
+		<slot name="after" />
+	</view>
+</drawer>
+

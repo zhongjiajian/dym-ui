@@ -1,0 +1,23 @@
+<d-timePicker model:show="{{show}}" type="{{type}}" timeValue="{{timeValue}}">
+</d-timePicker>
+
+<pageCard pageName="timePicker">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+  <exampleCard title="类型" des="type = 'year', 'year-month', 'year-month-date', 'time', 'year-month-date-time'">
+      <view class="d-ec-c">
+        <d-button size="mini" catchtap="changePickerType" data-type="year">年</d-button>
+        <d-button size="mini" catchtap="changePickerType" data-type="year-month">年-月</d-button>
+        <d-button size="mini" catchtap="changePickerType" data-type="year-month-date">年-月-日</d-button>
+        <d-button size="mini" catchtap="changePickerType" data-type="time">时分</d-button>
+        <d-button size="mini" catchtap="changePickerType" data-type="year-month-date-time">年-月-日-时分</d-button>
+      </view>
+  </exampleCard>
+  <exampleCard title="初始值" des="timeValue">
+      <view class="d-ec-c">
+        <d-button size="mini" catchtap="changeTimeValue">当前时间</d-button>
+        <d-button size="mini" catchtap="changeTimeValue" data-value="2000-02-03 03:04">2000-02-03 03:04</d-button>
+      </view>
+  </exampleCard>
+
+</pageCard>

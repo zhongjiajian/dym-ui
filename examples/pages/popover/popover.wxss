@@ -1,0 +1,17 @@
+.popover-slot-content{
+  width: 200rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200rpx;
+  justify-content: space-around;
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 30%);
+  border-radius: 20rpx;
+}
+.popover-slot-content text{
+    color: #000;
+}
+.d-popover-custom-class{
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 30%);
+}

@@ -10,6 +10,13 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
     {
+        time: '2021-03-19',
+        version: '1.4.0',
+        des: [
+            "feat: 新增popover气泡框、timePicker时间选择器"
+        ]
+    },
+    {
         time: '2021-03-11',
         version: '1.3.0',
         des: [

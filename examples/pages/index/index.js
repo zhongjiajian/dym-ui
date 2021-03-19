@@ -70,6 +70,16 @@ CustomPage({
         chinese: '提示',
         navigateUrl: '/pages/toast/toast'
       },
+      {
+        name: 'popover',
+        chinese: '气泡框',
+        navigateUrl: '/pages/popover/popover'
+      },
+      {
+        name: 'timePicker',
+        chinese: '时间选择器',
+        navigateUrl: '/pages/timePicker/timePicker'
+      },
     ]
   },
   nav(e){

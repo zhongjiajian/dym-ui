@@ -1,4 +1,4 @@
-<view>
+<view class="d-button">
 	<button
 	 class="custom-class d-button-native"
 	 hover-class="{{isCustomHoverClass?'d-hover-class':''}}"

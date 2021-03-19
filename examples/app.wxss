@@ -14,6 +14,7 @@ page{
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: center;
 
 }
 .d-ec-c-c{
@@ -25,6 +26,11 @@ page{
 .d-ec-c-a{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.d-ec-col-c{
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 /* 空白站位 */

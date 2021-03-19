@@ -1,0 +1,113 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "icon",
+          "pathName": "pages/icon/icon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "tag",
+          "pathName": "pages/tag/tag",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "list",
+          "pathName": "pages/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "loading",
+          "pathName": "pages/loading/loading",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "button",
+          "pathName": "pages/button/button",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "radio",
+          "pathName": "pages/radio/radio",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "keyboard",
+          "pathName": "pages/keyboard/keyboard",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "phoneNumberInput",
+          "pathName": "pages/phoneNumberInput/phoneNumberInput",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "smsCodeInput",
+          "pathName": "pages/smsCodeInput/smsCodeInput",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "drawer",
+          "pathName": "pages/drawer/drawer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "navigationBar",
+          "pathName": "pages/navigationBar/navigationBar",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "about",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "tabs",
+          "pathName": "pages/tabs/tabs",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "toast",
+          "pathName": "pages/toast/toast",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "popover",
+          "pathName": "pages/popover/popover",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "timePicker",
+          "pathName": "pages/timePicker/timePicker",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

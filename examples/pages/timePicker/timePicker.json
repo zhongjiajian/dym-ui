@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+  "pageCard": "/components/pageCard/index",
+  "exampleCard": "/components/exampleCard",
+  "space": "/components/space",
+  "d-button": "/dist/button/index",
+  "d-timePicker": "/dist/timePicker/index"
+  }
+}
