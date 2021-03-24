@@ -1,7 +1,7 @@
 <view class="d-popover">
 	<view
-	 class="d-popover-self custom-class {{placement}} {{disableAnimation?'':'animation'}}"
 	 wx:if="{{show}}"
+	 class="d-popover-self custom-class {{placement}} {{disableAnimation?'':'animation'}}"
 	 style="background-color:{{backgroundColor}};opacity:{{opacity}};z-index:{{zIndex}};"
 	 catchtap="hidePopover"
 	>

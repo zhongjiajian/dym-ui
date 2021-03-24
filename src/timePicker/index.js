@@ -75,7 +75,7 @@ Component({
     },
     methods:{
         cancel(){
-            this.triggerEvent('canel');
+            this.triggerEvent('cancel');
         },
         hidden(){
             this.triggerEvent('hidden');
@@ -125,7 +125,7 @@ Component({
         show() {
             if (this.properties.show) {
                 const type = this.properties.type;
-                const timeValue = new Date(+this.properties.timeValue);
+                const timeValue = new Date(+this.properties.timeValue || Date.now());
                 if(type.includes('date')) this._resetMonths(timeValue.getFullYear(),timeValue.getMonth() + 1);
                 switch (type) {
                     case 'year':

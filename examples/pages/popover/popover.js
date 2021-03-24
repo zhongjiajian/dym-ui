@@ -5,10 +5,13 @@ CustomPage({
     show = true | false
     disabled = true | false (点击气泡是否可关闭)
     placement = 'top' （气泡位置）
-    backgroundColor = 'rgba(0,0,0.65)'
+    backgroundColor = 'rgba(0,0,0,0.65)'
     text = ''（气泡文本）
     disableAnimation = true | false
     zIndex = 999994 (定位层级)
+
+    时间：
+    bindhidden (点击汽包隐藏时触发)
 
     拓展class
     custom-class（设置气泡框的根节点样式）

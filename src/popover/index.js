@@ -31,10 +31,10 @@ Component({
             type: Boolean,
             value: false
         },
-        zIndex:{
+        zIndex: {
             type: String,
-            optionalTypes:[Number],
-            value:999994
+            optionalTypes: [Number],
+            value: 999994
         }
     },
     data: {
@@ -42,45 +42,41 @@ Component({
         subOffsetStyle: '',
         opacity: 0
     },
-    lifetimes: {
-        ready() {
-            this.initComponent();
-        }
-    },
+  
     methods: {
         initComponent() {
-
-            Promise.all([this._getPopoverRect(),this._getPopoverSlotRect()])
-            .then(res=>{
-                this._setSubOffsetStyle(res[0].width,res[0].height,res[1].width,res[1].height);
-            })
+  
+            Promise.all([this._getPopoverRect(), this._getPopoverSlotRect()])
+                .then(res => {
+                    this._setSubOffsetStyle(res[0].width, res[0].height, res[1].width, res[1].height);
+                })
         },
-        _getPopoverRect(){
-            return new Promise(resolve=>{
+        _getPopoverRect() {
+            return new Promise(resolve => {
                 wx.createSelectorQuery().in(this).select('.d-popover-self').boundingClientRect(rect => {
                     resolve(rect);
                 }).exec();
             })
         },
-        _getPopoverSlotRect(){
-            return new Promise(resolve=>{
+        _getPopoverSlotRect() {
+            return new Promise(resolve => {
                 wx.createSelectorQuery().in(this).select('.d-popover-slot-wrap').boundingClientRect(rect => {
                     resolve(rect);
                 }).exec();
             })
         },
-        _setSubOffsetStyle(pw,ph,w, h) {
+        _setSubOffsetStyle(pw, ph, w, h) {
             const p = this.properties.placement;
-            if((p.startsWith('top') || p.startsWith('bottom')) && (pw<=w)){
+            if ((p.startsWith('top') || p.startsWith('bottom')) && (pw <= w)) {
                 this.setData({
                     subOffsetStyle: 'left:50%;transform:translateX(-50%);'
                 })
                 return;
             }
-            if((p.startsWith('left') || p.startsWith('right')) && (ph<=h)){
+            if ((p.startsWith('left') || p.startsWith('right')) && (ph <= h)) {
                 this.setData({
                     subOffsetStyle: `top:50%;transform:translateY(-50%);`
-
+  
                 })
                 return;
             }
@@ -114,24 +110,28 @@ Component({
             if (!this.properties.disabled && this.properties.show) {
                 this.setData({
                     show: false
-                })
+                });
+                this.triggerEvent('hidden');
             }
         }
     },
     observers: {
-        placement() {
-            this.initComponent();
-            this.setData({
-                mainPlacement: this.properties.placement.split('-')[0]
-            })
-        },
-        show(val) {
-            wx.nextTick(()=>{
+        placement(val) {
+            wx.nextTick(() => {
+                if(this.properties.show) this.initComponent();
                 this.setData({
-                    opacity: this.properties.show ? 1 : 0
+                    mainPlacement: val.split('-')[0]
                 })
             })
-            
+        },
+        show(val,old) {
+            wx.nextTick(() => {
+                if(val) this.initComponent();
+                this.setData({
+                    opacity: val ? 1 : 0
+                })
+            })
+  
         }
     }
-})
+  })
