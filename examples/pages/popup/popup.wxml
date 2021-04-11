@@ -1,0 +1,9 @@
+<pageCard pageName="popup">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+    <d-button catchtap="toggle">show popup</d-button>
+  </exampleCard>
+</pageCard>
+<d-popup show="{{show}}" bindtapMask="tapMask">
+  <view class="popup-content">i am slot of popup component</view>
+</d-popup>
+<d-toast class="d-toast" />

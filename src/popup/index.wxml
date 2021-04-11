@@ -1,0 +1,18 @@
+<view class="d-popup" wx:if="{{show}}">
+	<view
+	 class="mask"
+	 wx:if="{{showMask}}"
+	 style="opacity:{{show?1:0}};z-index:{{zIndex}};"
+	 catchtouchmove="maskTouchMove"
+	 catchtap="tapMask"
+	>
+	</view>
+	<view
+	 class="content"
+	 style="z-index:{{zIndex}};"
+	 catchtouchmove="maskTouchMove"
+	>
+		<slot/>
+	</view>
+</view>
+

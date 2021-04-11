@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+  "pageCard": "/components/pageCard/index",
+  "exampleCard": "/components/exampleCard",
+  "space": "/components/space",
+  "d-button": "/dist/button",
+  "d-toast": "/dist/toast/index",
+  "d-popup": "/dist/popup/index"
+  }
+}

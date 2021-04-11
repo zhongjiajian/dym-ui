@@ -1,0 +1,12 @@
+.cart {
+  position: fixed;
+  bottom: 0;
+  width: 100rpx;
+  height: 100rpx;
+  background: #d4f2f1;
+  border-radius: 50%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  z-index: 999997;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 30%);
+}

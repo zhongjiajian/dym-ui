@@ -80,6 +80,16 @@ CustomPage({
         chinese: '时间选择器',
         navigateUrl: '/pages/timePicker/timePicker'
       },
+      {
+        name: 'popup',
+        chinese: '弹窗',
+        navigateUrl: '/pages/popup/popup'
+      },
+      {
+        name: 'flyToCart',
+        chinese: '加入购物车动画',
+        navigateUrl: '/pages/flyToCart/flyToCart'
+      },
     ]
   },
   nav(e){

@@ -5,6 +5,7 @@
   "exampleCard": "/components/exampleCard",
   "space": "/components/space",
   "d-tabs": "/dist/tabs",
-  "d-tabs-panel": "/dist/tabs-panel"
+  "d-tabs-panel": "/dist/tabs-panel",
+  "d-button": "/dist/button"
   }
 }

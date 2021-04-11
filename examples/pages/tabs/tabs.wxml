@@ -2,14 +2,14 @@
   <exampleCard title="Doc" des='{{example1Des}}'>
   </exampleCard>
   <exampleCard title="tabs是否可以滚动" des='tabsScrollable = true | false'>
-    <d-tabs active="{{active}}" tabs="{{tabs1}}" tabsPanelStyle="{{tabsPanelStyle}}" bindchangeTab="changeTab">
+    <d-tabs class="tabs" active="{{active}}" tabs="{{tabs1}}" tabsPanelStyle="{{tabsPanelStyle}}" bindchangeTab="changeTab">
       <d-tabs-panel mark="{{index}}" wx:for="{{tabs1}}" wx:key="index" active="{{active}}">
         <view class="d-tas-panel-content">
           <view>{{item}}...</view>
         </view>
       </d-tabs-panel>
     </d-tabs>
-    <d-tabs tabsScrollable="{{false}}" active="{{active}}" tabs="{{tabs2}}" tabsPanelStyle="{{tabsPanelStyle}}" bindchangeTab="changeTab">
+    <d-tabs class="tabs" tabsScrollable="{{false}}" active="{{active}}" tabs="{{tabs2}}" tabsPanelStyle="{{tabsPanelStyle}}" bindchangeTab="changeTab">
       <d-tabs-panel mark="{{index}}" wx:for="{{tabs2}}" wx:key="index" active="{{active}}" >
         <view class="d-tas-panel-content">
           <view>{{item}}...</view>
@@ -18,7 +18,7 @@
     </d-tabs>
   </exampleCard>
   <exampleCard title="其他属性示例" des=''>
-    <d-tabs tabs="{{tabs2}}" 
+    <d-tabs class="tabs" tabs="{{tabs2}}" 
     tabsScrollable="{{false}}" 
     tabsBackgroundColor="#008EDD" 
     tabsHeight="{{50}}"
@@ -35,6 +35,13 @@
         </view>
       </d-tabs-panel>
     </d-tabs>
+  </exampleCard>
+
+  <exampleCard title="标记" des='{{example2Des}}'>
+    <d-button catchtap="showBadge">showBadge</d-button>
+    <space />
+    <d-button catchtap="hideBadge">hideBadge</d-button>
+
   </exampleCard>
 
 </pageCard>

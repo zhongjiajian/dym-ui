@@ -19,7 +19,22 @@ CustomPage({
     active = 0 (激活tab索引)
     
     事件：
-    bindchangeTab (tab切换时触发)`,
+    bindchangeTab (tab切换时触发)
+    
+    方法：
+    showBadge (显示标记)
+    hideBadge (隐藏标记)`,
+    example2Des: `component.showBadge({
+      index: 1,
+      placement: "right-top",
+      content: "99+",
+      isDot: false,
+      style:""
+    })
+
+    component.hideBadge({
+      index: 1
+    })`,
 
     tabs1: ['微信', '通讯录', '发现', '我', '附近的人和直播', '朋友圈', '小程序', '视频号'],
     tabs2: ['微信', '通讯录', '发现',],
@@ -28,5 +43,26 @@ CustomPage({
   },
   changeTab(e){
     console.log(e);
+  },
+  onLoad(){
+    this.showBadge();
+  },
+  showBadge(){
+    this.selectAllComponents('.tabs').forEach(component=>{
+      component.showBadge({
+        index: 1,
+        placement: "right-top",
+        content: "99+",
+        isDot: false,
+        style:""
+      });
+    });
+  },
+  hideBadge(){
+    this.selectAllComponents('.tabs').forEach(component=>{
+      component.hideBadge({
+        index:1
+      });
+    });
   }
 });

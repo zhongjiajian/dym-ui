@@ -16,6 +16,7 @@
 		>
 			<view class="tab-text" style="{{textStyle}};color:{{innerActive==index?activeTextColor:defaultTextColor}}">
 				{{item}}
+				<text wx:if="{{badgeData[index] && badgeData[index].show}}" class="badge {{badgeData[index].isDot?'dot':''}} {{badgeData[index].placement}}"  style="{{badgeData[index].style}}">{{badgeData[index].content}}</text>
 			</view>
 		</view>
 		<view class='indicator {{indicatorMove?"move":""}}' style="top:{{tabsHeight - 2}}px;background-color:{{indicatorColor}};width:{{lineWidth}}px;transform:translate3d({{widthTranslateX}}px,0,0);"></view>
@@ -36,6 +37,7 @@
 		>
 			<view class="tab-text" style="{{textStyle}};color:{{innerActive==index?activeTextColor:defaultTextColor}}">
 				{{item}}
+				<text wx:if="{{badgeData[index] && badgeData[index].show}}" class="badge {{badgeData[index].isDot?'dot':''}} {{badgeData[index].placement}}"  style="{{badgeData[index].style}}">{{badgeData[index].content}}</text>
 			</view>
 		</view>
 		<view class='indicator {{indicatorMove?"move":""}}' style="top:{{tabsHeight - 2}}px;background-color:{{indicatorColor}};width:{{lineWidth}}px;transform:translate3d({{widthTranslateX}}px,0,0);"></view>

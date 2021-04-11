@@ -1,0 +1,8 @@
+.popup-content{
+  z-index: 999996;
+  background-color: #fff;
+  width: 400rpx;
+  line-height: 200rpx;
+  text-align: center;
+  border-radius: 16rpx;
+}
