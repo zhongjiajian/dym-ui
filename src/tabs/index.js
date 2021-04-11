@@ -74,7 +74,17 @@ Component({
     scrollLeft: 0,// 滚动条横向位置
     indicatorMove: false, //初始的时候indicator移动会卡顿，为了体验：去掉动画
     firstFlag: true,
-    innerActive: 0
+    innerActive: 0,
+    badgeData: {
+      0:{
+        index: 0,
+        placement: "right-top", // "right"
+        content: "",
+        isDot: false,
+        style:"",
+        show: false
+      }
+    }
   },
   tabPanelNodes: null, //存储tab节点
   multipleNodesStyle: null, //存储tab节点信息
@@ -170,6 +180,23 @@ Component({
           this.data.windowWidth = res.windowWidth
         }
       })
+    },
+    // 设置标记（外部方法）
+    showBadge(option){
+      if(!option || (option.index === undefined)) return;
+      option.show = true;
+      const key = "badgeData["+ option.index +"]";
+      this.setData({
+        [key]: option
+      });
+    },
+    hideBadge(option){
+      if(!option || (option.index === undefined)) return;
+      option.show = false;
+      const key = "badgeData["+ option.index +"]";
+      this.setData({
+        [key]: option
+      });
     }
   },
 

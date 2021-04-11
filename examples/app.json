@@ -16,7 +16,10 @@
     "pages/tabs/tabs",
     "pages/toast/toast",
     "pages/popover/popover",
-    "pages/timePicker/timePicker"
+    "pages/timePicker/timePicker",
+    "pages/popup/popup",
+    "pages/flyToCart/flyToCart"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

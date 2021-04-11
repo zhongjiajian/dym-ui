@@ -28,7 +28,7 @@
   }
   .d-tabs .tabs .tab-text{
     display: inline-block;
-
+    position: relative;
   }
   .d-tabs .tabs .tab.firstTab{
     margin-left: 8px;
@@ -63,3 +63,37 @@
     transition: all 0.4s;
   }
   
+
+  // badge
+  .d-tabs .tabs .tab-text .badge{
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    background-color: #e02020;
+    border-radius: 12px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    overflow: hidden;
+  }
+  .d-tabs .tabs .tab-text .badge.right-top{
+    top: 0;
+    left: 100%;
+  }
+  .d-tabs .tabs .tab-text .badge.right{
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 2px);
+  }
+  
+  .d-tabs .tabs .tab-text .badge.dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    font-size: 0;
+    left: calc(100% + 2px);
+  }
+  .d-tabs .tabs .tab-text .badge.dot.right-top{
+    top: 10px;
+  }

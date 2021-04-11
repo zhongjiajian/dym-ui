@@ -10,6 +10,16 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
     {
+        time: '2021-04-11',
+        version: '1.5.0',
+        des: [
+            "feat: 新增弹窗组件popup",
+            "feat: 新增动画组件flyToCart",
+            "feat: tabs组件添加badge功能",
+            "change: 修改drawer组件蒙层的z-index值"
+        ]
+    },
+    {
         time: '2021-03-19',
         version: '1.4.0',
         des: [

@@ -105,6 +105,18 @@
         {
           "name": "timePicker",
           "pathName": "pages/timePicker/timePicker",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "popup",
+          "pathName": "pages/popup/popup",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "flyToCart",
+          "pathName": "pages/flyToCart/flyToCart",
           "scene": null
         }
       ]
