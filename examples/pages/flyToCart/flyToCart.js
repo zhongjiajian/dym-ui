@@ -8,7 +8,7 @@ CustomPage({
     
     方法：
     add(event)`,
-    cartPosition: ["0","100%"],
+    endPosition: ["0","100%"],
     arcRate:0.5,
     cartLeft:0
   },

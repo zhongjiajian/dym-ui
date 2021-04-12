@@ -1,4 +1,5 @@
 <view
+ wx:if="{{showMask}}"
  class="d-drawer-mask {{!disableAnimation && animation?'animation':''}}"
  style="z-index:{{zIndex}};transform: translate3d(0,{{show?0:'100%'}},0);opacity:{{translateY?(1-translateY/windowHeight):show?1:0}};"
  catchtouchmove="maskTouchMove"

@@ -16,7 +16,8 @@ Component({
    },
    data:{
        flyerId:0,
-       flyersStack:[]
+       flyersStack:[],
+       transitionIndex:0
    },
    methods:{
     add(e){
@@ -42,6 +43,14 @@ Component({
             });
         },200)
     },
+    transitionend(e){
+        this.data.transitionIndex++;
+        if(this.data.transitionIndex%2 != 0) return;
+        const endKey = "flyersStack["+ (this.data.transitionIndex/2 - 1) +"].isEnd";
+        this.setData({
+            [endKey]: true
+        });
+    }
    },
    observers:{
        arcRate(val){

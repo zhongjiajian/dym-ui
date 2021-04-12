@@ -7,6 +7,10 @@ Component({
             type: Boolean,
             value: false
         },
+        showMask: {
+            type: Boolean,
+            value: true
+        },
         zIndex: {
             type: String,
             optionalTypes: [Number],

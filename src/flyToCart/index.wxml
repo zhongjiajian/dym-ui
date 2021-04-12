@@ -4,6 +4,8 @@
 	 wx:key="id"
 	 class="flyer"
 	 style="transition: top .8s cubic-bezier(0,0,{{1-arcRate}},1),left .8s cubic-bezier({{arcRate}},0,1,1);left:{{item.left}};top:{{item.top}};{{style}}"
+	 bindtransitionend="transitionend"
+	 wx:if="{{!item.isEnd}}"
 	>
 	</view>
 </view>
