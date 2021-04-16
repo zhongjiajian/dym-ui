@@ -8,11 +8,11 @@
       <space/>
       <text>当前弧度：{{arcRate}}</text>
       <space/>
-    <image class="cart" src="/images//cart.png" alt="购物车" style="left:{{cartLeft}}%;" />
   </exampleCard>
   <exampleCard title="移动购物车" >
-    <slider block-size="{{20}}" bindchanging="sliderChangeing" />
+    <slider block-size="{{20}}" bindchange="sliderChange" />
   </exampleCard>
   <space height="800" />
 </pageCard>
-<d-flyToCart class="flyToCart" endPosition="{{cartPosition}}" arcRate="{{arcRate}}" />
+<image class="cart {{shake?'shake':''}}" src="/images/cart.png" alt="购物车" style="left:{{cartLeft}}%;" />
+<d-flyToCart class="flyToCart" endPosition="{{cartPosition}}" arcRate="{{arcRate}}" bindtransitionend="transitionend" />

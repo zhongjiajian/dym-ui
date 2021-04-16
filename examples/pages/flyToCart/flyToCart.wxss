@@ -3,10 +3,21 @@
   bottom: 0;
   width: 100rpx;
   height: 100rpx;
-  background: #d4f2f1;
   border-radius: 50%;
+  background-color: #fff;
   padding: 20rpx;
   box-sizing: border-box;
-  z-index: 999997;
+  z-index: 999999;
   box-shadow: 0 2px 8px 0 rgb(0 0 0 / 30%);
+}
+.cart.shake{
+  animation: shake .15s cubic-bezier(.59,.01,1,.27);
+  transform-origin: center bottom;
+}
+@keyframes shake{
+  0%{
+  }
+  50%{
+    transform: scale3d(1.15,1.15,1.15);
+  }
 }

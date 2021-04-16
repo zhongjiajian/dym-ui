@@ -50,6 +50,7 @@ Component({
         this.setData({
             [endKey]: true
         });
+        this.triggerEvent('transitionend');
     }
    },
    observers:{
