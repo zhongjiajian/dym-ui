@@ -10,16 +10,6 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
     {
-        time: '2021-04-17',
-        version: '1.6.0',
-        des: [
-            "feat: 新增点赞组件like",
-            "feat: tabs支持左右滑动切换",
-            "feat: timePicker组件支持设置start、end",
-            "change: drawer一些改动"
-        ]
-    },
-    {
         time: '2021-04-12',
         version: '1.5.0',
         des: [

@@ -17,7 +17,7 @@ CustomPage({
     example1Des: `属性：
     show = true | false
     zIndex = 999996
-    fixTop = 64 (window顶部到组件顶部的距离，px)
+    fixTop = 64 || 64px || 50% (window顶部到组件顶部的距离，px，%)
     contentPositionTop = 116 (组件顶部到content顶部的距离，rpx)
     title = ""
     titleStyle = ""

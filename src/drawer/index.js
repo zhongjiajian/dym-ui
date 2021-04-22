@@ -73,7 +73,8 @@ Component({
         translateY: 0,
         startY: 0,
         moveY: 0,
-        endY: 0
+        endY: 0,
+        fixTop_inner: '64px'
     },
     lifetimes:{
         attached(){
@@ -122,26 +123,52 @@ Component({
             if(!this.data.startY) return;
             var touch = event.changedTouches[0] || event.touches[0];
             this.data.endY = touch.clientY || touch.pageY;
-            if (this.data.endY - this.data.startY >= 160) {
-                this.setData({
-                    animation: true,
-                    translateY: 0, 
-                    show: false
-                },()=>{
-                    this.triggerEvent('hidden');
+            this._getComponentRect()
+            .then(rect=>{
+                if (this.data.endY - this.data.startY >= rect.height*0.3) {
+                    this.setData({
+                        animation: true,
+                        translateY: 0, 
+                        show: false
+                    },()=>{
+                        this.triggerEvent('hidden');
+                    })
+                }else{
+                    this.setData({
+                        animation: true,
+                        translateY: 0, 
+                        show: true
+                    })
+                }
+                this.data.startY = this.data.moveY = this.data.endY = 0;
+            })
+
+        },
+        _getComponentRect(){
+            if(!this.rectInfo){
+                return new Promise(resolve=>{
+                    wx.createSelectorQuery().in(this).select('.d-drawer').boundingClientRect(rect => {
+                        this.rectInfo = rect;
+                        resolve(rect);
+                    }).exec();
                 })
             }else{
-                this.setData({
-                    animation: true,
-                    translateY: 0, 
-                    show: true
-                })
+                return Promise.resolve(this.rectInfo);
             }
-            this.data.startY = this.data.moveY = this.data.endY = 0;
-        },
+            
+        }
 
 
     },
+    observers:{
+        fixTop(val){
+            let fixTop_inner = String(val);
+            if(!fixTop_inner.includes('%') && !fixTop_inner.includes('px')) fixTop_inner+='px';
+            this.setData({
+                fixTop_inner
+            });
+        }
+    }
 
 
 })

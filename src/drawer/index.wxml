@@ -10,7 +10,7 @@
  class="d-drawer  {{!disableAnimation && animation?'animation':''}}"
  catchtouchend="touchEnd"
  catchtouchmove="touchMove"
- style="z-index: {{zIndex}};top:{{fixTop}}px;background-color:{{backgroundColor}};transform: translate3d(0,{{translateY?translateY+'px':(show?0:'100%')}},0);"
+ style="z-index: {{zIndex}};top:{{fixTop_inner}};background-color:{{backgroundColor}};transform: translate3d(0,{{translateY?translateY+'px':(show?0:'100%')}},0);"
 >
 	<view wx:if="{{title}}" class="header">
 		<text class="title" titleStyle="{{titleStyle}}">{{title}}</text>
@@ -38,7 +38,9 @@
 	 class="scroll-view"
 	 style="top:{{contentPositionTop}}rpx;"
 	>
-		<slot name="content" />
+			<view class="fix-margin-top"></view>
+			<slot name="content" />
+			
 	</scroll-view>
 </view>
 

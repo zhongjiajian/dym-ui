@@ -67,7 +67,9 @@ Component({
             type: String,
             optionalTypes: [Number],
             value: now.getTime()
-        }
+        },
+        start:String, //格式为“YYYY-MM-DD hh:mm”
+        end:String
     },
     data: {
         years, months, dates, hours, minutes,
@@ -83,6 +85,9 @@ Component({
         confirm(){
             const innerVal = this.data.innerVal;
             const type = this.properties.type;
+            const  {
+                years, months, dates, hours, minutes
+            } = this.data;
             let postVal = '';
             switch (type) {
                 case 'year':
@@ -106,13 +111,15 @@ Component({
         bindChange(e){
             const val = e.detail.value;
             const type = this.properties.type;
-            if(type.includes('date')) this._resetMonths(years[val[0]],months[val[1]]);
+            const  {
+                years, months
+            } = this.data;
+            if(type.includes('date')) this._resetDates(years[val[0]],months[val[1]]);
             this.setData({
               innerVal: val
             });
           },
-          //月份天数确定
-        _resetMonths(year,month){
+        _resetDates(year,month){
             const maxDate = new Date(year,month,0).getDate();
             const dates = [];
             for (let i = 1; i <= maxDate; i++) {
@@ -122,11 +129,37 @@ Component({
         }
     },
     observers: {
+        "start,end"(start,end){
+            try{
+                if(this.properties.type.startsWith('year')){
+                    const startYear = +(start.split("-")[0] || 2000);
+                    const endYear = +(end.split("-")[0] ||  now.getFullYear());
+                    const years = [];
+                    for (let i = startYear; i <= endYear; i++) {
+                        years.push(i)
+                    }
+                    this.setData({years});
+                }else{
+                    const startHour = +(start.split(":")[0] || "00");
+                    const endHour = +(end.split(":")[0] || "23");
+                    const hours = [];
+                    for (let i = startHour; i <= endHour; i++) {
+                        hours.push(i < 10 ? ('0' + i) : i)
+                    }
+                    this.setData({hours});
+                }
+            }catch(err){
+                console.log(err);
+            }
+        },
         show() {
             if (this.properties.show) {
                 const type = this.properties.type;
                 const timeValue = new Date(+this.properties.timeValue || Date.now());
-                if(type.includes('date')) this._resetMonths(timeValue.getFullYear(),timeValue.getMonth() + 1);
+                if(type.includes('date')) this._resetDates(timeValue.getFullYear(),timeValue.getMonth() + 1);
+                const  {
+                    years, months, dates, hours, minutes
+                } = this.data;
                 switch (type) {
                     case 'year':
                         this.setData({
@@ -173,6 +206,6 @@ Component({
 
                 }
             }
-        }
+        },
     }
 })

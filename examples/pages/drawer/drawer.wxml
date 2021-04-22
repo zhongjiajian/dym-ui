@@ -1,6 +1,6 @@
 <d-drawer model:show="{{drawerShow1}}" title="default drawer" bindcancel="cancel" bindconfirm="confirm">
   <view slot="content">
-    <image wx:for="{{imgs}}" wx:key="*this" src="{{item}}" mode="aspectFit" style="width:100%;"></image>
+    <image wx:for="{{imgs}}" wx:key="*this" src="{{item}}" mode="aspectFit" style="margin-top: 50px;display: block;width:100%;"></image>
   </view>
 </d-drawer>
 <d-drawer model:show="{{drawerShow2}}" contentPositionTop="40">
