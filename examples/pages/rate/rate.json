@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+  "pageCard": "/components/pageCard/index",
+  "exampleCard": "/components/exampleCard",
+  "space": "/components/space",
+  "d-rate": "/dist/rate/index"
+  }
+}

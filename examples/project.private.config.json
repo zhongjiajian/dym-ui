@@ -117,6 +117,13 @@
         {
           "name": "flyToCart",
           "pathName": "pages/flyToCart/flyToCart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "rate",
+          "pathName": "pages/rate/rate",
+          "query": "",
           "scene": null
         }
       ]

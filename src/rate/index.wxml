@@ -1,0 +1,48 @@
+<view class="d-rate">
+  <view class="stars">
+    <block wx:for="{{dataList}}" wx:key="index">
+      <image
+        wx:if="{{item===eachFull}}"
+        class="star star-full"
+        src="../static/images/star-full.png"
+        style="width: {{size}}rpx;height: {{size}}rpx;margin-right:{{index===4?0:gap}}px"
+        data-flag="{{index}}"
+        catchtap="_change"
+      >
+      </image>
+      <image
+        wx:elif="{{item===0}}"
+        class="star star-void"
+        src="../static/images/star-void.png"
+        style="width: {{size}}rpx;height: {{size}}rpx;margin-right:{{index===4?0:gap}}px"
+        data-flag="{{index}}"
+        catchtap="_change"
+      >
+      </image>
+      <view
+        wx:else
+        class="noFull"
+        style="width: {{size}}rpx;height: {{size}}rpx;margin-right:{{index===4?0:gap}}px"
+        data-flag="{{index}}"
+        catchtap="_change"
+      >
+        <image
+          class="star down"
+          src="../static/images/star-void.png"
+          style="width: {{size}}rpx;height: {{size}}rpx;"
+        >
+        </image>
+        <view class="up" style="width: {{item/eachFull*100+'%'}}">
+          <image
+            class="star"
+            src="../static/images/star-full.png"
+            style="width: {{size}}rpx;height: {{size}}rpx;"
+          >
+          </image>
+        </view>
+      </view>
+    </block>
+  </view>
+  <text class="score" wx:if="{{showScore}}">{{score}}</text>
+</view>
+

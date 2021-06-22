@@ -18,7 +18,8 @@
     "pages/popover/popover",
     "pages/timePicker/timePicker",
     "pages/popup/popup",
-    "pages/flyToCart/flyToCart"
+    "pages/flyToCart/flyToCart",
+    "pages/rate/rate"
 
   ],
   "window": {

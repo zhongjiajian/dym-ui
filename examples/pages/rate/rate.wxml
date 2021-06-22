@@ -1,0 +1,20 @@
+<pageCard pageName="rate">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+  <exampleCard title="示例1" des='max = 5 \n max = 100'>
+    <view class="d-ec-c">
+      <d-rate value="3.3" showScore size="36" />
+    </view>
+    <view class="d-ec-c">
+      <d-rate value="33" showScore max="100" size="36" />
+    </view>
+  </exampleCard>
+  <exampleCard title="示例2" des='allowHalf = true | false'>
+    <view class="d-ec-c">
+      <d-rate value="3.3" showScore size="36" />
+    </view>
+    <view class="d-ec-c">
+      <d-rate value="3.3" allow-half showScore size="36" bindchange="change" />
+    </view>
+  </exampleCard>
+</pageCard>

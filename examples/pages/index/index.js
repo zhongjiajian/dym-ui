@@ -90,6 +90,11 @@ CustomPage({
         chinese: '加入购物车动画',
         navigateUrl: '/pages/flyToCart/flyToCart'
       },
+      {
+        name: 'rate',
+        chinese: '评分',
+        navigateUrl: '/pages/rate/rate'
+      },
     ]
   },
   nav(e){
