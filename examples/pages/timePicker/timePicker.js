@@ -17,6 +17,7 @@ CustomPage({
     bindcancel (点击取消触发)
     bindconfirm (点击确定触发)
     bindhidden（隐藏时触发）
+    bindchange（值变化时触发）
 
     插槽：
     slot = "before"
@@ -37,5 +38,7 @@ CustomPage({
       show:true,
       timeValue:new Date(e.currentTarget.dataset.value).getTime() || Date.now()
     })
+  },
+  change(val){
   }
 })

@@ -30,7 +30,7 @@ Component({
     methods:{
         change(){
             if(this.properties.disabled) return;
-            const val = !this.data.checked;
+            const val = !this.properties.checked;
             this.setData({checked:val});
             this.triggerEvent('change',{value:val});
         }
