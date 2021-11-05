@@ -4,7 +4,7 @@ const months = [];
 const dates = [];
 const hours = [];
 const minutes = [];
-for (let i = 2000; i <= now.getFullYear(); i++) {
+for (let i = 2010; i <= now.getFullYear()+1; i++) {
   years.push(i);
 }
 for (let i = 1; i <= 12; i++) {
@@ -69,7 +69,11 @@ Component({
       value: now.getTime()
     },
     start:String, //格式为“YYYY-MM-DD hh:mm”
-    end:String
+    end:String,
+    isDiscreteMinute: {
+      type:Boolean,
+      value:false
+    }
   },
   data: {
     years, months, dates, hours, minutes,
@@ -189,6 +193,7 @@ Component({
         });
         break;
       default:
+
         this.setData({
           innerVal: [
             years.findIndex(item => (item == timeValue.getFullYear())),
@@ -234,5 +239,10 @@ Component({
         this._resetVal();
       }
     },
+    isDiscreteMinute(val){
+      if(val) this.setData({
+        minutes: ['00','15','30','45']
+      });
+    }
   }
 });

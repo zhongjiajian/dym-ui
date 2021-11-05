@@ -1,4 +1,4 @@
-<d-timePicker model:show="{{show}}" type="{{type}}" timeValue="{{timeValue}}" bindchange="change">
+<d-timePicker model:show="{{show}}" type="{{type}}" timeValue="{{timeValue}}" bindchange="change" isDiscreteMinute>
 </d-timePicker>
 
 <pageCard pageName="timePicker">

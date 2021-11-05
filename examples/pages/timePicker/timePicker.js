@@ -25,20 +25,21 @@ CustomPage({
     `,
     show: false,
     type: 'year-month-date-time',
-    timeValue: Date.now()
+    timeValue: Date.now().get
   },
   changePickerType(e){
     this.setData({
       show:true,
       type:e.currentTarget.dataset.type
-    })
+    });
   },
   changeTimeValue(e){
     this.setData({
       show:true,
       timeValue:new Date(e.currentTarget.dataset.value).getTime() || Date.now()
-    })
+    });
   },
   change(val){
+    console.log(val);
   }
-})
+});
