@@ -31,14 +31,15 @@ CustomPage({
     this.setData({
       show:true,
       type:e.currentTarget.dataset.type
-    })
+    });
   },
   changeTimeValue(e){
     this.setData({
       show:true,
       timeValue:new Date(e.currentTarget.dataset.value).getTime() || Date.now()
-    })
+    });
   },
   change(val){
+    console.log(val);
   }
-})
+});
