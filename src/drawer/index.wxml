@@ -8,7 +8,7 @@
 </view>
 <view
  class="d-drawer  {{!disableAnimation && animation?'animation':''}}"
- catchtouchend="touchEnd"
+ bindtouchend="touchEnd"
  catchtouchmove="touchMove"
  style="z-index: {{zIndex}};top:{{fixTop_inner}};background-color:{{backgroundColor}};transform: translate3d(0,{{translateY?translateY+'px':(show?0:'100%')}},0);"
 >
