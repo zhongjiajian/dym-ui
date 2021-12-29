@@ -25,7 +25,7 @@ CustomPage({
     `,
     show: false,
     type: 'year-month-date-time',
-    timeValue: Date.now()
+    timeValue: Date.now().get
   },
   changePickerType(e){
     this.setData({
