@@ -65,7 +65,12 @@ Component({
     disableAnimation:{
       type: Boolean,
       value: false
-    }
+    },
+    scrollTop: {
+      type: String,
+      optionalTypes: [Number],
+      value: '0'
+    },
   },
   data: {
     windowHeight: 900,

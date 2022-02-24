@@ -29,6 +29,7 @@ CustomPage({
     disableDraw = true | false
     disableMaskTap = true | false
     disableAnimation = true | false
+    scrollTop = "0"（设置组件内部竖向滚动条位置）
 
     事件：
     bindcancel (点击返回触发)
@@ -42,6 +43,7 @@ CustomPage({
     tip：下拉可关闭`,
     drawerShow1: false,
     drawerShow2: false,
+    scrollTop: "0",
     
   },
   toogleDrawer1(){
