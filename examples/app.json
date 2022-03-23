@@ -19,7 +19,8 @@
     "pages/timePicker/timePicker",
     "pages/popup/popup",
     "pages/flyToCart/flyToCart",
-    "pages/rate/rate"
+    "pages/rate/rate",
+    "pages/leftSlider/leftSlider"
 
   ],
   "window": {

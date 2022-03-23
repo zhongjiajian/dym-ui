@@ -1,0 +1,12 @@
+<view class="leftSlider" style="width: {{width}}px;height: {{height}}px;">
+    <movable-area style="width: {{width + subWidth}}px;height: {{height}}px;background-color:{{subBackgroundColor}};">
+        <view class="sub" style="width: {{subWidth}}px; height: {{height}}px;background-color:{{subBackgroundColor}};">
+            <slot name="sub"></slot>
+        </view>
+        <movable-view style="width: {{width}}px;height: {{height}}px;background-color:{{mainBackgroundColor}};" inertia out-of-bounds direction="horizontal" x="{{x}}" disabled="{{disabled}}" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd" bindchange="onTouchChange">
+            <view class="main" style="width: {{width}}px; height: {{height}}px;">
+                <slot name="main"></slot>
+            </view>
+        </movable-view>
+    </movable-area>
+</view>

@@ -125,6 +125,13 @@
           "pathName": "pages/rate/rate",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "leftSlider",
+          "pathName": "pages/leftSlider/leftSlider",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
         }
       ]
     }

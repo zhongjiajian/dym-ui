@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "pageCard": "/components/pageCard/index",
+    "exampleCard": "/components/exampleCard",
+    "space": "/components/space",
+    "d-button": "/dist/button",
+    "d-leftSlider": "/dist/leftSlider/index"
+  }
+}

@@ -95,6 +95,11 @@ CustomPage({
         chinese: '评分',
         navigateUrl: '/pages/rate/rate'
       },
+      {
+        name: 'leftSlider',
+        chinese: '左滑容器',
+        navigateUrl: '/pages/leftSlider/leftSlider'
+      },
     ]
   },
   nav(e){
