@@ -20,7 +20,8 @@
     "pages/popup/popup",
     "pages/flyToCart/flyToCart",
     "pages/rate/rate",
-    "pages/leftSlider/leftSlider"
+    "pages/leftSlider/leftSlider",
+    "pages/popupMenu/popupMenu"
 
   ],
   "window": {

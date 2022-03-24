@@ -1,4 +1,4 @@
-<view class="leftSlider" style="width: {{width}}px;height: {{height}}px;">
+<view class="d-leftSlider" style="width: {{width}}px;height: {{height}}px;">
     <movable-area style="width: {{width + subWidth}}px;height: {{height}}px;background-color:{{subBackgroundColor}};">
         <view class="sub" style="width: {{subWidth}}px; height: {{height}}px;background-color:{{subBackgroundColor}};">
             <slot name="sub"></slot>

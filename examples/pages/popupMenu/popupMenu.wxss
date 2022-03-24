@@ -1,0 +1,16 @@
+.d-list-for-example-n{
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  justify-content: center;
+}
+.d-list-for-example-n > text{
+  line-height: 40rpx;
+  padding-left: 20rpx;
+  color: #999;
+}
+
+.popup-li{
+  line-height: 60rpx;
+  padding-left: 40rpx;
+}

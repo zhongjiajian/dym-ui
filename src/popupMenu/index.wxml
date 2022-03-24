@@ -1,0 +1,17 @@
+<view class="d-popupMenu" wx:if="{{_show}}">
+	<view
+	 class="mask"
+	 style="background-color:{{maskBackgroundColor}};z-index:{{zIndex}};"
+	 catchtouchmove="maskTouchMove"
+	 catchtap="maskTap"
+	>
+	</view>
+	<view
+	 class="content"
+	 style="{{style}};z-index:{{zIndex}};width:{{width}}px;height:{{height}}px;left:{{left}};top:{{top}};"
+	 catchtouchmove="contentTouchMove"
+	>
+		<slot/>
+	</view>
+</view>
+

@@ -10,10 +10,24 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
   {
+    time: '2022-03-24',
+    version: '1.9.0',
+    des: [
+      'feat: 新增弹窗菜单组件popupMenu'
+    ]
+  },
+  {
     time: '2022-03-23',
     version: '1.8.0',
     des: [
-      'feat: 新增左滑容器组件'
+      'feat: 新增左滑容器组件leftSlider'
+    ]
+  },
+  {
+    time: '2021-06-22',
+    version: '1.6.0',
+    des: [
+      'feat: 新增评分组件rate'
     ]
   },
   {

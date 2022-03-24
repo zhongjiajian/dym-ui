@@ -130,6 +130,13 @@
           "name": "leftSlider",
           "pathName": "pages/leftSlider/leftSlider",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "popupMenu",
+          "pathName": "pages/popupMenu/popupMenu",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

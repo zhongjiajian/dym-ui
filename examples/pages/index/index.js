@@ -100,6 +100,11 @@ CustomPage({
         chinese: '左滑容器',
         navigateUrl: '/pages/leftSlider/leftSlider'
       },
+      {
+        name: 'popupMenu',
+        chinese: '弹窗菜单',
+        navigateUrl: '/pages/popupMenu/popupMenu'
+      },
     ]
   },
   nav(e){

@@ -6,7 +6,7 @@ Component({
   properties: {
     width: {
       type: Number,
-      value: _windowWidth
+      value: _windowWidth?_windowWidth:375
     },
     height: {
       type: Number,

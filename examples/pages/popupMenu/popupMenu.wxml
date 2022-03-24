@@ -1,0 +1,55 @@
+<pageCard pageName="leftSlider">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+  <exampleCard title="示例1" des='经常用于长摁列表弹出菜单'>
+
+    <d-list showArrow="{{false}}">
+      <view class="d-list-for-example-n" catchlongpress="onLongpress">
+        <text>《明月》</text>
+      </view>
+    </d-list>
+    <d-list showArrow="{{false}}">
+      <view class="d-list-for-example-n" catchlongpress="onLongpress">
+        <text>春风和和润风情，</text>
+      </view>
+    </d-list>
+    <d-list showArrow="{{false}}">
+      <view class="d-list-for-example-n" catchlongpress="onLongpress">
+        <text>一夜芳草离倦疲。</text>
+      </view>
+    </d-list>
+    <d-list showArrow="{{false}}">
+      <view class="d-list-for-example-n" catchlongpress="onLongpress">
+        <text>谁家春园无芳草，</text>
+      </view>
+    </d-list>
+    <d-list showArrow="{{false}}">
+      <view class="d-list-for-example-n" catchlongpress="onLongpress">
+        <text>何处轩窗无月明。</text>
+      </view>
+    </d-list>
+    <d-list showArrow="{{false}}">
+      <view class="d-list-for-example-n" catchlongpress="onLongpress">
+        <text style="white-space: pre-wrap;"> 作者：钟家建</text>
+      </view>
+    </d-list>
+    <space height="1000" />
+
+    <d-popupMenu class="popupMenu" style="border: 2rpx solid #ccc;">
+      <view>
+        <d-list showArrow="{{false}}" lineType = "left">
+         <view class="popup-li">好诗，💕</view>
+        </d-list>
+        <d-list showArrow="{{false}}" lineType = "left">
+          <view class="popup-li">哈~ 忒~</view>
+        </d-list>
+        <d-list showArrow="{{false}}" showLine="{{false}}" lineType = "left">
+          <view class="popup-li" catchtap="closePopup">关闭菜单</view>
+        </d-list>
+      </view>
+    </d-popupMenu>
+
+  </exampleCard>
+
+
+</pageCard>
