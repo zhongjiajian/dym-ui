@@ -105,6 +105,11 @@ CustomPage({
         chinese: '弹窗菜单',
         navigateUrl: '/pages/popupMenu/popupMenu'
       },
+      {
+        name: 'actionSheet',
+        chinese: '操作菜单',
+        navigateUrl: '/pages/actionSheet/actionSheet'
+      },
     ]
   },
   nav(e){

@@ -10,6 +10,13 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
   {
+    time: '2022-04-01',
+    version: '1.10.0',
+    des: [
+      'feat: 新增操作菜单组件actionSheet'
+    ]
+  },
+  {
     time: '2022-03-24',
     version: '1.9.0',
     des: [

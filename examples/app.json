@@ -21,7 +21,8 @@
     "pages/flyToCart/flyToCart",
     "pages/rate/rate",
     "pages/leftSlider/leftSlider",
-    "pages/popupMenu/popupMenu"
+    "pages/popupMenu/popupMenu",
+    "pages/actionSheet/actionSheet"
 
   ],
   "window": {

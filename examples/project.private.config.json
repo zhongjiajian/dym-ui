@@ -137,6 +137,13 @@
           "name": "popupMenu",
           "pathName": "pages/popupMenu/popupMenu",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "actionSheet",
+          "pathName": "pages/actionSheet/actionSheet",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

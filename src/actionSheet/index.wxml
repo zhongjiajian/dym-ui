@@ -1,0 +1,9 @@
+<view class="d-actionSheet" wx:if="{{show}}">
+    <view class="mask" style="opacity:{{show?1:0}};z-index:{{zIndex}};" catchtouchmove="maskTouchMove" catchtap="hide"></view>
+    <view class="content" style="z-index:{{zIndex}};" catchtouchmove="maskTouchMove">
+        <d-list wx:for="{{itemList}}" wx:key="index" showArrow="{{false}}" lineStyle="width: 100%;" showLine="{{index+1===itemList.length?false:true}}" data-index="{{index}}" catchtap="itemTap">
+            <view style="height:{{itemHeight}}rpx;color:{{itemColor}};" class="item">{{item}}</view>
+        </d-list>
+        <view wx:if="{{showCancel}}" class="cancel" catchtap="hide">{{cancelText}}</view>
+    </view>
+</view>
