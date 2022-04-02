@@ -2,7 +2,7 @@
 	<view
 	 class="mask"
 	 wx:if="{{showMask}}"
-	 style="opacity:{{show?1:0}};z-index:{{zIndex}};"
+	 style="opacity:{{show?1:0}};z-index:{{zIndex}};{{maskStyle}}"
 	 catchtouchmove="maskTouchMove"
 	 catchtap="tapMask"
 	>

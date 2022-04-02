@@ -1,23 +1,27 @@
 Component({
-    properties:{
-        show:{
-            type: Boolean,
-            value: false
-        },
-        showMask:{
-            type: Boolean,
-            value: true
-        },
-        zIndex:{
-            type: String,
-            optionalTypes: [Number],
-            value: 999996
-        },
+  properties:{
+    show:{
+      type: Boolean,
+      value: false
     },
-    methods:{
-        maskTouchMove(){},
-        tapMask(){
-            this.triggerEvent('tapMask');
-        }
+    showMask:{
+      type: Boolean,
+      value: true
+    },
+    maskStyle:{
+      type: String,
+      value: ''
+    },
+    zIndex:{
+      type: String,
+      optionalTypes: [Number],
+      value: 999996
+    },
+  },
+  methods:{
+    maskTouchMove(){},
+    tapMask(){
+      this.triggerEvent('tapMask');
     }
-})
+  }
+});
