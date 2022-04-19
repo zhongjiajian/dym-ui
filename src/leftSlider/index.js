@@ -33,6 +33,7 @@ Component({
       value: false,
       observer: function (newVal) {
         if (newVal) {
+          if(!this.data.x) this.triggerEvent('slideClose');
           this.setData({
             x: this.properties.subWidth
           },()=>{
@@ -78,6 +79,8 @@ Component({
       }else{ // 根据临界值判断关闭或打开
         if(!this.moveX) return;
         const crisis = this.properties.crisis;
+        if(this.data.x && this.moveX <= crisis) this.triggerEvent('slideOpen');
+        else if(!this.data.x && !(this.moveX <= crisis)) this.triggerEvent('slideClose');
         this.setData({
           x: this.moveX <= crisis ? 0 : this.properties.subWidth
         });

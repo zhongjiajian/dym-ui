@@ -3,7 +3,7 @@
   </exampleCard>
   <exampleCard title="示例1" des='width=200 \n height=30'>
     <view class="d-ec-c">
-      <d-leftSlider width="{{200}}" height="{{30}}" subWidth="{{50}}" bind:slideStart="onTouchStart" bind:slideEnd="onTouchEnd" bindchange="onTouchChange">
+      <d-leftSlider width="{{200}}" height="{{30}}" subWidth="{{50}}" bind:slideStart="onTouchStart" bind:slideEnd="onTouchEnd" bindchange="onTouchChange" bindslideOpen="onOpen" bindslideClose="onClose">
         <view slot="main" class="main">
           向左滑动我~main
         </view>

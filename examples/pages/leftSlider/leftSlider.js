@@ -16,6 +16,8 @@ CustomPage({
     bindslideStart (手指开始触摸滑块时触发)
     bindslideEnd (手指离开滑块时触发)
     bindchange (滑块位置变动时时触发)
+    bindslideOpen (滑块从关闭状态到完全打开时触发，需有状态变化)
+    bindslideClose (滑块从打开状态到完全关闭时触发，需有状态变化)
 
     插槽：
     slot = "main" (滑块容器内slot)
@@ -31,11 +33,17 @@ CustomPage({
     console.log('end.....',e)
   },
   onTouchChange(e) {
-    console.log('change',e)
+    // console.log('change',e)
   },
   close(){
     this.setData({
       close: true
     })
-  }
+  },
+  onOpen(){
+    console.log('bindslideOpen')
+  },
+  onClose(){
+    console.log('bindslideClose')
+  },
 });
