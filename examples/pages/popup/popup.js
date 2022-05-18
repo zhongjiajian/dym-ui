@@ -4,6 +4,7 @@ CustomPage({
     example1Des:`属性：
     show = true | false
     showMask = true | false
+    maskStyle = ''
     zIndex = 999996
     
     事件：

@@ -1,7 +1,7 @@
 <view
  wx:if="{{showMask}}"
  class="d-drawer-mask {{!disableAnimation && animation?'animation':''}}"
- style="z-index:{{zIndex}};transform: translate3d(0,{{show?0:'100%'}},0);opacity:{{translateY?(1-translateY/windowHeight):show?1:0}};"
+ style="z-index:{{zIndex}};transform: translate3d(0,{{show?0:'100%'}},0);opacity:{{translateY?(1-translateY/windowHeight):show?1:0}};background-color:{{maskBackgroundColor}};"
  catchtouchmove="maskTouchMove"
  catchtap="maskTap"
 >
@@ -13,7 +13,7 @@
  style="z-index: {{zIndex}};top:{{fixTop_inner}};background-color:{{backgroundColor}};transform: translate3d(0,{{translateY?translateY+'px':(show?0:'100%')}},0);"
 >
 	<view wx:if="{{title}}" class="header">
-		<text class="title" titleStyle="{{titleStyle}}">{{title}}</text>
+		<text class="title" style="{{titleStyle}}">{{title}}</text>
 
 		<view class="btns">
 			<view

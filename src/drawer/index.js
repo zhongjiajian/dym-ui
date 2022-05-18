@@ -71,6 +71,10 @@ Component({
       optionalTypes: [Number],
       value: '0'
     },
+    maskBackgroundColor: {
+      type: String,
+      value: 'rgba(0, 0, 0, 0.6)'
+    },
   },
   data: {
     windowHeight: 900,
