@@ -7,7 +7,7 @@ CustomPage({
     itemHeight = 80 (按钮的高度，rpx)
     cancelText = "取消" (取消按钮的文本)
     showCancel = true (是否显示取消按钮)
-    zIndex = "999996" (组件层级)
+    zIndex = "901" (组件层级)
 
     方法：
       show(Object object) (显示操作菜单)
@@ -32,7 +32,7 @@ CustomPage({
     this.actionSheetComponent.show({
       itemList:['星期一','星期二','星期三','星期四','星期五','星期六','星期天',],
       complete(res){
-        this.setData({errMsg: res})
+        this.setData({errMsg: res});
       }
     });
   }

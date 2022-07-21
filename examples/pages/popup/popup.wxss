@@ -1,5 +1,4 @@
 .popup-content{
-  z-index: 999996;
   background-color: #fff;
   width: 400rpx;
   line-height: 200rpx;

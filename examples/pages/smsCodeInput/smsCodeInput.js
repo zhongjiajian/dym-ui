@@ -23,7 +23,7 @@ CustomPage({
     password = true | false 
 
     键盘属性
-    keyboardZIndex = "999997" (键盘的定位层级)
+    keyboardZIndex = "901" (键盘的定位层级)
     keyboardFixBottom = "0" (键盘定位的bottom值，rpx)
     keyboardAnimation = true | false (键盘显示隐藏是否使用过度)
     adjustPosition = true | false (键盘弹起时，是否自动上推页面)
@@ -66,16 +66,16 @@ CustomPage({
       if (flag == i) {
         this.setData({
           [k]: true
-        })
+        });
       } else {
         this.setData({
           [k]: false
-        })
+        });
       }
     }
     this.setData({
       isShowKeyboard: true,
-    })
+    });
 
   },
   inputBlur(e) {
@@ -84,7 +84,7 @@ CustomPage({
     this.setData({
       isShowKeyboard: false,
       [k]: false
-    })
+    });
   },
 
 });

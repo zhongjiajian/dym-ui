@@ -5,7 +5,7 @@ CustomPage({
     width = 150 (弹窗宽度，px)
     height = 100 (弹窗的高度，px)
     style = '' (弹窗的样式)
-    zIndex = 999996 (层级)
+    zIndex = 901 (层级)
     maskBackgroundColor = 'transparent' (蒙层的背景色)
     closeTapMask = true|false （点击蒙层的时，是否关闭弹窗）
     

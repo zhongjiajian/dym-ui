@@ -8,7 +8,7 @@ CustomPage({
     backgroundColor = 'rgba(0,0,0,0.65)'
     text = ''（气泡文本）
     disableAnimation = true | false
-    zIndex = 999994 (定位层级)
+    zIndex = 1 (定位层级)
 
     时间：
     bindhidden (点击汽包隐藏时触发)
@@ -28,12 +28,12 @@ CustomPage({
   showOrHide(){
     this.setData({
       show1:!this.data.show1
-    })
+    });
   },
   changePlacement(e){
     console.log(e);
     this.setData({
       placement:e.currentTarget.dataset.placement
-    })
+    });
   }
 });

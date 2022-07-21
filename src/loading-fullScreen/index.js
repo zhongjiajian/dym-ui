@@ -14,7 +14,7 @@ Component({
     zIndex:{
       type: String,
       optionalTypes: [Number],
-      value: 999999
+      value: 1000
     }
   },
 
@@ -26,7 +26,7 @@ Component({
       }else{
         option = {
           show: true
-        }
+        };
       }
       this.setData(option);
     },
@@ -36,4 +36,4 @@ Component({
       });
     }
   }
-})
+});

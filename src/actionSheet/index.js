@@ -21,7 +21,7 @@ Component({
     zIndex: {
       type: String,
       optionalTypes: [Number],
-      value: 999996
+      value: 901
     },
   },
   data: {

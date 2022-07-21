@@ -5,18 +5,18 @@ import CustomPage from '../../utils/page';
 CustomPage({
   data:{
     imgs:[
-      "/images/mm.jpeg",
-      "/images/mm1.jpeg",
-      "/images/mm2.jpeg",
-      "/images/mm3.jpeg",
-      "/images/mm4.jpg",
-      "/images/mm5.jpg",
-      "/images/mm6.jpg",
-      "/images/mm7.jpg",
+      '/images/mm.jpeg',
+      '/images/mm1.jpeg',
+      '/images/mm2.jpeg',
+      '/images/mm3.jpeg',
+      '/images/mm4.jpg',
+      '/images/mm5.jpg',
+      '/images/mm6.jpg',
+      '/images/mm7.jpg',
     ],
     example1Des: `属性：
     show = true | false
-    zIndex = 999996
+    zIndex = 901
     fixTop = 64 || 64px || 50% (window顶部到组件顶部的距离，px，%)
     contentPositionTop = 116 (组件顶部到content顶部的距离，rpx)
     title = ""
@@ -45,27 +45,27 @@ CustomPage({
     tip：下拉可关闭`,
     drawerShow1: false,
     drawerShow2: false,
-    scrollTop: "0",
+    scrollTop: '0',
     
   },
   toogleDrawer1(){
-    this.setData({drawerShow1: !this.data.drawerShow1})
+    this.setData({drawerShow1: !this.data.drawerShow1});
   },
   cancel(){
     wx.showToast({
       icon: 'none',
       title: '点击了返回~',
-    })
+    });
 
   },
   confirm(){
     wx.showToast({
       icon: 'none',
       title: '点击了确定~',
-    })
+    });
   },
   toogleDrawer2(){
-    this.setData({drawerShow2: !this.data.drawerShow2})
+    this.setData({drawerShow2: !this.data.drawerShow2});
   },
 
  

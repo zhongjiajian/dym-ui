@@ -39,6 +39,11 @@ Component({
       optionalTypes: [String],
       value: 1
     },
+    zIndex: {
+      type: String,
+      optionalTypes: [Number],
+      value: 900
+    },
   },
   lifetimes: {
     created() {
@@ -94,7 +99,7 @@ Component({
           `margin-left:${rightDistance}px`
         ].join(';');
       } else {
-        navBarLeft = [`width:auto`, `margin-left:0px`].join(';');
+        navBarLeft = ['width:auto', 'margin-left:0px'].join(';');
       }
       this.setData({
         navigationbarinnerStyle,
@@ -185,39 +190,39 @@ Component({
     back() {
       this.triggerEvent('back');
 
-        wx.navigateBack({
-          delta: this.data.delta
-        })
+      wx.navigateBack({
+        delta: this.data.delta
+      })
         .catch(err=>console.log(err));
     },
     home() {
       this.triggerEvent('home');
       if (this.properties.homePagePath) {
         switch (this.properties.navToHomeType) {
-          case "switchTab":
-            wx.switchTab({
-              url: this.properties.homePagePath
-            })
+        case 'switchTab':
+          wx.switchTab({
+            url: this.properties.homePagePath
+          })
             .catch(err=>console.log(err));
-            break;
-          case "reLaunch":
-            wx.reLaunch({
-              url: this.properties.homePagePath
-            })
+          break;
+        case 'reLaunch':
+          wx.reLaunch({
+            url: this.properties.homePagePath
+          })
             .catch(err=>console.log(err));
-            break;
-          case "redirectTo":
-            wx.redirectTo({
-              url: this.properties.homePagePath
-            })
+          break;
+        case 'redirectTo':
+          wx.redirectTo({
+            url: this.properties.homePagePath
+          })
             .catch(err=>console.log(err));
-            break;
-          case "navigateTo":
-            wx.navigateTo({
-              url: this.properties.homePagePath
-            })
+          break;
+        case 'navigateTo':
+          wx.navigateTo({
+            url: this.properties.homePagePath
+          })
             .catch(err=>console.log(err));
-            break;
+          break;
         }
       }
 

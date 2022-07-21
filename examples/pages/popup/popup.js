@@ -5,7 +5,7 @@ CustomPage({
     show = true | false
     showMask = true | false
     maskStyle = ''
-    zIndex = 999996
+    zIndex = 901
     
     事件：
     tapMask（点击蒙层时触发）`,
@@ -14,13 +14,13 @@ CustomPage({
   toggle(){
     this.setData({
       show: !this.data.show
-    })
+    });
   },
   tapMask(){
     this.toggle();
     this.selectComponent('.d-toast').show({
-      title: "you clicked the mask",
+      title: 'you clicked the mask',
       mask: false
-    })
+    });
   }
 });

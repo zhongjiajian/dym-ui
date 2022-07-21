@@ -1,6 +1,6 @@
 <view class="d-nav-bar" style="background: {{backgroundColorTop}};height: {{navBarHeight + navBarExtendHeight}}px;">
-	<view class="d-nav-bar__placeholder {{ios ? 'ios' : 'android'}}" style="background-color:{{backgroundColor}};height: {{navBarHeight + navBarExtendHeight}}px;visibility: hidden;"></view>
-	<view class="d-nav-bar__inner {{ios ? 'ios' : 'android'}}" style="background-color:{{backgroundColor}};{{navigationbarinnerStyle}}">
+	<view class="d-nav-bar__placeholder {{ios ? 'ios' : 'android'}}" style="background-color:{{backgroundColor}};height: {{navBarHeight + navBarExtendHeight}}px;z-index:{{zIndex}};visibility: hidden;"></view>
+	<view class="d-nav-bar__inner {{ios ? 'ios' : 'android'}}" style="background-color:{{backgroundColor}};z-index:{{zIndex}};{{navigationbarinnerStyle}}">
 
 		<view class='d-nav-bar__left' style="{{navBarLeft}}">
 			<block wx:if="{{back&&!home}}">

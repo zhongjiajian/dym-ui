@@ -4,7 +4,7 @@
     <d-icon name="{{paneShrink?'arrow_drop_down':'arrow_right'}}" />
     <text class="d-ex-t">{{title}}</text>
   </view>
-  <text user-select selectable wx:if="{{des}}" class="d-ex-des {{paneShrink?'shrink':''}}">{{des}}</text>
+  <text user-select user-select wx:if="{{des}}" class="d-ex-des {{paneShrink?'shrink':''}}">{{des}}</text>
   <view class="d-ex-s-w {{paneShrink?'shrink':''}}" >
     <slot />
   </view>

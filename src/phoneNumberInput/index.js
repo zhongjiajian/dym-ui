@@ -7,12 +7,12 @@ Component({
     },
     value: {
       type: String,
-      value: ""
+      value: ''
     },
     height: {
       type: String,
       optionalTypes: [Number],
-      value: "98"
+      value: '98'
     },
 
     clear: {
@@ -54,7 +54,7 @@ Component({
     keyboardZIndex: {
       type: String,
       optionalTypes: [Number],
-      value: 999997
+      value: 901
     },
     keyboardFixBottom: {
       type: String,
@@ -80,20 +80,20 @@ Component({
   },
   lifetimes: {
     created() {
-        wx.getSystemInfo({
-            success: (result) => {
-                this.windowHeight = result.windowHeight;
-            }
-        });
+      wx.getSystemInfo({
+        success: (result) => {
+          this.windowHeight = result.windowHeight;
+        }
+      });
 
     },
    
     ready() {
-        wx.createSelectorQuery().in(this).select('#d-keybord-1611026643897').boundingClientRect(rect => {
-            this.data.keyboardHeight = rect.height;
-        }).exec();
+      wx.createSelectorQuery().in(this).select('#d-keybord-1611026643897').boundingClientRect(rect => {
+        this.data.keyboardHeight = rect.height;
+      }).exec();
     }
-},
+  },
   observers: {
     value: function (val) {
       if (val.length > 11) {
@@ -119,22 +119,22 @@ Component({
       if (typeofIt(teo) != 'object') return;
       if (!Object.keys(teo).length) return;
       wx.createSelectorQuery().in(this).select('.d-phone-number-input').boundingClientRect(rect => {
-          // 触发元素底部位于指定位置的下方则页面上推
-          const triggerRect = rect;
-          const adjustHeight = this.windowHeight - this.data.keyboardHeight - this.properties.cursorSpacing;
-          if (adjustHeight < triggerRect.bottom) {
-              const scrollTop = triggerRect.height + this.properties.cursorSpacing + teo.currentTarget.offsetTop - (this.windowHeight - this.data.keyboardHeight)
-              wx.pageScrollTo({
-                  scrollTop: scrollTop,
-                  duration: 200
-              })
-          }
+        // 触发元素底部位于指定位置的下方则页面上推
+        const triggerRect = rect;
+        const adjustHeight = this.windowHeight - this.data.keyboardHeight - this.properties.cursorSpacing;
+        if (adjustHeight < triggerRect.bottom) {
+          const scrollTop = triggerRect.height + this.properties.cursorSpacing + teo.currentTarget.offsetTop - (this.windowHeight - this.data.keyboardHeight);
+          wx.pageScrollTo({
+            scrollTop: scrollTop,
+            duration: 200
+          });
+        }
 
       }).exec();
-  },
+    },
     addInput(e) {
       if (this.properties.value.length >= 11) return;
-      let value = this.properties.value + e.detail.value
+      let value = this.properties.value + e.detail.value;
       this.setData({
         value
       });
@@ -142,7 +142,7 @@ Component({
     },
     deleteInput(e) {
       if (!this.properties.value.length) return;
-      let value = this.properties.value.slice(0, -1)
+      let value = this.properties.value.slice(0, -1);
       this.setData({
         value
       });
@@ -156,10 +156,10 @@ Component({
     },
     clear() {
       this.setData({
-        value: ""
+        value: ''
       });
       this.triggerEvent('input', '');
       this.triggerEvent('focus');
     }
   },
-})
+});

@@ -10,7 +10,7 @@ Component({
     zIndex:{
       type: String,
       optionalTypes: [Number],
-      value: 999999
+      value: 1000
     },
     duration:{
       type:Number,
@@ -30,7 +30,7 @@ Component({
       }else{
         option = {
           show: true
-        }
+        };
       }
       let duration = this.properties.duration;
       if(typeofIt(option.duration) === 'number'){
@@ -39,7 +39,7 @@ Component({
       if(this.timer){
         clearTimeout(this.timer);
       }
-      this.timer = setTimeout(()=>{this.hide()},duration);
+      this.timer = setTimeout(()=>{this.hide();},duration);
       this.setData(option);
     },
     hide(){
@@ -51,4 +51,4 @@ Component({
       });
     }
   }
-})
+});
