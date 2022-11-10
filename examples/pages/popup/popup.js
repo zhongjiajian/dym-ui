@@ -1,26 +1,27 @@
 import CustomPage from '../../utils/page';
 CustomPage({
-  data:{
-    example1Des:`属性：
+  data: {
+    example1Des: `属性：
     show = true | false
     showMask = true | false
     maskStyle = ''
+    customStyle = ''
     zIndex = 901
     
     事件：
     tapMask（点击蒙层时触发）`,
-    show:false
+    show: false,
   },
-  toggle(){
+  toggle() {
     this.setData({
-      show: !this.data.show
+      show: !this.data.show,
     });
   },
-  tapMask(){
+  tapMask() {
     this.toggle();
-    this.selectComponent('.d-toast').show({
-      title: 'you clicked the mask',
-      mask: false
+    this.selectComponent(".d-toast").show({
+      title: "you clicked the mask",
+      mask: false,
     });
-  }
+  },
 });

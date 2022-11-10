@@ -9,7 +9,7 @@
 	</view>
 	<view
 	 class="content"
-	 style="z-index:{{zIndex}};"
+	 style="z-index:{{zIndex}};{{customStyle}}"
 	 catchtouchmove="maskTouchMove"
 	>
 		<slot/>

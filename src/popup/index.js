@@ -17,6 +17,10 @@ Component({
       optionalTypes: [Number],
       value: 901
     },
+    customStyle:{
+      type: String,
+      value: ''
+    },
   },
   methods:{
     maskTouchMove(){},
