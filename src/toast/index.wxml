@@ -1,6 +1,6 @@
 <view class="d-toast" wx:if="{{show}}">
 	<view class="content" style="z-index:{{zIndex - 1}};">
-		<text class="title">{{title}}</text>
+		<text class="title" style="{{customStyle}}">{{title}}</text>
 	</view>
 	<view
 	 wx:if="{{mask}}"

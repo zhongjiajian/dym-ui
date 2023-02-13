@@ -7,6 +7,6 @@
     <d-button catchtap="hideToast">hide toast</d-button>
 
   </exampleCard>
- 
+
 </pageCard>
 <d-toast class="d-toast" />

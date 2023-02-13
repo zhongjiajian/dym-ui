@@ -16,6 +16,11 @@ Component({
       type:Number,
       optionalTypes:[String],
       value:1500
+    },
+    customStyle:{
+      type: String,
+      value:'',
+
     }
   },
   data: {
