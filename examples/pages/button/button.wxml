@@ -1,23 +1,23 @@
 <pageCard pageName="button">
   <exampleCard title="示例" des='{{example1Des}}'>
-      <d-button>按钮</d-button>
+    <d-button>按钮</d-button>
   </exampleCard>
   <exampleCard title="拓展class" des='{{example2Des}}'>
-      <d-button  custom-class="my-button-class" textColor="#00A19C">按钮</d-button>
+    <d-button custom-class="my-button-class" textColor="#00A19C">按钮</d-button>
   </exampleCard>
   <exampleCard title="自定义hover样式(isCustomHoverClass + d-hover-class)" des='{{example3Des}}'>
-      <d-button custom-class="my-button-class" isCustomHoverClass d-hover-class="d-button-hover-class"  textColor="#00A19C">按钮</d-button>
+    <d-button custom-class="my-button-class" isCustomHoverClass d-hover-class="d-button-hover-class" textColor="#00A19C">按钮</d-button>
   </exampleCard>
   <exampleCard title="加载按钮" des='loading = true | false'>
-      <d-button loading="{{loading}}" catchtap="loading">{{loading?'加载中':'按钮'}}</d-button>
+    <d-button loading="{{loading}}" catchtap="loading">{{loading?'加载中':'按钮'}}</d-button>
   </exampleCard>
   <exampleCard title="加载按钮示例" des='{{example4Des}}'>
-      <d-button custom-class="my-button-class" isCustomHoverClass d-hover-class="d-button-hover-class"  textColor="#00A19C" loading="{{loadingEg}}" loadingSize="40" catchtap="loadingOne" disabled="{{loadingEgDisabled}}">{{loadingEg?'加载中':'按钮'}}</d-button>
+    <d-button custom-class="my-button-class" isCustomHoverClass d-hover-class="d-button-hover-class" textColor="#00A19C" loading="{{loadingEg}}" loadingSize="40" catchtap="loadingOne" disabled="{{loadingEgDisabled}}">{{loadingEg?'加载中':'按钮'}}</d-button>
   </exampleCard>
   <exampleCard title="带图标" des='属性：icon iconSize'>
-      <d-button icon="logout">退出登录</d-button>
+    <d-button icon="logout">退出登录</d-button>
   </exampleCard>
   <exampleCard title="带图标示例" des='{{example5Des}}'>
-      <d-button custom-class="" icon="{{logoutIcon}}"   textColor="#00A19C" loading="{{logouting}}" catchtap="logout">退出登录</d-button>
+    <d-button custom-class="" icon="{{logoutIcon}}" textColor="#00A19C" loading="{{logouting}}" catchtap="logout">退出登录</d-button>
   </exampleCard>
 </pageCard>

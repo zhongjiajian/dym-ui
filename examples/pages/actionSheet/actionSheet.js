@@ -1,16 +1,17 @@
-import CustomPage from '../../utils/page';
+import CustomPage from "../../utils/page";
 CustomPage({
   data: {
-
     example1Des: `属性：
-    itemColor = "#000000" (按钮文字的颜色)
-    itemHeight = 80 (按钮的高度，rpx)
+    sheetHeight = '' (整个列表的高度，用于实现动画)
+    itemStyle = "" (按钮样式)
+    lineStyle = "" (分割线样式)
     cancelText = "取消" (取消按钮的文本)
+    cancelStyle = "" (取消按钮样式)
     showCancel = true (是否显示取消按钮)
     zIndex = "901" (组件层级)
 
     方法：
-      show(Object object) (显示操作菜单)
+      show(Object object) (显示操作菜单，支持promise)
       参数
       Object object
       属性	    |  类型	           | 必填	| 说明
@@ -24,17 +25,29 @@ CustomPage({
       Object res
       属性	 	   |	 类型		 |	   说明
       tapIndex	|		number	|		点击的按钮序号，从上到下从0开始
-    `
-
+    `,
   },
-  show(){
-    if(!this.actionSheetComponent) this.actionSheetComponent = this.selectComponent('.d-action-sheet');
-    this.actionSheetComponent.show({
-      itemList:['星期一','星期二','星期三','星期四','星期五','星期六','星期天',],
-      complete(res){
-        this.setData({errMsg: res});
-      }
-    });
-  }
-
+  async show() {
+    if (!this.actionSheetComponent)
+      this.actionSheetComponent = this.selectComponent(".d-action-sheet");
+    try {
+      const res = await this.actionSheetComponent.show({
+        itemList: [
+          "星期一",
+          "星期二",
+          "星期三",
+          "星期四",
+          "星期五",
+          "星期六",
+          "星期天",
+        ],
+        complete(res) {
+          console.log("conplte callback", res);
+        },
+      });
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  },
 });

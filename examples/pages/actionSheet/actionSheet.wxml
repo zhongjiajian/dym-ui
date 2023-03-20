@@ -3,10 +3,10 @@
   </exampleCard>
 
   <exampleCard title="示例" des=''>
-      <d-button catchtap="show">显示</d-button>
+    <d-button catchtap="show">显示</d-button>
   </exampleCard>
- 
+
 </pageCard>
 
 
-<d-actionSheet class="d-action-sheet" />
+<d-actionSheet class="d-action-sheet" sheetHeight="672rpx" />

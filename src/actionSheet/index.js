@@ -1,18 +1,24 @@
 Component({
-
   properties: {
-    itemColor: {
+    sheetHeight: {
       type: String,
-      value: '#000000'
+      value: ''
     },
-    itemHeight: {
-      type: Number,
-      optionalTypes: [String],
-      value: 80
+    itemStyle: {
+      type: String,
+      value: ''
+    },
+    lineStyle: {
+      type: String,
+      value: ''
     },
     cancelText: {
       type: String,
       value: '取消'
+    },
+    cancelStyle: {
+      type: String,
+      value: ''
     },
     showCancel: {
       type: Boolean,
@@ -37,33 +43,79 @@ Component({
       //     fail,
       //     complete,
       // }
-      const itemList = object.itemList;
-      if (!itemList || !Array.isArray(itemList) || !itemList.length) return;
-      this.setData({
-        show: true,
-        itemList
+      return new Promise((resolve, reject) => {
+        const itemList = object.itemList;
+        this.promiseResolve = resolve;
+        this.promiseReject = reject;
+
+        if (!itemList || !Array.isArray(itemList) || !itemList.length) {
+          object.fail && object.fail({
+            errMsg: 'error',
+          });
+          object.complete && object.complete({
+            errMsg: 'error',
+          });
+          reject({
+            errMsg: 'error',
+          });
+          return;
+        }
+        this.setData({
+          show: true,
+          itemList
+        });
+        this.success = object.success;
+        this.fail = object.fail;
+        this.complete = object.complete;
+        this.animate('#d-actionSheet .mask', [
+          { offset: 0, opacity: 0, },
+          { offset: 1, opacity: 1, ease: 'ease-out' },
+        ], 400, () => {
+          this.clearAnimation('#d-actionSheet', {});
+        });
+        if (this.properties.sheetHeight) {
+          this.animate('#d-actionSheet .content', [
+            { offset: 0, height: 0, opacity: 1 },
+            { offset: 1, height: this.properties.sheetHeight, ease: 'ease-out' },
+          ], 400, () => {
+            this.clearAnimation('#d-actionSheet', {});
+          });
+        } else {
+          this.animate('#d-actionSheet .content', [
+            { offset: 0, height: 'auto', opacity: 0, },
+            { offset: 1, opacity: 1, ease: 'ease-out' },
+          ], 400, () => {
+            this.clearAnimation('#d-actionSheet', {});
+          });
+        }
+
       });
-      this.success = object.success;
-      this.fail = object.fail;
-      this.complete = object.complete;
+
     },
     hide() {
       this.setData({ show: false });
       this.fail && this.fail({
-        errMsg:'cancel',
+        errMsg: 'cancel',
       });
       this.complete && this.complete({
-        errMsg:'cancel',
+        errMsg: 'cancel',
+      });
+      this.promiseReject({
+        errMsg: 'cancel',
       });
     },
-    itemTap(e){
+    itemTap(e) {
       this.setData({ show: false });
       this.success && this.success({
-        errMsg:'ok',
+        errMsg: 'ok',
         tapIndex: e.currentTarget.dataset.index
       });
       this.complete && this.complete({
-        errMsg:'ok',
+        errMsg: 'ok',
+        tapIndex: e.currentTarget.dataset.index
+      });
+      this.promiseResolve({
+        errMsg: 'ok',
         tapIndex: e.currentTarget.dataset.index
       });
     }

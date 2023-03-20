@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 Component({
     externalClasses: [
         'd-hover-class',
@@ -8,7 +9,7 @@ Component({
             type: Boolean,
             value: false
         },
-        textColor:{
+        textColor: {
             type: String,
             value: '#000'
         },
@@ -25,7 +26,7 @@ Component({
             type: String,
             value: ''
         },
- 
+
         iconSize: {
             type: String,
             optionalTypes: [Number],
@@ -49,6 +50,5 @@ Component({
             type: Boolean,
             value: false
         },
-
-    }
-})
+    },
+});

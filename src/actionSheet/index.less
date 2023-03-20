@@ -1,31 +1,37 @@
-.d-actionSheet{
-    .mask{
-        background: rgba(0, 0, 0, 0.6);
+.d-actionSheet {
+
+    .mask {
+        background: rgba(0, 0, 0, 0.45);
         position: fixed;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
-        will-change: opacity;
-        transition: opacity 0.9s cubic-bezier(0.075, 0.680, 0.175, 0.970);
+        opacity: 0;
     }
-    .content{
+
+    .content {
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #999;
+        background-color: #ddd;
         border-radius: 30rpx 30rpx 0 0;
         overflow: hidden;
+        height: 0;
+        opacity: 0;
 
-        .item{
+        .item {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 14px;
             background-color: #fff;
+            height: 80rpx;
+            overflow: hidden;
         }
-        .cancel{
+
+        .cancel {
             display: flex;
             justify-content: center;
             align-items: center;
