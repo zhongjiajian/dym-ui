@@ -12,9 +12,7 @@ CustomPage({
   },
   showToast() {
     this.selectComponent(".d-toast").show({
-      title:
-        // "去年今日此门中，人面桃花相映红。\n人面不知何处去，桃花依旧笑春风。",
-        "该车辆已有2个待提货运单24230210490948,24230210376323，无法接单！",
+      title: "庵中不见庵前物，\n水自茫茫花自红。",
     });
   },
   hideToast() {

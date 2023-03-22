@@ -39,7 +39,6 @@ Component({
         { offset: 0, scaleX: 0, scaleY: 0, translateX: '-50%', translateY: '-50%', transformOrigin: '0% 0%' },
         { offset: 1, scaleX: 1, scaleY: 1, translateX: '-50%', translateY: '-50%', transformOrigin: '0% 0%', ease: 'ease-out' },
       ], 300);
-
     },
     animateHide(callback) {
       this.animate('.d-popup .mask', [

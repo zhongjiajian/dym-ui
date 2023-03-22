@@ -36,14 +36,14 @@
     <space height="1000" />
 
     <d-popupMenu class="popupMenu" style="border: 2rpx solid #ccc;">
-      <view>
-        <d-list showArrow="{{false}}" lineType = "left">
-         <view class="popup-li">好诗，💕</view>
+      <view class="menu-list">
+        <d-list showArrow="{{false}}" lineType="left">
+          <view class="popup-li">好诗，💕</view>
         </d-list>
-        <d-list showArrow="{{false}}" lineType = "left">
+        <d-list showArrow="{{false}}" lineType="left">
           <view class="popup-li">哈~ 忒~</view>
         </d-list>
-        <d-list showArrow="{{false}}" showLine="{{false}}" lineType = "left">
+        <d-list showArrow="{{false}}" showLine="{{false}}" lineType="left">
           <view class="popup-li" catchtap="closePopup">关闭菜单</view>
         </d-list>
       </view>

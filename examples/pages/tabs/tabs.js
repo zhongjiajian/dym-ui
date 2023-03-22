@@ -1,7 +1,7 @@
-import CustomPage from '../../utils/page';
+import CustomPage from "../../utils/page";
 CustomPage({
-  data:{
-    example1Des:`tabs组件属性：
+  data: {
+    example1Des: `tabs组件属性：
     tabs = [] (选项卡的标题数组)
     tabsScrollable = true | false (选项卡是否可滚动)
     tabsBackgroundColor = "#00A19C" (选项卡的背景色)
@@ -36,33 +36,42 @@ CustomPage({
       index: 1
     })`,
 
-    tabs1: ['微信', '通讯录', '发现', '我', '附近的人和直播', '朋友圈', '小程序', '视频号'],
-    tabs2: ['微信', '通讯录', '发现',],
-    active: 0,
-    tabsPanelStyle: 'height: 150rpx'
+    tabs1: [
+      "微信",
+      "通讯录",
+      "发现",
+      "我",
+      "附近的人和直播",
+      "朋友圈",
+      "小程序",
+      "视频号",
+    ],
+    tabs2: ["微信", "通讯录", "发现"],
+    active: 2,
+    tabsPanelStyle: "height: 150rpx",
   },
-  changeTab(e){
+  changeTab(e) {
     console.log(e);
   },
-  onLoad(){
+  onLoad() {
     this.showBadge();
   },
-  showBadge(){
-    this.selectAllComponents('.tabs').forEach(component=>{
+  showBadge() {
+    this.selectAllComponents(".tabs").forEach((component) => {
       component.showBadge({
         index: 1,
         placement: "right-top",
         content: "99+",
         isDot: false,
-        style:""
+        style: "",
       });
     });
   },
-  hideBadge(){
-    this.selectAllComponents('.tabs').forEach(component=>{
+  hideBadge() {
+    this.selectAllComponents(".tabs").forEach((component) => {
       component.hideBadge({
-        index:1
+        index: 1,
       });
     });
-  }
+  },
 });

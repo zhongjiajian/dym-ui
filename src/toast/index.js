@@ -3,23 +3,23 @@ Component({
 
   properties: {
     title: String,
-    mask:{
-      type:Boolean,
-      value:false
+    mask: {
+      type: Boolean,
+      value: false
     },
-    zIndex:{
+    zIndex: {
       type: String,
       optionalTypes: [Number],
       value: 1000
     },
-    duration:{
-      type:Number,
-      optionalTypes:[String],
-      value:1500
+    duration: {
+      type: Number,
+      optionalTypes: [String],
+      value: 1500
     },
-    customStyle:{
+    customStyle: {
       type: String,
-      value:'',
+      value: '',
 
     }
   },
@@ -28,31 +28,32 @@ Component({
   },
 
   methods: {
-    catchtouchmove(){},
-    show(option){
-      if(typeofIt(option) === 'object'){
+    catchtouchmove() { },
+    show(option) {
+      if (typeofIt(option) === 'object') {
         option.show = true;
-      }else{
+      } else {
         option = {
           show: true
         };
       }
       let duration = this.properties.duration;
-      if(typeofIt(option.duration) === 'number'){
+      if (typeofIt(option.duration) === 'number') {
         duration = option.duration;
       }
-      if(this.timer){
+      if (this.timer) {
         clearTimeout(this.timer);
       }
-      this.timer = setTimeout(()=>{this.hide();},duration);
+
+      this.timer = setTimeout(() => { this.hide(); }, duration);
       this.setData(option);
     },
-    hide(){
-      if(this.timer){
+    hide() {
+      if (this.timer) {
         clearTimeout(this.timer);
       }
       this.setData({
-        show:false
+        show: false
       });
     }
   }
