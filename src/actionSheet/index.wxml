@@ -1,4 +1,4 @@
-<view class="d-actionSheet" wx:if="{{show}}" id="d-actionSheet">
+<view class="d-actionSheet" wx:if="{{show}}">
     <view class="mask" style="z-index:{{zIndex}};" catchtouchmove="maskTouchMove" catchtap="hide"></view>
     <view class="content" style="z-index:{{zIndex}};" catchtouchmove="maskTouchMove">
         <d-list wx:for="{{itemList}}" wx:key="index" showArrow="{{false}}" lineStyle="width: 100%;{{lineStyle}}" showLine="{{index+1===itemList.length?false:true}}" data-index="{{index}}" catchtap="itemTap">

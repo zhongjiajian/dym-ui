@@ -1,4 +1,4 @@
-import CustomPage from '../../utils/page';
+import CustomPage from "../../utils/page";
 CustomPage({
   data: {
     example1Des: `属性：
@@ -19,9 +19,9 @@ CustomPage({
   },
   tapMask() {
     this.toggle();
-    this.selectComponent(".d-toast").show({
-      title: "you clicked the mask",
-      mask: false,
-    });
+    // this.selectComponent(".d-toast").show({
+    //   title: "you clicked the mask",
+    //   mask: false,
+    // });
   },
 });

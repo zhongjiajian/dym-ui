@@ -1,5 +1,6 @@
+/* eslint-disable indent */
 Component({
-    externalClasses:[
+    externalClasses: [
         'd-hover-class'
     ],
     properties: {
@@ -15,14 +16,14 @@ Component({
             type: String,
             value: ''
         },
-        showArrow:{
+        showArrow: {
             type: Boolean,
             value: true
         },
-        disabledHover:{
+        disabledHover: {
             type: Boolean,
             value: false
         }
     },
 
-})
+});

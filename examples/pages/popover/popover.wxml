@@ -15,7 +15,7 @@
         <d-button size="mini" catchtap="changePlacement" data-placement="top-end">上右</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="bottom-start">下左</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="bottom">下边</d-button>
-        <d-button size="mini" catchtap="changePlacement" data-placement="bottom-end" >下右</d-button>
+        <d-button size="mini" catchtap="changePlacement" data-placement="bottom-end">下右</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="left-start">左上</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="left">左边</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="left-end">左下</d-button>
@@ -32,7 +32,7 @@
         <view slot="content">
           <view class="popover-slot-content">
             <text>你确定吗？</text>
-            <d-button size="mini" type="primary">确定</d-button>         
+            <d-button size="mini" type="primary">确定</d-button>
           </view>
         </view>
         <text>hello popover</text>

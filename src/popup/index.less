@@ -1,18 +1,21 @@
-.d-popup{
-    .mask{
-        background: rgba(0, 0, 0, 0.6);
+.d-popup {
+    .mask {
+        background: rgba(0, 0, 0, 0.45);
         position: fixed;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
-        will-change: opacity;
-        transition: opacity 0.9s cubic-bezier(0.075, 0.680, 0.175, 0.970);
+        // will-change: opacity;
+        // transition: opacity 0.9s cubic-bezier(0.075, 0.680, 0.175, 0.970);
+        opacity: 0
     }
-    .content{
+
+    .content {
         position: fixed;
         left: 50%;
         top: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: scaleX(0) scaleY(0);
+        // transform-origin: 0% 0%;
     }
 }

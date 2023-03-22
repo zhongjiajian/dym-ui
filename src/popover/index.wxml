@@ -1,16 +1,10 @@
 <view class="d-popover">
-	<view
-	 wx:if="{{show}}"
-	 class="d-popover-self custom-class {{placement}} {{disableAnimation?'':'animation'}}"
-	 style="background-color:{{backgroundColor}};opacity:{{opacity}};z-index:{{zIndex}};"
-	 catchtap="hidePopover"
-	>
-		<view class="arrow {{mainPlacement}}" style="border-{{mainPlacement}}-color:{{backgroundColor}};{{subOffsetStyle}}"></view>
-		<text wx:if="{{text}}" class="text">{{text}}</text>
-		<slot wx:else name="content" />
-	</view>
-	<view class="d-popover-slot-wrap">
-		<slot/>
-	</view>
+				<view wx:if="{{_show}}" class="d-popover-self custom-class {{placement}} {{disableAnimation?'':'animation'}}" style="background-color:{{backgroundColor}};z-index:{{zIndex}};" catchtap="_hidePopover">
+								<view class="arrow {{mainPlacement}}" style="border-{{mainPlacement}}-color:{{backgroundColor}};{{subOffsetStyle}}"></view>
+								<text wx:if="{{text}}" class="text">{{text}}</text>
+								<slot wx:else name="content" />
+				</view>
+				<view class="d-popover-slot-wrap">
+								<slot />
+				</view>
 </view>
-

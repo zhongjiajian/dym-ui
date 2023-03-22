@@ -1,103 +1,122 @@
-:host{
+:host {
     display: inline-block;
     font-size: 0;
 }
-.d-popover{
+
+.d-popover {
     position: relative;
     display: inline-block;
 }
-.d-popover-self{
+
+.d-popover-self {
     position: absolute;
     border-radius: 8rpx;
 }
-.d-popover-self .text{
+
+.d-popover-self.animation {
+    opacity: 0;
+}
+
+.d-popover-self .text {
     display: inline-block;
     font-size: 12px;
     color: #fff;
     padding: 16rpx 32rpx;
     white-space: nowrap;
 }
-.d-popover-self.animation{
-    transition: opacity 1.2s cubic-bezier(0.075, 0.680, 0.175, 0.970);
-}
-.d-popover-slot-wrap{
+
+
+.d-popover-slot-wrap {
     width: fit-content;
     font-size: 0;
 }
 
 
 
-.d-popover-self.top{
+.d-popover-self.top {
     bottom: calc(100% + 5px);
     left: 50%;
     transform: translateX(-50%);
 }
-.d-popover-self.top-start{
+
+.d-popover-self.top-start {
     bottom: calc(100% + 5px);
     left: 0;
 }
-.d-popover-self.top-end{
+
+.d-popover-self.top-end {
     bottom: calc(100% + 5px);
     right: 0;
 }
 
 
-.d-popover-self.right{
+.d-popover-self.right {
     left: calc(100% + 5px);
     top: 50%;
     transform: translateY(-50%);
 }
-.d-popover-self.right-start{
+
+.d-popover-self.right-start {
     left: calc(100% + 5px);
     top: 0;
 }
-.d-popover-self.right-end{
+
+.d-popover-self.right-end {
     left: calc(100% + 5px);
     bottom: 0;
 }
 
-.d-popover-self.bottom{
+.d-popover-self.bottom {
     top: calc(100% + 5px);
     left: 50%;
     transform: translateX(-50%);
 }
-.d-popover-self.bottom-start{
+
+.d-popover-self.bottom-start {
     top: calc(100% + 5px);
     left: 0;
 }
-.d-popover-self.bottom-end{
+
+.d-popover-self.bottom-end {
     top: calc(100% + 5px);
     right: 0;
 }
 
-.d-popover-self.left{
+.d-popover-self.left {
     right: calc(100% + 5px);
     top: 50%;
     transform: translateY(-50%);
 }
-.d-popover-self.left-start{
+
+.d-popover-self.left-start {
     right: calc(100% + 5px);
     top: 0;
 }
-.d-popover-self.left-end{
+
+.d-popover-self.left-end {
     right: calc(100% + 5px);
     bottom: 0;
 }
-.arrow{
+
+.arrow {
     width: 0;
     height: 0;
-    border:5px solid transparent;
+    border: 5px solid transparent;
     position: absolute;
 }
-.arrow.top{
+
+.arrow.top {
     top: 100%;
 }
-.arrow.right{
+
+.arrow.right {
     right: 100%;
 }
-.arrow.bottom{
+
+.arrow.bottom {
     bottom: 100%;
 }
-.arrow.left{
+
+.arrow.left {
     left: 100%;
 }

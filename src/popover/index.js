@@ -38,14 +38,14 @@ Component({
     }
   },
   data: {
+    _show: false,
     mainPlacement: 'top',
     subOffsetStyle: '',
-    opacity: 0
   },
-  
+
   methods: {
     initComponent() {
-  
+
       Promise.all([this._getPopoverRect(), this._getPopoverSlotRect()])
         .then(res => {
           this._setSubOffsetStyle(res[0].width, res[0].height, res[1].width, res[1].height);
@@ -76,7 +76,7 @@ Component({
       if ((p.startsWith('left') || p.startsWith('right')) && (ph <= h)) {
         this.setData({
           subOffsetStyle: 'top:50%;transform:translateY(-50%);'
-  
+
         });
         return;
       }
@@ -106,32 +106,69 @@ Component({
         });
       }
     },
-    hidePopover() {
-      if (!this.properties.disabled && this.properties.show) {
-        this.setData({
-          show: false
-        });
-        this.triggerEvent('hidden');
+    _hidePopover() {
+      if (!this.properties.disabled && this.properties._show) {
+        const callback = () => {
+          this.setData({
+            show: false,
+            _show: false,
+          });
+          this.triggerEvent('hidden');
+        };
+        if (!this.properties.disableAnimation) {
+          this.animateHide(callback);
+        } else {
+          callback();
+        }
       }
+    },
+    animateHide(callback) {
+      this.animate('.d-popover .d-popover-self', [
+        { offset: 0, opacity: 1, },
+        { offset: 1, opacity: 0, ease: 'ease-out' },
+      ], 400, callback.bind(this));
     }
   },
   observers: {
     placement(val) {
       wx.nextTick(() => {
-        if(this.properties.show) this.initComponent();
+        if (this.properties.show) this.initComponent();
         this.setData({
           mainPlacement: val.split('-')[0]
         });
       });
     },
-    show(val,old) {
-      wx.nextTick(() => {
-        if(val) this.initComponent();
+    show(val) {
+      if (val == this.data._show) return;
+      if (!this.properties.disableAnimation) {
+        if (val) {
+          this.setData({
+            _show: true,
+          }, () => {
+            this.initComponent();
+            this.animate('.d-popover .d-popover-self', [
+              { offset: 0, opacity: 0, },
+              { offset: 1, opacity: 1, ease: 'ease-out' },
+            ], 400);
+          });
+
+        } else {
+          this.animateHide(() => {
+            this.setData({
+              _show: false,
+            });
+          });
+        }
+
+      } else {
         this.setData({
-          opacity: val ? 1 : 0
+          _show: val,
+        }, () => {
+          if (val) this.initComponent();
         });
-      });
-  
+      }
+
+
     }
   }
 });

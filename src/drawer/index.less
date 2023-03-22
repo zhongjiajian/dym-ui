@@ -1,88 +1,93 @@
 @import "../common/reset.css";
+
 .d-drawer-mask {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    will-change: transform;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  will-change: transform;
 
-  }
-  .d-drawer-mask.animation{
-    transition: opacity 0.9s cubic-bezier(0.075, 0.680, 0.175, 0.970);
-  }
-  
-  .d-drawer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 30rpx 30rpx 0 0;
-    will-change: transform;
-    
-  }
-  
-  .d-drawer.animation {
-    transition: transform 0.4s cubic-bezier(0.075, 0.680, 0.175, 0.970);
-  }
-
-  .header{
-    box-sizing: content-box;
-    height: 114rpx;
-    border-bottom: 2rpx solid rgba(0, 0, 0, 0.05);
-    position: relative;
-  }
-  
-
-  
-  .header .title {
-    position: absolute;
-    text-align: center;
-    width: 60%;
-    margin: 0 auto;
-    font-size: 16px;
-    font-weight: bold;
-    height: 100%;
-    line-height: 114rpx;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .header .btns{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-  }
-  .header  .cancel {
-    color: rgba(153, 153, 153, 1);
-    margin-left: 36rpx;
-    font-size: 14px;
-    padding: 20rpx;
-  }
-  
-  .header .confirm {
-    color: #00A19C;
-    margin-right: 36rpx;
-    font-size: 14px;
-    padding: 0 20rpx;
-    line-height: 80rpx;
-  }
-
-  .hover-class{
-    opacity: .5;
 }
-  
-.scroll-view{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    .fix-margin-top{
-      display: table;
-      width: 0;
-      height: 0;
-    }
+
+.d-drawer-mask.animation {
+  transition: opacity 0.9s cubic-bezier(0.075, 0.680, 0.175, 0.970);
+}
+
+.d-drawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30rpx 30rpx 0 0;
+  will-change: transform;
+
+}
+
+.d-drawer.animation {
+  transition: transform 0.4s cubic-bezier(0.075, 0.680, 0.175, 0.970);
+}
+
+.header {
+  box-sizing: content-box;
+  height: 114rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+
+
+.header .title {
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
+  height: 100%;
+  line-height: 114rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header .cancel {
+  color: rgba(153, 153, 153, 1);
+  margin-left: 36rpx;
+  font-size: 14px;
+  padding: 20rpx;
+}
+
+.header .confirm {
+  color: #00A19C;
+  margin-right: 36rpx;
+  font-size: 14px;
+  padding: 0 20rpx;
+  line-height: 80rpx;
+}
+
+.hover-class {
+  opacity: .5;
+}
+
+.scroll-view {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .fix-margin-top {
+    display: table;
+    width: 0;
+    height: 0;
+  }
 }
