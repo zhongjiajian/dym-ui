@@ -11,7 +11,7 @@ CustomPage({
     zIndex = "901" (组件层级)
 
     方法：
-      show(Object object) (显示操作菜单，支持promise)
+      show(Object object) (显示操作菜单；支持promise)
       参数
       Object object
       属性	    |  类型	           | 必填	| 说明

@@ -28,13 +28,12 @@ Component({
   },
 
   methods: {
-    maskTouchMove(e) {
-      if (!this.properties.closeTapMask) return;
-      this.hide();
+    maskTouchStart() {
+      this.maskTap();
     },
-    contentTouchMove() {
-
+    maskTouchMove() {
     },
+    contentTouchMove() { },
     getContentRect() {
       var query = wx.createSelectorQuery().in(this);
       return new Promise((resolve) => {
@@ -44,6 +43,7 @@ Component({
       });
     },
     show(e) {
+      if (this.data._show) return;
       this.setData({
         _show: true
       }, async () => {
@@ -72,8 +72,6 @@ Component({
         const transformOriginXY = `${transformOriginX} ${transformOriginY}`;
         this.animateShow(transformOriginXY);
       });
-
-
     },
     animateShow(transformOriginXY) {
       this.animate('.d-popupMenu .mask', [
@@ -87,6 +85,7 @@ Component({
       ], 200);
     },
     hide() {
+      if (!this.data._show) return;
       this.animateHide(() => {
         this.setData({
           _show: false
@@ -106,7 +105,12 @@ Component({
     },
     maskTap() {
       if (!this.properties.closeTapMask) return;
-      this.hide();
+      this.animateHide(() => {
+        this.setData({
+          _show: false
+        });
+        this.triggerEvent('hidden');
+      });
     }
   }
 });

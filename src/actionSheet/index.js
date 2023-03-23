@@ -43,7 +43,9 @@ Component({
       //     fail,
       //     complete,
       // }
+
       return new Promise((resolve, reject) => {
+        if (this.data.show) return;
         const itemList = object.itemList;
         this.promiseResolve = resolve;
         this.promiseReject = reject;

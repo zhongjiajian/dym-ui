@@ -4,7 +4,7 @@
   <exampleCard title="位置" des='{{example2Des}}'>
     <view class="d-ec-col-c">
       <space height="100" />
-      <d-popover model:show="{{show1}}" text="I am a popover, oh!" placement="{{placement}}" custom-class="d-popover-custom-class">
+      <d-popover model:show="{{show1}}" text="I am a popover, oh!" placement="{{placement}}" custom-class="d-popover-custom-class" bind:hidden="tapHidden">
         <d-button size="mini" catchtap="showOrHide">show or hide</d-button>
       </d-popover>
       <space height="100" />

@@ -1,7 +1,7 @@
-import CustomPage from '../../utils/page';
+import CustomPage from "../../utils/page";
 CustomPage({
-  data:{
-    example1Des:`属性：
+  data: {
+    example1Des: `属性：
     show = true | false
     disabled = true | false (点击气泡是否可关闭)
     placement = 'top' （气泡位置）
@@ -10,7 +10,7 @@ CustomPage({
     disableAnimation = true | false
     zIndex = 1 (定位层级)
 
-    时间：
+    事件：
     bindhidden (点击汽包隐藏时触发)
 
     拓展class
@@ -19,21 +19,24 @@ CustomPage({
     插槽：
     solt = 'content' (自定义气泡内容，text为空时有效)
     `,
-    example2Des:`placement = 'top', 'top-start', 'top-end', 'right', 'right-start', 'right-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end'
+    example2Des: `placement = 'top', 'top-start', 'top-end', 'right', 'right-start', 'right-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end'
     
     placement属性值为：方向-对齐位置；四个方向：top、left、right、bottom；三种对齐位置：start, end，默认为空。如placement="left-end"，则提示信息出现在目标元素的左侧，且提示信息的底部与目标元素的底部对齐。`,
-    show1:true,
-    placement:'top'
+    show1: true,
+    placement: "top",
   },
-  showOrHide(){
+  showOrHide() {
     this.setData({
-      show1:!this.data.show1
+      show1: !this.data.show1,
     });
   },
-  changePlacement(e){
+  changePlacement(e) {
     console.log(e);
     this.setData({
-      placement:e.currentTarget.dataset.placement
+      placement: e.currentTarget.dataset.placement,
     });
-  }
+  },
+  tapHidden() {
+    console.log("点击气泡关闭了");
+  },
 });

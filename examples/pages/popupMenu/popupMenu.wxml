@@ -35,7 +35,7 @@
     </d-list>
     <space height="1000" />
 
-    <d-popupMenu class="popupMenu" style="border: 2rpx solid #ccc;">
+    <d-popupMenu class="popupMenu" style="border: 2rpx solid #ccc;" bind:hidden="maskTapHidden">
       <view class="menu-list">
         <d-list showArrow="{{false}}" lineType="left">
           <view class="popup-li">好诗，💕</view>

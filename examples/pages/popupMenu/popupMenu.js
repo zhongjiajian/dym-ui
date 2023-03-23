@@ -7,8 +7,11 @@ CustomPage({
     maskBackgroundColor = 'transparent' (蒙层的背景色)
     closeTapMask = true|false （点击蒙层的时，是否关闭弹窗）
     
+    事件：
+    bindhidden (点击蒙层隐藏时触发)
+
     方法：
-    show(event) (显示弹窗，event为点击等事件，支持promise)
+    show(event) (显示弹窗，event为事件参数)
     hide() (关闭弹窗)
 
     `,
@@ -20,5 +23,8 @@ CustomPage({
   },
   closePopup() {
     this.popupMenuComponent.hide();
+  },
+  maskTapHidden() {
+    console.log("点击蒙层关闭了");
   },
 });

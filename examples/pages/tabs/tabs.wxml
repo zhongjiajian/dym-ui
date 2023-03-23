@@ -10,7 +10,7 @@
       </d-tabs-panel>
     </d-tabs>
     <d-tabs class="tabs" tabsScrollable="{{false}}" active="{{active}}" tabs="{{tabs2}}" tabsPanelStyle="{{tabsPanelStyle}}" bindchangeTab="changeTab">
-      <d-tabs-panel mark="{{index}}" wx:for="{{tabs2}}" wx:key="index" active="{{active}}" >
+      <d-tabs-panel mark="{{index}}" wx:for="{{tabs2}}" wx:key="index" active="{{active}}">
         <view class="d-tas-panel-content">
           <view>{{item}}...</view>
         </view>
@@ -18,17 +18,7 @@
     </d-tabs>
   </exampleCard>
   <exampleCard title="其他属性示例" des=''>
-    <d-tabs class="tabs" tabs="{{tabs2}}" 
-    tabsScrollable="{{false}}" 
-    tabsBackgroundColor="#008EDD" 
-    tabsHeight="{{50}}"
-      tabsStyle="border-radius: 30px" 
-      tabsPanelStyle="height: 300rpx;" 
-      activeTextColor="#000" 
-      defaultTextColor="#ccc"
-      indicatorColor="#000" 
-      active="{{1}}" 
-      bindchangeTab="changeTab">
+    <d-tabs class="tabs" tabs="{{tabs2}}" tabsScrollable="{{false}}" tabsBackgroundColor="#008EDD" tabsHeight="{{50}}" tabsStyle="border-radius: 30px" tabsPanelStyle="height: 300rpx;" activeTextColor="#000" defaultTextColor="#ccc" indicatorColor="#000" active="{{1}}" bindchangeTab="changeTab">
       <d-tabs-panel mark="{{index}}" wx:for="{{tabs2}}" wx:key="index" active="{{1}}">
         <view class="d-tas-panel-content">
           <view>{{item}}...</view>
