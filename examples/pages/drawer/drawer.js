@@ -1,18 +1,15 @@
-
-
-
-import CustomPage from '../../utils/page';
+import CustomPage from "../../utils/page";
 CustomPage({
-  data:{
-    imgs:[
-      '/images/mm.jpeg',
-      '/images/mm1.jpeg',
-      '/images/mm2.jpeg',
-      '/images/mm3.jpeg',
-      '/images/mm4.jpg',
-      '/images/mm5.jpg',
-      '/images/mm6.jpg',
-      '/images/mm7.jpg',
+  data: {
+    imgs: [
+      "/images/mm.jpeg",
+      "/images/mm1.jpeg",
+      "/images/mm2.jpeg",
+      "/images/mm3.jpeg",
+      "/images/mm4.jpg",
+      "/images/mm5.jpg",
+      "/images/mm6.jpg",
+      "/images/mm7.jpg",
     ],
     example1Des: `属性：
     show = true | false
@@ -31,7 +28,7 @@ CustomPage({
     disableAnimation = true | false
     scrollTop = "0"（设置组件内部竖向滚动条位置）
     showMask = true
-    maskBackgroundColor = "rgba(0, 0, 0, 0.6)"
+    maskBackgroundColor = "rgba(0, 0, 0, 0.45)"
 
     事件：
     bindcancel (点击返回触发)
@@ -45,28 +42,24 @@ CustomPage({
     tip：下拉可关闭`,
     drawerShow1: false,
     drawerShow2: false,
-    scrollTop: '0',
-    
+    scrollTop: "0",
   },
-  toogleDrawer1(){
-    this.setData({drawerShow1: !this.data.drawerShow1});
+  toogleDrawer1() {
+    this.setData({ drawerShow1: !this.data.drawerShow1 });
   },
-  cancel(){
+  cancel() {
     wx.showToast({
-      icon: 'none',
-      title: '点击了返回~',
-    });
-
-  },
-  confirm(){
-    wx.showToast({
-      icon: 'none',
-      title: '点击了确定~',
+      icon: "none",
+      title: "点击了返回~",
     });
   },
-  toogleDrawer2(){
-    this.setData({drawerShow2: !this.data.drawerShow2});
+  confirm() {
+    wx.showToast({
+      icon: "none",
+      title: "点击了确定~",
+    });
   },
-
- 
+  toogleDrawer2() {
+    this.setData({ drawerShow2: !this.data.drawerShow2 });
+  },
 });

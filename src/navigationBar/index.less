@@ -2,120 +2,134 @@
 
 
 .d-nav-bar__inner {
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    padding-right: 97px;
-    width: 100%;
-    padding-bottom: 4px;
-  }
-  .d-nav-bar__inner.android {
-    height: 48px;
-  }
-  .d-nav-bar__inner.devtools {
-    height: 42px;
-  }
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding-right: 97px;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+.d-nav-bar__inner.android {
+  height: 48px;
+}
+
+.d-nav-bar__inner.devtools {
+  height: 42px;
+}
 
 
 
-  
-  .d-nav-bar__inner .d-nav-bar__left {
-    width: 97px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-  }
-  .d-nav-bar__buttons {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 16px;
-    border: 1rpx solid rgba(204, 204, 204, 0.6);
-    position: relative;
-  }
-  .d-nav-bar__buttons.white{
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  .d-nav-bar__buttons.black{
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-  .d-nav-bar__buttons.android {
-    border: 1rpx solid rgba(234, 234, 234, 0.6);
-  }
-  .d-nav-bar__buttons::after {
-    position: absolute;
-    content: '';
-    width: 1rpx;
-    height: 18.4px;
-    background-color: rgba(204, 204, 204, 0.6);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .d-nav-bar__buttons.android::after {
-    background-color: rgba(234, 234, 234, 0.6);
-  }
-  .d-nav-bar__button {
-    box-sizing: border-box;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    font-size: 12px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 1em 2em;
-    justify-content: center;
-    align-items: center;   
-  }
 
-  
+.d-nav-bar__inner .d-nav-bar__left {
+  width: 97px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
 
-  .d-nav-bar__inner .d-nav-bar__center {
-    box-sizing: border-box;
-    font-size: 17px;
-    line-height: 17px;
-    text-align: center;
-    position: relative;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10px;
-  }
-  .d-nav-bar__inner .d-nav-bar__center .title {
-    font-size: 36rpx;
-    line-height: 36rpx;
-    font-weight: 700;
-  }
-  .d-nav-bar__inner .d-nav-bar__loading {
-    font-size: 0;
-  }
-  .d-nav-bar__inner .d-nav-bar__loading .d-loading {
-    margin-left: 0;
-  }
-  .d-nav-bar__inner .d-nav-bar__right {
-    margin-right: 10px;
-  }
+.d-nav-bar__buttons {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  border: 1rpx solid rgba(204, 204, 204, 0.6);
+  position: relative;
+}
+
+.d-nav-bar__buttons.white {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.d-nav-bar__buttons.black {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.d-nav-bar__buttons.android {
+  border: 1rpx solid rgba(234, 234, 234, 0.6);
+}
+
+.d-nav-bar__buttons::after {
+  position: absolute;
+  content: '';
+  width: 1rpx;
+  height: 18.4px;
+  background-color: rgba(204, 204, 204, 0.6);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.d-nav-bar__buttons.android::after {
+  background-color: rgba(234, 234, 234, 0.6);
+}
+
+.d-nav-bar__button {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1em 2em;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
-  .d-nav-bar__placeholder {
-    height: 44px;
-    position: relative;
-  }
-  .d-nav-bar__placeholder.android{
-    height: 48px;
-  }
+.d-nav-bar__inner .d-nav-bar__center {
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.d-nav-bar__inner .d-nav-bar__center .title {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  font-weight: 700;
+}
+
+.d-nav-bar__inner .d-nav-bar__loading {
+  font-size: 0;
+}
+
+.d-nav-bar__inner .d-nav-bar__loading .d-loading {
+  margin-left: 0;
+}
+
+.d-nav-bar__inner .d-nav-bar__right {
+  margin-right: 10px;
+}
 
 
 
-  
-  .view-hover-class{
-    opacity: 0.5;
-  }
+.d-nav-bar__placeholder {
+  height: 44px;
+  position: relative;
+}
+
+.d-nav-bar__placeholder.android {
+  height: 48px;
+}
+
+
+
+
+.view-hover-class {
+  opacity: 0.5;
+}

@@ -22,8 +22,9 @@
     "pages/rate/rate",
     "pages/leftSlider/leftSlider",
     "pages/popupMenu/popupMenu",
-    "pages/actionSheet/actionSheet"
-
+    "pages/actionSheet/actionSheet",
+    "pages/customTabBar/customTabBar",
+    "pages/modal/modal"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,8 +34,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color":"#D4F2F1",
-    "selectedColor":"#00A19C",
+    "color": "#D4F2F1",
+    "selectedColor": "#00A19C",
     "list": [
       {
         "pagePath": "pages/index/index",

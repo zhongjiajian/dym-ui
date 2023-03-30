@@ -10,7 +10,7 @@
       <space height="100" />
 
       <view class="d-ec-c">
-        <d-button size="mini" catchtap="changePlacement" data-placement="top-start">上右</d-button>
+        <d-button size="mini" catchtap="changePlacement" data-placement="top-start">上左</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="top">上边</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="top-end">上右</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="bottom-start">下左</d-button>

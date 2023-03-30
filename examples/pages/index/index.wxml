@@ -7,7 +7,7 @@
 
 <view>
 
-  <d-list wx:for="{{components}}" wx:key="item" data-nav-url="{{item.navigateUrl}}" catchtap="nav">
+  <d-list wx:for="{{componentsSort}}" wx:key="item" data-nav-url="{{item.navigateUrl}}" disabledHover catchtap="nav" d-hover-class="d-list-hover-class">
     <view class="d-list-n">
       {{item.name}} {{item.chinese}}
     </view>

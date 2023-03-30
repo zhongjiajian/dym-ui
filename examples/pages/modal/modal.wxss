@@ -1,0 +1,4 @@
+.modal-slot {
+  text-align: center;
+  padding: 40px;
+}

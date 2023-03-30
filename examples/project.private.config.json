@@ -137,6 +137,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "modal",
+          "pathName": "pages/modal/modal",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "customTabBar",
+          "pathName": "pages/customTabBar/customTabBar",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

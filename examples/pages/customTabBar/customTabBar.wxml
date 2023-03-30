@@ -1,0 +1,7 @@
+<pageCard pageName="custom-tab-bar">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+</pageCard>
+
+<d-customTabBar list="{{tabBarList}}" />
+<d-toast class="d-toast" />

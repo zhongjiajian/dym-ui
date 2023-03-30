@@ -24,3 +24,15 @@
   color: #333;
   padding-left: 28rpx;
 }
+
+.d-list-hover-class {
+  background-color: #D4F2F1;
+}
+
+.d-list-hover-class .d-list-n {
+  color: #00A19C;
+}
+
+.d-list-hover-class :before {
+  color: #00A19C;
+}

@@ -34,9 +34,9 @@ Component({
       type: String,
       value: ''
     },
-    titleStyle:{
-      type:String,
-      value:''
+    titleStyle: {
+      type: String,
+      value: ''
     },
     cancelText: {
       type: String,
@@ -54,15 +54,15 @@ Component({
       type: String,
       value: ''
     },
-    disableDraw:{
+    disableDraw: {
       type: Boolean,
       value: false
     },
-    disableMaskTap:{
+    disableMaskTap: {
       type: Boolean,
       value: false
     },
-    disableAnimation:{
+    disableAnimation: {
       type: Boolean,
       value: false
     },
@@ -73,7 +73,7 @@ Component({
     },
     maskBackgroundColor: {
       type: String,
-      value: 'rgba(0, 0, 0, 0.6)'
+      value: 'rgba(0, 0, 0, 0.45)'
     },
   },
   data: {
@@ -85,8 +85,8 @@ Component({
     endY: 0,
     fixTop_inner: '64px'
   },
-  lifetimes:{
-    attached(){
+  lifetimes: {
+    attached() {
       const systemInfo = wx.getSystemInfoSync();
       this.setData({
         windowHeight: systemInfo.windowHeight
@@ -96,10 +96,10 @@ Component({
   methods: {
     maskTouchMove() { },
     maskTap() {
-      if(this.properties.disableMaskTap) return;
+      if (this.properties.disableMaskTap) return;
       this.setData({
         show: false
-      },()=>{
+      }, () => {
         this.triggerEvent('hidden');
       });
     },
@@ -110,13 +110,13 @@ Component({
       this.triggerEvent('confirm');
     },
     touchMove(event) {
-      if(this.properties.disableDraw) return;
+      if (this.properties.disableDraw) return;
       var touch = event.touches[0] || event.changedTouches[0];
       if (!this.data.startY) {
         this.data.startY = touch.clientY || touch.pageY;
       } else {
         this.data.moveY = touch.clientY || touch.pageY;
-        if (this.data.moveY < this.data.startY){
+        if (this.data.moveY < this.data.startY) {
           this.data.startY = this.data.moveY;
           return;
         }
@@ -128,24 +128,24 @@ Component({
 
     },
     touchEnd(event) {
-      if(this.properties.disableDraw) return;
-      if(!this.data.startY) return;
+      if (this.properties.disableDraw) return;
+      if (!this.data.startY) return;
       var touch = event.changedTouches[0] || event.touches[0];
       this.data.endY = touch.clientY || touch.pageY;
       this._getComponentRect()
-        .then(rect=>{
-          if (this.data.endY - this.data.startY >= rect.height*0.3) {
+        .then(rect => {
+          if (this.data.endY - this.data.startY >= rect.height * 0.3) {
             this.setData({
               animation: true,
-              translateY: 0, 
+              translateY: 0,
               show: false
-            },()=>{
+            }, () => {
               this.triggerEvent('hidden');
             });
-          }else{
+          } else {
             this.setData({
               animation: true,
-              translateY: 0, 
+              translateY: 0,
               show: true
             });
           }
@@ -153,26 +153,26 @@ Component({
         });
 
     },
-    _getComponentRect(){
-      if(!this.rectInfo){
-        return new Promise(resolve=>{
+    _getComponentRect() {
+      if (!this.rectInfo) {
+        return new Promise(resolve => {
           wx.createSelectorQuery().in(this).select('.d-drawer').boundingClientRect(rect => {
             this.rectInfo = rect;
             resolve(rect);
           }).exec();
         });
-      }else{
+      } else {
         return Promise.resolve(this.rectInfo);
       }
-            
+
     }
 
 
   },
-  observers:{
-    fixTop(val){
+  observers: {
+    fixTop(val) {
       let fixTop_inner = String(val);
-      if(!fixTop_inner.includes('%') && !fixTop_inner.includes('px')) fixTop_inner+='px';
+      if (!fixTop_inner.includes('%') && !fixTop_inner.includes('px')) fixTop_inner += 'px';
       this.setData({
         fixTop_inner
       });

@@ -9,4 +9,4 @@
 </pageCard>
 
 
-<d-actionSheet class="d-action-sheet" sheetHeight="672rpx" />
+<d-actionSheet class="d-action-sheet" />

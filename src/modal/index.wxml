@@ -1,0 +1,22 @@
+<view class="d-modal">
+    <d-popup show="{{show}}" maskStyle="{{maskStyle}}" zIndex="{{zIndex}}" customStyle="{{customStyle}}" bind:tapMask="_tapMask">
+        <view class="content">
+            <view wx:if="{{title || content}}">
+                <view class="title">{{title}}</view>
+                <view class="content-text" wx:if="{{content}}">{{content}}</view>
+            </view>
+            <view wx:else>
+                <slot />
+            </view>
+            <view class="footer">
+                <view class="cancel item" style="color:{{cancelColor}};" catchtap="_cancel" hover-class="view-hover-class" wx:if="{{showCancel}}">
+                    {{cancelText}}
+                </view>
+                <view class="line" wx:if="{{showCancel}}"></view>
+                <view class="confirm item" style="color:{{confirmColor}};" catchtap="_confirm" hover-class="view-hover-class">
+                    {{confirmText}}
+                </view>
+            </view>
+        </view>
+    </d-popup>
+</view>

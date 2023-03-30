@@ -1,9 +1,7 @@
+import { typeofIt } from '../utils/utils.js';
+
 Component({
   properties: {
-    sheetHeight: {
-      type: String,
-      value: ''
-    },
     itemStyle: {
       type: String,
       value: ''
@@ -36,8 +34,8 @@ Component({
   },
   methods: {
     maskTouchMove() { },
-    show(object) {
-      // object:{
+    show(options) {
+      // options:{
       //     itemList,
       //     success,
       //     fail,
@@ -46,15 +44,16 @@ Component({
 
       return new Promise((resolve, reject) => {
         if (this.data.show) return;
-        const itemList = object.itemList;
+        if (typeofIt(options) !== 'object') options = {};
+        const itemList = options.itemList;
         this.promiseResolve = resolve;
         this.promiseReject = reject;
 
         if (!itemList || !Array.isArray(itemList) || !itemList.length) {
-          object.fail && object.fail({
+          options.fail && options.fail({
             errMsg: 'error',
           });
-          object.complete && object.complete({
+          options.complete && options.complete({
             errMsg: 'error',
           });
           reject({
@@ -66,28 +65,31 @@ Component({
           show: true,
           itemList
         });
-        this.success = object.success;
-        this.fail = object.fail;
-        this.complete = object.complete;
+        this.success = options.success;
+        this.fail = options.fail;
+        this.complete = options.complete;
         this.animateShow();
       });
     },
-    animateShow() {
+    getContentRect() {
+      var query = wx.createSelectorQuery().in(this);
+      return new Promise((resolve) => {
+        query.select('.d-actionSheet .content').boundingClientRect(function (res) {
+          resolve(res);
+        }).exec();
+      });
+    },
+    async animateShow() {
       this.animate('.d-actionSheet .mask', [
         { offset: 0, opacity: 0, },
         { offset: 1, opacity: 1, ease: 'ease-out' },
       ], 300);
-      if (this.properties.sheetHeight) {
-        this.animate('.d-actionSheet .content', [
-          { offset: 0, height: 0, opacity: 1 },
-          { offset: 1, height: this.properties.sheetHeight, ease: 'ease-out' },
-        ], 300);
-      } else {
-        this.animate('.d-actionSheet .content', [
-          { offset: 0, opacity: 0, height: 'auto' },
-          { offset: 1, opacity: 1, ease: 'ease-out' },
-        ], 300);
-      }
+      const contentRect = await this.getContentRect();
+      this.animate('.d-actionSheet .content', [
+        { offset: 0, height: 0, opacity: 1 },
+        { offset: 1, height: `${contentRect.height}px`, ease: 'ease-out' },
+      ], 300);
+
     },
     hide() {
       this.animateHide(function () {
@@ -127,17 +129,10 @@ Component({
         { offset: 0, opacity: 1, },
         { offset: 1, opacity: 0, ease: 'ease-out' },
       ], 300, callback);
-      if (this.properties.sheetHeight) {
-        this.animate('.d-actionSheet .content', [
-          { offset: 0, height: this.properties.sheetHeight, opacity: 1 },
-          { offset: 1, height: 0, ease: 'ease-out' },
-        ], 300);
-      } else {
-        this.animate('.d-actionSheet .content', [
-          { offset: 0, opacity: 1, height: 'auto', },
-          { offset: 1, opacity: 0, ease: 'ease-out' },
-        ], 300);
-      }
+      this.animate('.d-actionSheet .content', [
+        { offset: 0, opacity: 1 },
+        { offset: 1, height: 0, ease: 'ease-out' },
+      ], 300);
     },
   }
 });

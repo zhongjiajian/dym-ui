@@ -1,0 +1,12 @@
+<pageCard pageName="modal">
+  <exampleCard title="Doc" des='{{example1Des}}'>
+  </exampleCard>
+  <exampleCard title="示例" des=''>
+    <d-button catchtap="showModal">show modal</d-button>
+  </exampleCard>
+</pageCard>
+
+<d-modal bindtapMask="tapMask" class="d-modal">
+  <view class="modal-slot">i am slot of modal component.</view>
+</d-modal>
+<d-toast class="d-toast" />
