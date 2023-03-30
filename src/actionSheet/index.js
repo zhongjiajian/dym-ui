@@ -41,7 +41,6 @@ Component({
       //     fail,
       //     complete,
       // }
-
       return new Promise((resolve, reject) => {
         if (this.data.show) return;
         if (typeofIt(options) !== 'object') options = {};
@@ -64,11 +63,10 @@ Component({
         this.setData({
           show: true,
           itemList
-        });
-        this.success = options.success;
-        this.fail = options.fail;
-        this.complete = options.complete;
-        this.animateShow();
+        }, this.animateShow);
+        this._dy_custom_success = options.success;
+        this._dy_custom_fail = options.fail;
+        this._dy_custom_complete = options.complete;
       });
     },
     getContentRect() {
@@ -87,17 +85,17 @@ Component({
       const contentRect = await this.getContentRect();
       this.animate('.d-actionSheet .content', [
         { offset: 0, height: 0, opacity: 1 },
-        { offset: 1, height: `${contentRect.height}px`, ease: 'ease-out' },
+        { offset: 1, height: `${contentRect.height}px`, opacity: 1, ease: 'ease-out' },
       ], 300);
 
     },
     hide() {
       this.animateHide(function () {
         this.setData({ show: false });
-        this.fail && this.fail({
+        this._dy_custom_fail && this._dy_custom_fail({
           errMsg: 'cancel',
         });
-        this.complete && this.complete({
+        this._dy_custom_complete && this._dy_custom_complete({
           errMsg: 'cancel',
         });
         this.promiseReject({
@@ -109,11 +107,11 @@ Component({
     itemTap(e) {
       this.animateHide(function () {
         this.setData({ show: false });
-        this.success && this.success({
+        this._dy_custom_success && this._dy_custom_success({
           errMsg: 'ok',
           tapIndex: e.currentTarget.dataset.index
         });
-        this.complete && this.complete({
+        this._dy_custom_complete && this._dy_custom_complete({
           errMsg: 'ok',
           tapIndex: e.currentTarget.dataset.index
         });
@@ -131,7 +129,7 @@ Component({
       ], 300, callback);
       this.animate('.d-actionSheet .content', [
         { offset: 0, opacity: 1 },
-        { offset: 1, height: 0, ease: 'ease-out' },
+        { offset: 1, height: 0, opacity: 1, ease: 'ease-out' },
       ], 300);
     },
   }

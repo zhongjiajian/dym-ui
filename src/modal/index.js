@@ -48,17 +48,17 @@ Component({
                 });
                 this.promiseResolve = resolve;
                 this.promiseReject = reject;
-                this.success = options.success;
-                this.fail = options.fail;
-                this.complete = options.complete;
+                this._dy_custom_success = options.success;
+                this._dy_custom_fail = options.fail;
+                this._dy_custom_complete = options.complete;
             });
         },
         _confirm() {
             this.hide();
-            this.success && this.success({
+            this._dy_custom_success && this._dy_custom_success({
                 errMsg: 'ok',
             });
-            this.complete && this.complete({
+            this._dy_custom_complete && this._dy_custom_complete({
                 errMsg: 'ok',
             });
             this.promiseResolve({
@@ -67,10 +67,10 @@ Component({
         },
         _cancel() {
             this.hide();
-            this.fail && this.fail({
+            this._dy_custom_fail && this._dy_custom_fail({
                 errMsg: 'cancel',
             });
-            this.complete && this.complete({
+            this._dy_custom_complete && this._dy_custom_complete({
                 errMsg: 'cancel',
             });
             this.promiseReject({
