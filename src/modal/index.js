@@ -42,6 +42,13 @@ Component({
                 if (this.data.show) return;
                 if (typeofIt(options) !== 'object') options = {};
                 const showOptions = Object.assign({}, defaultOptions, options);
+                for (let key in showOptions) {
+                    if (
+                        defaultOptions[key] === undefined
+                    ) {
+                        delete showOptions[key];
+                    }
+                }
                 this.setData({
                     show: true,
                     ...showOptions,

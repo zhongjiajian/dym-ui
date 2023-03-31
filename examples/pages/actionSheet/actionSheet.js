@@ -2,6 +2,7 @@ import CustomPage from "../../utils/page";
 CustomPage({
   data: {
     example1Des: `属性：
+    alertStyle = "" (标题样式)
     itemStyle = "" (按钮样式)
     lineStyle = "" (分割线样式)
     cancelText = "取消" (取消按钮的文本)
@@ -14,6 +15,7 @@ CustomPage({
     参数
     Object object
     属性              |       类型        | 必填 |   说明
+    alertText        |   string          |  否  |  标题文本
     itemList         |   Array.<string>  |  是  |  按钮的文字数组
     success        	 |   function	       |	否	|  接口调用成功的回调函数	
     fail	           |   function			   |  否  |	 接口调用失败的回调函数	
@@ -31,6 +33,7 @@ CustomPage({
       this.actionSheetComponent = this.selectComponent(".d-action-sheet");
     try {
       const res = await this.actionSheetComponent.show({
+        // alertText: "选择星期",
         itemList: [
           "星期一",
           "星期二",

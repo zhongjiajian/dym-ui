@@ -1,7 +1,14 @@
 import { typeofIt } from '../utils/utils.js';
-
+const defaultOptions = {
+  alertText: '',
+  itemList: []
+};
 Component({
   properties: {
+    alertStyle: {
+      type: String,
+      value: ''
+    },
     itemStyle: {
       type: String,
       value: ''
@@ -30,12 +37,13 @@ Component({
   },
   data: {
     show: false,
-    itemList: []
+    ...defaultOptions,
   },
   methods: {
     maskTouchMove() { },
     show(options) {
-      // options:{
+      // options: {
+      //     alertText,
       //     itemList,
       //     success,
       //     fail,
@@ -44,7 +52,15 @@ Component({
       return new Promise((resolve, reject) => {
         if (this.data.show) return;
         if (typeofIt(options) !== 'object') options = {};
-        const itemList = options.itemList;
+        const showOptions = Object.assign({}, defaultOptions, options);
+        for (let key in showOptions) {
+          if (
+            defaultOptions[key] === undefined
+          ) {
+            delete showOptions[key];
+          }
+        }
+        const itemList = showOptions.itemList;
         this.promiseResolve = resolve;
         this.promiseReject = reject;
 
@@ -62,7 +78,7 @@ Component({
         }
         this.setData({
           show: true,
-          itemList
+          ...showOptions,
         }, this.animateShow);
         this._dy_custom_success = options.success;
         this._dy_custom_fail = options.fail;

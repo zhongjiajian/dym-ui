@@ -9,4 +9,4 @@
 </pageCard>
 
 
-<d-actionSheet class="d-action-sheet" />
+<d-actionSheet class="d-action-sheet" alertStyle="color:red;" />
