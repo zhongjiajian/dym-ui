@@ -50,5 +50,9 @@ Component({
             type: Boolean,
             value: false
         },
+        customStyle: {
+            type: String,
+            value: ''
+        },
     },
 });

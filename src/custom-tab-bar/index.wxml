@@ -1,6 +1,6 @@
 <view class="d-custom-tab-bar">
     <view class="tab-bar-border"></view>
-    <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" catchtap="switchTab">
+    <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" catchtap="nav" data-navtype="{{item.navType}}">
         <image class="icon" src="{{selected == index ? item.selectedIconPath : item.iconPath}}"></image>
         <view class="text" style="color: {{selected == index ? selectedColor : color}}">
             {{item.text}}

@@ -20,11 +20,13 @@ Component({
         },
     },
     methods: {
-        switchTab(e) {
+        nav(e) {
             const data = e.currentTarget.dataset;
             const url = data.path;
-            wx.switchTab({ url });
-            this.setData({
+            if (this.properties.selected == data.index) return;
+            const navType = data.navtype || 'switchTab';
+            wx[navType]({ url });
+            if (navType === 'switchTab') this.setData({
                 selected: data.index
             });
         }
