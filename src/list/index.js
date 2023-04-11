@@ -23,6 +23,10 @@ Component({
         disabledHover: {
             type: Boolean,
             value: false
+        },
+        customStyle: {
+            ype: String,
+            value: ''
         }
     },
 

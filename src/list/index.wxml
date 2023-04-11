@@ -1,18 +1,11 @@
-<view class="d-list">
-	<view class="content" hover-class="{{disabledHover?'':'hover-class'}} d-hover-class">
-		<view class="content-slot">
-			<slot></slot>
-		</view>
-		<d-icon
-		 class="arrow"
-		 wx:if="{{showArrow}}"
-		 name="keyboard_arrow_right"
-		 color="rgba(0, 0, 0, 0.3)"
-		/>
-	</view>
-	<view wx:if="{{showLine}}" class='line-wrap line-type-{{lineType}}'>
-		<view class='line' style='{{lineStyle}}'></view>
-	</view>
-
+<view class="d-list" style="{{customStyle}}">
+				<view class="content" hover-class="{{disabledHover?'':'hover-class'}} d-hover-class">
+								<view class="content-slot">
+												<slot></slot>
+								</view>
+								<d-icon class="arrow" wx:if="{{showArrow}}" name="keyboard_arrow_right" color="rgba(0, 0, 0, 0.3)" />
+				</view>
+				<view wx:if="{{showLine}}" class='line-wrap line-type-{{lineType}}'>
+								<view class='line' style='{{lineStyle}}'></view>
+				</view>
 </view>
-
