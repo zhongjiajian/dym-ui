@@ -19,6 +19,22 @@ Component({
             value: '#00A19C'
         },
     },
+    data: {
+        safeAreaInsetBottom: 0,
+    },
+    lifetimes: {
+        attached() {
+            const systemInfo = wx.getSystemInfoSync();
+            if (systemInfo.screenHeight && systemInfo.safeArea && systemInfo.safeArea.bottom) {
+                const safeAreaInsetBottom = systemInfo.screenHeight - systemInfo.safeArea.bottom;
+                if (safeAreaInsetBottom > 0) {
+                    this.setData({
+                        safeAreaInsetBottom
+                    });
+                }
+            }
+        }
+    },
     methods: {
         nav(e) {
             const data = e.currentTarget.dataset;

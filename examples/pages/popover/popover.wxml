@@ -28,7 +28,7 @@
   <exampleCard title="自定义气泡内容" des='solt = "content"'>
     <view class="d-ec-col-c">
       <space height="200" />
-      <d-popover show backgroundColor="#fff" disabled>
+      <d-popover show backgroundColor="#fff" disabled placement="bottom-start">
         <view slot="content">
           <view class="popover-slot-content">
             <text>你确定吗？</text>
