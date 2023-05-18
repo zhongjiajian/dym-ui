@@ -24,7 +24,8 @@
     "pages/popupMenu/popupMenu",
     "pages/actionSheet/actionSheet",
     "pages/customTabBar/customTabBar",
-    "pages/modal/modal"
+    "pages/modal/modal",
+    "pages/switch/switch"
   ],
   "window": {
     "backgroundTextStyle": "light",

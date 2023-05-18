@@ -1,0 +1,7 @@
+<view class="d-switch {{_value?'open':'close'}}" style="opacity: {{disabled?0.5:1}};background: {{_value?openColor:closeColor}};" catchtap="change">
+    <view class="ball"></view>
+    <view class="text-wrap">
+        <text class="txt">{{_value?openText:''}}</text>
+        <text class="txt">{{_value?'':closeText}}</text>
+    </view>
+</view>

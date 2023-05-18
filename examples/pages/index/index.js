@@ -117,6 +117,11 @@ const components = [
     chinese: "模态框",
     navigateUrl: "/pages/modal/modal",
   },
+  {
+    name: "switch",
+    chinese: "开关",
+    navigateUrl: "/pages/switch/switch",
+  },
 ];
 function sortByLetter(list) {
   const enObj = {};

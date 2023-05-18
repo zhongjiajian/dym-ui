@@ -151,6 +151,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "switch",
+          "pathName": "pages/switch/switch",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

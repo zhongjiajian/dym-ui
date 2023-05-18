@@ -10,6 +10,13 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
   {
+    time: '2023-05-18',
+    version: '3.3.0',
+    des: [
+      '新增swtich组件'
+    ]
+  },
+  {
     time: '2023-03-30',
     version: '3.1.0',
     des: [

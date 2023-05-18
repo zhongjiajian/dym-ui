@@ -1,0 +1,59 @@
+.view-hover-class {
+    opacity: 0.5;
+}
+
+.button-hover-class {
+    opacity: 0.5;
+}
+
+.overflow-1 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+:host {
+    display: inline-block;
+}
+
+.d-switch {
+    width: 134rpx;
+    height: 64rpx;
+    border-radius: 32rpx;
+    position: relative;
+    padding: 8rpx;
+}
+
+.d-switch .ball {
+    width: 48rpx;
+    height: 48rpx;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4rpx 8rpx 0 rgba(0, 0, 0, 0.10);
+    position: absolute;
+    left: 8rpx;
+    top: 8rpx;
+    transition: left linear .2s;
+}
+
+.d-switch.open .ball {
+    left: 78rpx;
+}
+
+.d-switch .text-wrap {
+    color: #fff;
+    font-size: 28rpx;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.d-switch .text-wrap .txt {
+    width: 50%;
+    text-align: center;
+    height: 48rpx;
+    line-height: 48rpx;
+    overflow: hidden;
+}
