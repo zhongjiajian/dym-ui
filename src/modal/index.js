@@ -91,7 +91,6 @@ Component({
             this.setData({
                 show: false,
             });
-
         }
     }
 });

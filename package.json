@@ -1,6 +1,6 @@
 {
   "name": "dym-ui",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "A special UI components library with MiniProgram",
   "main": "app.js",
   "directories": {

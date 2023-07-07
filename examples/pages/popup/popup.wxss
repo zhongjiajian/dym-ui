@@ -1,7 +1,12 @@
-.popup-content{
+.popup-content {
   background-color: #fff;
   width: 400rpx;
   line-height: 200rpx;
   text-align: center;
   border-radius: 16rpx;
+}
+
+.content {
+  background-color: #fff;
+  padding: 28rpx;
 }

@@ -18,4 +18,38 @@
         transform: scaleX(0) scaleY(0);
         // transform-origin: 0% 0%;
     }
+
+    .content.bottom {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: unset;
+        bottom: 0;
+        transform: scaleX(1) scaleY(0);
+    }
+
+    .content.top {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: scaleX(1) scaleY(0);
+    }
+
+    .content.left {
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: scaleX(0) scaleY(1);
+    }
+
+    .content.right {
+        height: 100%;
+        position: fixed;
+        left: unset;
+        right: 0;
+        top: 0;
+        transform: scaleX(0) scaleY(1);
+    }
 }
