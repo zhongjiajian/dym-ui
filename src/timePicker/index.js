@@ -4,7 +4,7 @@ const months = [];
 const dates = [];
 const hours = [];
 const minutes = [];
-for (let i = 2010; i <= now.getFullYear()+1; i++) {
+for (let i = 2010; i <= now.getFullYear() + 1; i++) {
   years.push(i);
 }
 for (let i = 1; i <= 12; i++) {
@@ -38,9 +38,9 @@ Component({
       type: String,
       value: '选择时间'
     },
-    titleStyle:{
-      type:String,
-      value:''
+    titleStyle: {
+      type: String,
+      value: ''
     },
     cancelText: {
       type: String,
@@ -68,169 +68,173 @@ Component({
       optionalTypes: [Number],
       value: now.getTime()
     },
-    start:String, //格式为“YYYY-MM-DD hh:mm”
-    end:String,
+    start: String, //格式为“YYYY-MM-DD hh:mm”
+    end: String,
     isDiscreteMinute: {
-      type:Boolean,
-      value:false
-    }
+      type: Boolean,
+      value: false
+    },
+    isNotMinute: {
+      type: Boolean,
+      value: false
+    },
   },
   data: {
     years, months, dates, hours, minutes,
     innerVal: []
   },
-  methods:{
-    cancel(){
+  methods: {
+    cancel() {
       this.triggerEvent('cancel');
     },
-    hidden(){
+    hidden() {
       this.triggerEvent('hidden');
     },
-    confirm(){
+    confirm() {
       const innerVal = this.data.innerVal;
       const type = this.properties.type;
-      const  {
+      const {
         years, months, dates, hours, minutes
       } = this.data;
       let postVal = '';
       switch (type) {
-      case 'year':
-        postVal = `${years[innerVal[0]]}`;
-        break;
-      case 'year-month':
-        postVal = `${years[innerVal[0]]}-${months[innerVal[1]]}`;
-        break;
-      case 'year-month-date':
-        postVal = `${years[innerVal[0]]}-${months[innerVal[1]]}-${dates[innerVal[2]]}`;
-        break;
-      case 'time':
-        postVal = `${hours[innerVal[0]]}:${minutes[innerVal[1]]}`;
-        break;
-      default:
-        postVal = `${years[innerVal[0]]}-${months[innerVal[1]]}-${dates[innerVal[2]]} ${hours[innerVal[3]]}:${minutes[innerVal[4]]}`;
-        break;
+        case 'year':
+          postVal = `${years[innerVal[0]]}`;
+          break;
+        case 'year-month':
+          postVal = `${years[innerVal[0]]}-${months[innerVal[1]]}`;
+          break;
+        case 'year-month-date':
+          postVal = `${years[innerVal[0]]}-${months[innerVal[1]]}-${dates[innerVal[2]]}`;
+          break;
+        case 'time':
+          postVal = `${hours[innerVal[0]]}:${minutes[innerVal[1]]}`;
+          break;
+        default:
+          postVal = `${years[innerVal[0]]}-${months[innerVal[1]]}-${dates[innerVal[2]]} ${hours[innerVal[3]]}:${minutes[innerVal[4]]}`;
+          break;
       }
-      this.triggerEvent('confirm',postVal);
+      this.triggerEvent('confirm', postVal);
     },
-    bindChange(e){
+    bindChange(e) {
       const val = e.detail.value;
       const type = this.properties.type;
-      const  {
-        years, months,dates, hours, minutes
+      const {
+        years, months, dates, hours, minutes
       } = this.data;
-      if(type.includes('date')) this._resetDates(years[val[0]],months[val[1]]);
+      if (type.includes('date')) this._resetDates(years[val[0]], months[val[1]]);
       this.setData({
         innerVal: val
       });
-   
+
       let postVal = '';
       switch (type) {
-      case 'year':
-        postVal = `${years[val[0]]}`;
-        break;
-      case 'year-month':
-        postVal = `${years[val[0]]}-${months[val[1]]}`;
-        break;
-      case 'year-month-date':
-        postVal = `${years[val[0]]}-${months[val[1]]}-${dates[val[2]]}`;
-        break;
-      case 'time':
-        postVal = `${hours[val[0]]}:${minutes[val[1]]}`;
-        break;
-      default:
-        postVal = `${years[val[0]]}-${months[val[1]]}-${dates[val[2]]} ${hours[val[3]]}:${minutes[val[4]]}`;
-        break;
+        case 'year':
+          postVal = `${years[val[0]]}`;
+          break;
+        case 'year-month':
+          postVal = `${years[val[0]]}-${months[val[1]]}`;
+          break;
+        case 'year-month-date':
+          postVal = `${years[val[0]]}-${months[val[1]]}-${dates[val[2]]}`;
+          break;
+        case 'time':
+          postVal = `${hours[val[0]]}:${minutes[val[1]]}`;
+          break;
+        default:
+          postVal = `${years[val[0]]}-${months[val[1]]}-${dates[val[2]]} ${hours[val[3]]}:${minutes[val[4]]}`;
+          break;
       }
-      this.triggerEvent('change',postVal);
+      this.triggerEvent('change', postVal);
     },
-    _resetDates(year,month){
-      const maxDate = new Date(year,month,0).getDate();
+    _resetDates(year, month) {
+      const maxDate = new Date(year, month, 0).getDate();
       const dates = [];
       for (let i = 1; i <= maxDate; i++) {
         dates.push(i < 10 ? ('0' + i) : i);
       }
-      this.setData({dates});
+      this.setData({ dates });
     },
-    _resetVal(){
+    _resetVal() {
 
       const type = this.properties.type;
       const timeValue = new Date(+this.properties.timeValue || Date.now());
-      if(type.includes('date')) this._resetDates(timeValue.getFullYear(),timeValue.getMonth() + 1);
-      const  {
+      if (type.includes('date')) this._resetDates(timeValue.getFullYear(), timeValue.getMonth() + 1);
+      const {
         years, months, dates, hours, minutes
       } = this.data;
       switch (type) {
-      case 'year':
-        this.setData({
-          innerVal: [
-            years.findIndex(item => (item == timeValue.getFullYear()))
-          ]
-        });
-        break;
-      case 'year-month':
-        this.setData({
-          innerVal: [
-            years.findIndex(item => (item == timeValue.getFullYear())),
-            months.findIndex(item => (item == timeValue.getMonth() + 1)),
-          ]
-        });
-        break;
-      case 'year-month-date':
-        this.setData({
-          innerVal: [
-            years.findIndex(item => (item == timeValue.getFullYear())),
-            months.findIndex(item => (item == timeValue.getMonth() + 1)),
-            dates.findIndex(item => (item == timeValue.getDate())),
-          ]
-        });
-        break;
-      case 'time':
-        this.setData({
-          innerVal: [
-            hours.findIndex(item => (item == timeValue.getHours())),
-            minutes.findIndex(item => (item == timeValue.getMinutes())),
-          ]
-        });
-        break;
-      default:
+        case 'year':
+          this.setData({
+            innerVal: [
+              years.findIndex(item => (item == timeValue.getFullYear()))
+            ]
+          });
+          break;
+        case 'year-month':
+          this.setData({
+            innerVal: [
+              years.findIndex(item => (item == timeValue.getFullYear())),
+              months.findIndex(item => (item == timeValue.getMonth() + 1)),
+            ]
+          });
+          break;
+        case 'year-month-date':
+          this.setData({
+            innerVal: [
+              years.findIndex(item => (item == timeValue.getFullYear())),
+              months.findIndex(item => (item == timeValue.getMonth() + 1)),
+              dates.findIndex(item => (item == timeValue.getDate())),
+            ]
+          });
+          break;
+        case 'time':
+          this.setData({
+            innerVal: [
+              hours.findIndex(item => (item == timeValue.getHours())),
+              minutes.findIndex(item => (item == timeValue.getMinutes())),
+            ]
+          });
+          break;
+        default:
 
-        this.setData({
-          innerVal: [
-            years.findIndex(item => (item == timeValue.getFullYear())),
-            months.findIndex(item => (item == timeValue.getMonth() + 1)),
-            dates.findIndex(item => (item == timeValue.getDate())),
-            hours.findIndex(item => (item == timeValue.getHours())),
-            minutes.findIndex(item => (item == timeValue.getMinutes())),
-          ]
-        });
+          this.setData({
+            innerVal: [
+              years.findIndex(item => (item == timeValue.getFullYear())),
+              months.findIndex(item => (item == timeValue.getMonth() + 1)),
+              dates.findIndex(item => (item == timeValue.getDate())),
+              hours.findIndex(item => (item == timeValue.getHours())),
+              minutes.findIndex(item => (item == timeValue.getMinutes())),
+            ]
+          });
 
       }
     }
   },
   observers: {
-    timeValue(){
+    timeValue() {
       this._resetVal();
     },
-    'start,end'(start,end){
-      try{
-        if(this.properties.type.startsWith('year')){
+    'start,end'(start, end) {
+      try {
+        if (this.properties.type.startsWith('year')) {
           const startYear = +(start.split('-')[0] || 2000);
-          const endYear = +(end.split('-')[0] ||  now.getFullYear());
+          const endYear = +(end.split('-')[0] || now.getFullYear());
           const years = [];
           for (let i = startYear; i <= endYear; i++) {
             years.push(i);
           }
-          this.setData({years});
-        }else{
+          this.setData({ years });
+        } else {
           const startHour = +(start.split(':')[0] || '00');
           const endHour = +(end.split(':')[0] || '23');
           const hours = [];
           for (let i = startHour; i <= endHour; i++) {
             hours.push(i < 10 ? ('0' + i) : i);
           }
-          this.setData({hours});
+          this.setData({ hours });
         }
-      }catch(err){
+      } catch (err) {
         console.log(err);
       }
     },
@@ -239,9 +243,14 @@ Component({
         this._resetVal();
       }
     },
-    isDiscreteMinute(val){
-      if(val) this.setData({
-        minutes: ['00','15','30','45']
+    isDiscreteMinute(val) {
+      if (val) this.setData({
+        minutes: ['00', '15', '30', '45']
+      });
+    },
+    isNotMinute(val) {
+      if (val) this.setData({
+        minutes: ['00',]
       });
     }
   }
