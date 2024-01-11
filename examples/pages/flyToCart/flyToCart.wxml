@@ -1,18 +1,18 @@
 <pageCard pageName="flyToCart">
-  <exampleCard title="Doc" des='{{example1Des}}'>
-      <d-button catchtap="addToCart">+ 加入购物车</d-button>
-      <space/>
-      <d-button catchtap="addArcRate">+ 增加弧度</d-button>
-      <space/>
-      <d-button catchtap="reduceArcRate">- 减少弧度</d-button>
-      <space/>
-      <text>当前弧度：{{arcRate}}</text>
-      <space/>
-  </exampleCard>
-  <exampleCard title="移动购物车" >
-    <slider block-size="{{20}}" bindchange="sliderChange" />
-  </exampleCard>
-  <space height="800" />
+    <exampleCard title="Doc" des='{{example1Des}}'>
+        <d-button catchtap="addToCart">+ 加入购物车</d-button>
+        <space />
+        <d-button catchtap="addArcRate">+ 增加弧度</d-button>
+        <space />
+        <d-button catchtap="reduceArcRate">- 减少弧度</d-button>
+        <space />
+        <text>当前弧度：{{arcRate}}</text>
+        <space />
+    </exampleCard>
+    <exampleCard title="移动购物车">
+        <slider block-size="{{20}}" bindchange="sliderChange" />
+    </exampleCard>
+    <space height="800" />
 </pageCard>
 <image class="cart {{shake?'shake':''}}" src="/images/cart.png" alt="购物车" style="left:{{cartLeft}}%;" />
 <d-flyToCart class="flyToCart" endPosition="{{cartPosition}}" arcRate="{{arcRate}}" bindtransitionend="transitionend" />

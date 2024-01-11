@@ -1,0 +1,8 @@
+<view class="d-message">
+    <d-popup show="{{show}}" showMask="{{mask}}"  maskStyle="background-color: transparent;" zIndex="{{zIndex}}" customStyle="{{customStyle}}" position="{{position}}" >
+        <view class="content {{position}} {{type}}" style="{{color?('background-color: '+color+';'):''}};">
+            <image wx:if="{{icon}}" src="../static/images/{{type}}.png" class="icon" />
+            <text class="title">{{title}}</text>
+        </view>
+    </d-popup>
+</view>

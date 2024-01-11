@@ -12,7 +12,8 @@ CustomPage({
 
   方法：
     show(Object object) (显示操作菜单；支持promise)
-    参数
+    hide()
+    show方法参数
     Object object
     属性              |       类型        | 必填 |   说明
     alertText        |   string          |  否  |  标题文本

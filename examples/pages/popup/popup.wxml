@@ -1,17 +1,18 @@
 <pageCard pageName="popup">
-  <exampleCard title="Doc" des='{{example1Des}}'>
-  </exampleCard>
-  <exampleCard title="示例1" des='position="center"'>
-    <d-button catchtap="toggle">show popup</d-button>
-  </exampleCard>
-  <exampleCard title="示例2" des='position="right"'>
-    <d-button catchtap="toggle2">show popup</d-button>
-  </exampleCard>
+    <exampleCard title="Doc" des='{{example1Des}}'></exampleCard>
+    <exampleCard title="示例1" des='position="center"'>
+        <d-button catchtap="toggle">show popup</d-button>
+    </exampleCard>
+    <exampleCard title="示例2" des='position="right"'>
+        <d-button catchtap="toggle2">show popup</d-button>
+    </exampleCard>
 </pageCard>
 <d-popup show="{{show}}" bindtapMask="tapMask" position="center">
-  <view class="popup-content">i am slot of popup component.</view>
+    <view class="popup-content">i am slot of popup component.</view>
 </d-popup>
 <d-popup show="{{show2}}" bindtapMask="tapMask2" position="right">
-  <view class="content" style="width: 600rpx;height: 100%;"><text>【科学家：地球正处12.5万年来最热时期】财联社7月7日电，科学家认为，地球正处于大约12.5万年以来最热的时期。伦敦格兰瑟姆研究所的气候科学家保罗·塞皮表示，根据冰芯、树木年轮和沉积物等气候数据，“12.5万年以来，从未有过如此温暖的天气”。研究表明，全球变暖趋势可能与石油、天然气以及煤炭的燃烧有关，这些燃烧会向大气中释放二氧化碳和甲烷等温室气体。在过去的一个世纪里，这些气体导致地球温度上升到无法用自然变化来解释的水平。</text></view>
+    <view class="content" style="width: 600rpx;height: 100%;">
+        <text>【科学家：地球正处12.5万年来最热时期】财联社7月7日电，科学家认为，地球正处于大约12.5万年以来最热的时期。伦敦格兰瑟姆研究所的气候科学家保罗·塞皮表示，根据冰芯、树木年轮和沉积物等气候数据，“12.5万年以来，从未有过如此温暖的天气”。研究表明，全球变暖趋势可能与石油、天然气以及煤炭的燃烧有关，这些燃烧会向大气中释放二氧化碳和甲烷等温室气体。在过去的一个世纪里，这些气体导致地球温度上升到无法用自然变化来解释的水平。</text>
+    </view>
 </d-popup>
 <d-toast class="d-toast" />

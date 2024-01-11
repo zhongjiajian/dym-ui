@@ -1,6 +1,5 @@
 <pageCard pageName="popover">
-  <exampleCard title="Doc" des='{{example1Des}}'>
-  </exampleCard>
+  <exampleCard title="Doc" des='{{example1Des}}'></exampleCard>
   <exampleCard title="位置" des='{{example2Des}}'>
     <view class="d-ec-col-c">
       <space height="100" />
@@ -8,7 +7,6 @@
         <d-button size="mini" catchtap="showOrHide">show or hide</d-button>
       </d-popover>
       <space height="100" />
-
       <view class="d-ec-c">
         <d-button size="mini" catchtap="changePlacement" data-placement="top-start">上左</d-button>
         <d-button size="mini" catchtap="changePlacement" data-placement="top">上边</d-button>
@@ -25,7 +23,7 @@
       </view>
     </view>
   </exampleCard>
-  <exampleCard title="自定义气泡内容" des='solt = "content"'>
+  <exampleCard title="自定义气泡内容" des='slot = "content"'>
     <view class="d-ec-col-c">
       <space height="200" />
       <d-popover show backgroundColor="#fff" disabled placement="bottom-start">
@@ -39,5 +37,4 @@
       </d-popover>
     </view>
   </exampleCard>
-
 </pageCard>

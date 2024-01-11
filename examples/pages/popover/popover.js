@@ -17,7 +17,7 @@ CustomPage({
     custom-class（设置气泡框的根节点样式）
 
     插槽：
-    solt = 'content' (自定义气泡内容，text为空时有效)
+    slot = 'content' (自定义气泡内容，text为空时有效)
     `,
     example2Des: `placement = 'top', 'top-start', 'top-end', 'right', 'right-start', 'right-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end'
     

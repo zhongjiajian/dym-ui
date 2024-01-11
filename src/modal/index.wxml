@@ -1,20 +1,30 @@
 <view class="d-modal">
-    <d-popup show="{{show}}" maskStyle="{{maskStyle}}" zIndex="{{zIndex}}" customStyle="{{customStyle}}" bind:tapMask="_tapMask">
-        <view class="content">
-            <view wx:if="{{title || content}}">
-                <view class="title">{{title}}</view>
-                <view class="content-text" wx:if="{{content}}">{{content}}</view>
+    <d-popup show="{{show}}" maskStyle="{{maskStyle}}" zIndex="{{zIndex}}" customStyle="{{customStyle}}" position="{{position}}" bind:tapMask="_tapMask">
+        <view class="content {{position}}">
+            <view>
+                <view  wx:if="{{title}}" class="title">{{title}}</view>
+                <view  wx:if="{{content}}" class="content-text {{title?'':'no-title'}}" wx:if="{{content}}">{{content}}</view>
+                 <view wx:else>
+                    <slot />
+                </view>
             </view>
-            <view wx:else>
-                <slot />
-            </view>
-            <view class="footer">
+           
+            <view class="footer center" wx:if="{{position==='center'}}">
                 <view class="cancel item" style="color:{{cancelColor}};" catchtap="_cancel" hover-class="view-hover-class" wx:if="{{showCancel}}">
                     {{cancelText}}
                 </view>
                 <view class="line" wx:if="{{showCancel}}"></view>
                 <view class="confirm item" style="color:{{confirmColor}};" catchtap="_confirm" hover-class="view-hover-class">
                     {{confirmText}}
+                </view>
+            </view>
+            <view class="footer bottom" wx:elif="{{position==='bottom'}}">
+                <view class="confirm item" style="color:{{confirmColor}};" catchtap="_confirm" hover-class="view-hover-class">
+                    {{confirmText}}
+                </view>
+                <view class="line" wx:if="{{showCancel}}"></view>
+                <view class="cancel item" style="color:{{cancelColor}};" catchtap="_cancel" hover-class="view-hover-class" wx:if="{{showCancel}}">
+                    {{cancelText}}
                 </view>
             </view>
         </view>

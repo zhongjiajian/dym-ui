@@ -1,51 +1,46 @@
 <view class="d-loading">
-	<view style="width: {{size}}rpx;height: {{size}}rpx;">
-
-		<view wx:if="{{type==='flower'}}" class="d-loading-type d-loading-flower">
-			<view class="d-loading-flower-center">
-				<view class="d-loading-flower-gun">
-					<view class="before" style="color:{{color}};"></view>
-					<view class="after" style="color:{{color}};"></view>
-
+				<view style="width: {{size}}rpx;height: {{size}}rpx;">
+								<view wx:if="{{type==='flower'}}" class="d-loading-type d-loading-flower">
+												<view class="d-loading-flower-center">
+																<view class="d-loading-flower-gun">
+																				<view class="before" style="color:{{color}};"></view>
+																				<view class="after" style="color:{{color}};"></view>
+																</view>
+																<view class="d-loading-flower-gun">
+																				<view class="before" style="color:{{color}};"></view>
+																				<view class="after" style="color:{{color}};"></view>
+																</view>
+																<view class="d-loading-flower-gun">
+																				<view class="before" style="color:{{color}};"></view>
+																				<view class="after" style="color:{{color}};"></view>
+																</view>
+																<view class="d-loading-flower-gun">
+																				<view class="before" style="color:{{color}};"></view>
+																				<view class="after" style="color:{{color}};"></view>
+																</view>
+																<view class="d-loading-flower-gun">
+																				<view class="before" style="color:{{color}};"></view>
+																				<view class="after" style="color:{{color}};"></view>
+																</view>
+																<view class="d-loading-flower-gun">
+																				<view class="before" style="color:{{color}};"></view>
+																				<view class="after" style="color:{{color}};"></view>
+																</view>
+												</view>
+												<view class="d-loading-flower-circle" style="background-color:{{backgroundColor}}"></view>
+								</view>
+								<view wx:elif="{{type==='circle'}}" class="d-loading-type d-loading-circle">
+												<view class="d-loading-circle-center">
+																<view class="before" style="color:{{color}};border-top-width:{{size/10}}rpx;border-bottom-width:{{size/10}}rpx;border-left-width:{{size/10}}rpx;border-top-left-radius:{{size/2}}rpx;border-bottom-left-radius:{{size/2}}rpx;"></view>
+																<view class="after" style="color:{{color}};border-top-width:{{size/10}}rpx;border-bottom-width:{{size/10}}rpx;border-right-width:{{size/10}}rpx;border-top-right-radius:{{size/2}}rpx;border-bottom-right-radius:{{size/2}}rpx;"></view>
+																<view class="d-loading-circle-dot" style="color:{{color}};width:{{size/10}}rpx;height:{{size/10}}rpx;"></view>
+												</view>
+								</view>
+								<view wx:else class="d-loading-type d-loading-slot">
+												<slot />
+								</view>
 				</view>
-				<view class="d-loading-flower-gun">
-					<view class="before" style="color:{{color}};"></view>
-					<view class="after" style="color:{{color}};"></view>
-
+				<view wx:if="{{title}}" class="d-loading-title" style="color:{{color}};{{titleStyle}}">
+				{{title}}
 				</view>
-				<view class="d-loading-flower-gun">
-					<view class="before" style="color:{{color}};"></view>
-					<view class="after" style="color:{{color}};"></view>
-
-				</view>
-				<view class="d-loading-flower-gun">
-					<view class="before" style="color:{{color}};"></view>
-					<view class="after" style="color:{{color}};"></view>
-
-				</view>
-				<view class="d-loading-flower-gun">
-					<view class="before" style="color:{{color}};"></view>
-					<view class="after" style="color:{{color}};"></view>
-
-				</view>
-				<view class="d-loading-flower-gun">
-					<view class="before" style="color:{{color}};"></view>
-					<view class="after" style="color:{{color}};"></view>
-
-				</view>
-			</view>
-			<view class="d-loading-flower-circle" style="background-color:{{backgroundColor}}"></view>
-		</view>
-
-		<view wx:else class="d-loading-type d-loading-circle">
-			<view class="d-loading-circle-center">
-				<view class="before" style="color:{{color}};border-top-width:{{size/10}}rpx;border-bottom-width:{{size/10}}rpx;border-left-width:{{size/10}}rpx;border-top-left-radius:{{size/2}}rpx;border-bottom-left-radius:{{size/2}}rpx;"></view>
-				<view class="after" style="color:{{color}};border-top-width:{{size/10}}rpx;border-bottom-width:{{size/10}}rpx;border-right-width:{{size/10}}rpx;border-top-right-radius:{{size/2}}rpx;border-bottom-right-radius:{{size/2}}rpx;"></view>
-				<view class="d-loading-circle-dot" style="color:{{color}};width:{{size/10}}rpx;height:{{size/10}}rpx;">
-				</view>
-			</view>
-		</view>
-	</view>
-	<text wx:if="{{title}}" class="d-loading-title" style="color:{{color}};{{titleStyle}}">{{title}}</text>
 </view>
-

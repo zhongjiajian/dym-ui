@@ -6,6 +6,15 @@ Component({
       type:Boolean,
       value:false
     },
+    type:{
+      type: String,
+      value: 'circle', // circle圈圈 flower菊花 
+    },
+    size:{
+      type: String,
+      optionalTypes:[Number],
+      value: '120'
+    },
     title: String,
     mask:{
       type:Boolean,

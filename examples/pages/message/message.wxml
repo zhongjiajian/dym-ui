@@ -1,0 +1,12 @@
+<pageCard pageName="message">
+    <exampleCard title="Doc" des='{{example1Des}}'>
+    </exampleCard>
+    <exampleCard title="示例" des=''>
+        <d-button catchtap="showMessage">show message</d-button>
+        <space />
+        <!-- <d-button catchtap="hideMessage">hide message</d-button> -->
+
+    </exampleCard>
+
+</pageCard>
+<d-message class="d-message" />

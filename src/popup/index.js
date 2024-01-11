@@ -79,7 +79,7 @@ Component({
       this.animate('.d-popup .mask', [
         { offset: 0, opacity: 1, },
         { offset: 1, opacity: 0, ease: 'ease-out' },
-      ], 300, callback.bind(this));
+      ], 300);
       let animateActions; 
       switch(this.properties.position){
       case 'bottom':
@@ -112,7 +112,7 @@ Component({
           { offset: 1, scaleX: 0, scaleY: 0, translateX: '-50%', translateY: '-50%', transformOrigin: '0% 0%', ease: 'ease-out' },
         ];
       }
-      this.animate('.d-popup .content', animateActions, 300);
+      this.animate('.d-popup .content', animateActions, 300, callback.bind(this));
     }
   },
   observers: {

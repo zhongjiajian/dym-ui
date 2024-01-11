@@ -18,6 +18,18 @@ Component({
             type: String,
             value: '#00A19C'
         },
+        direction: {
+            type: String,
+            value: 'column', // icon与text的排列方向 row column
+        },
+        iconStyle: {
+            type: String,
+            value: ''
+        },
+        textStyle: {
+            type: String,
+            value: ''
+        },
     },
     data: {
         safeAreaInsetBottom: 0,

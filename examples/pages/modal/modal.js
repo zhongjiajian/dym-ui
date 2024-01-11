@@ -12,7 +12,8 @@ CustomPage({
 
     方法：
     show(Object object) (显示模态框；支持promise)
-    参数
+    hide()
+    show方法参数
     Object object
     属性	    |  类型	           | 必填	| 说明
     title    |	string          |	否	|  标题
@@ -22,21 +23,24 @@ CustomPage({
     cancelColor|	string        |	否	|  取消按钮文本颜色，默认“#000000”
     confirmText|	string        |	否	|  确定按钮文本，默认“确定”
     confirmColor|	string        |	否	|  确定按钮文本颜色，默认“#576B95”
+    position   |	string        |	否	|  弹窗位置，"center"或"bottom"，默认"center"
     success	 |  function	      |	否	|  接口调用成功的回调函数	
     fail	   |  function			  | 否	|	 接口调用失败的回调函数	
     complete |  function		    |	否	|	 接口调用结束的回调函数（成功、失败都会执行）	
 
      插槽：
-    solt  (title和content都为空时有效)
+    slot  (title和content都为空时有效)
 
     `,
     show: false,
   },
-  async showModal() {
+  async showModal(e) {
+    const position = e.currentTarget.dataset.position;
     try {
       const res = await this.selectComponent(".d-modal").show({
         title: "提示",
         content: "《狂飙》是最好看的电视剧？",
+        position,
         complete(res) {
           console.log("conplte callback", res);
         },

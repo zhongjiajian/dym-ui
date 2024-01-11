@@ -1,47 +1,57 @@
 <pageCard pageName="loading">
-  <exampleCard title="类型" des='type = "circle"、"flower"'>
-    <view class="d-ec-c-a">
-      <d-loading />
-      <d-loading type="flower" />
-    </view>
-  </exampleCard>
-  <exampleCard title="大小" des='默认：size = "72" (rpx)'>
-    <view class="d-ec-c-a">
-      <d-loading size="25" />
-      <d-loading size="40" />
-      <d-loading />
-    </view>
-  </exampleCard>
-  <exampleCard title="颜色" des='默认：color = "#00A19C"'>
-    <view class="d-ec-c-a">
-      <d-loading color="#1B9E0D" />
-      <d-loading color="#008EDD" />
-      <d-loading color="#443AAD" />
-    </view>
-  </exampleCard>
-  <exampleCard title='背景颜色(type="flower")' des='默认：backgroundColor = "#fff"'>
-    <view class="d-ec-c-a">
-      <d-loading type="flower" backgroundColor="#008EDD" />
-      <d-loading type="flower" backgroundColor="#443AAD" />
-      <d-loading type="flower" backgroundColor="#C12682" />
-    </view>
-  </exampleCard>
-  <exampleCard title="标题文字" des='title = ""'>
-    <view class="d-ec-c-a">
-      <d-loading title="请稍后..." />
-      <d-loading title="加载中..." />
-      <d-loading title="拼命加载中~" />
-    </view>
-  </exampleCard>
-  <exampleCard title="标题文字样式" des='titleStyle = "color:#000;font-size:20rpx;"'>
-    <view class="d-ec-c-c">
-      <d-loading title="加载中..." titleStyle="color:#000;font-size:20rpx;" />
-    </view>
-  </exampleCard>
-
-  <exampleCard title="全屏加载 <loading-fullScreen />" des='{{example1Des}}'>
-    <d-button catchtap="toogleLfS">show or hide loading-fullScreen</d-button>
-  </exampleCard>
+    <exampleCard title="类型" des='type = "circle"、"flower"'>
+        <view class="d-ec-c-a">
+            <d-loading />
+            <d-loading type="flower" />
+        </view>
+    </exampleCard>
+    <exampleCard title="大小" des='默认：size = "72" (rpx)'>
+        <view class="d-ec-c-a">
+            <d-loading size="25" />
+            <d-loading size="40" />
+            <d-loading />
+        </view>
+    </exampleCard>
+    <exampleCard title="颜色" des='默认：color = "#00A19C"'>
+        <view class="d-ec-c-a">
+            <d-loading color="#1B9E0D" />
+            <d-loading color="#008EDD" />
+            <d-loading color="#443AAD" />
+        </view>
+    </exampleCard>
+    <exampleCard title='背景颜色(type="flower")' des='默认：backgroundColor = "#fff"'>
+        <view class="d-ec-c-a">
+            <d-loading type="flower" backgroundColor="#008EDD" />
+            <d-loading type="flower" backgroundColor="#443AAD" />
+            <d-loading type="flower" backgroundColor="#C12682" />
+        </view>
+    </exampleCard>
+    <exampleCard title="标题文字" des='title = ""'>
+        <view class="d-ec-c-a">
+            <d-loading title="请稍后..." />
+            <d-loading title="加载中..." />
+            <d-loading title="拼命加载中~" />
+        </view>
+    </exampleCard>
+    <exampleCard title="标题文字样式" des='titleStyle = "color:#000;font-size:20rpx;"'>
+        <view class="d-ec-c-c">
+            <d-loading title="加载中..." titleStyle="color:#000;font-size:20rpx;" />
+        </view>
+    </exampleCard>
+    <exampleCard title="使用插槽自定义" des='{{exampleDes}}'>
+        <view class="d-ec-c-c">
+            <d-loading type="" title="加载中..." size="92">
+                <image src="/images/dongdong.gif" mode="aspectFit" style="width: 100%;height: 100%;border-radius: 20rpx;" />
+            </d-loading>
+        </view>
+    </exampleCard>
+    <exampleCard title="全屏加载 <loading-fullScreen />" des='{{example1Des}}'>
+        <d-button catchtap="toogleLfS">show or hide loading-fullScreen</d-button>
+        <space />
+        <d-button catchtap="toogleLfS2">show or hide （使用插槽）</d-button>
+    </exampleCard>
 </pageCard>
 
-<d-loading-fullScreen class="d-loading-fullScreen" />
+<d-loading-fullScreen class="d-loading-fullScreen">
+    <image src="/images/dongdong.gif" mode="aspectFit" style="width: 222rpx;height: 222rpx;border-radius: 40rpx; position: absolute; left: 50%;top: 50%;transform: translateX(-50%) translateY(-50%);" />
+</d-loading-fullScreen>

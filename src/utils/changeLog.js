@@ -10,6 +10,15 @@
 // chore: 构建工具或构建过程等的变动，如：关联包升级等
 export default [
   {
+    time: '2024-01-10',
+    version: '3.4.0',
+    des: [
+      '修复已知问题',
+      '新增message组件',
+      'modal、loading、loading-fullScreen、custom-tab-bar组件新增特性',
+    ]
+  },
+  {
     time: '2023-05-18',
     version: '3.3.0',
     des: [

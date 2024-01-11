@@ -122,6 +122,11 @@ const components = [
     chinese: "开关",
     navigateUrl: "/pages/switch/switch",
   },
+  {
+    name: "message",
+    chinese: "消息提示",
+    navigateUrl: "/pages/message/message",
+  },
 ];
 function sortByLetter(list) {
   const enObj = {};

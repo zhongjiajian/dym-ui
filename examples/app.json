@@ -1,55 +1,56 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/about/about",
-    "pages/icon/icon",
-    "pages/tag/tag",
-    "pages/list/list",
-    "pages/loading/loading",
-    "pages/button/button",
-    "pages/radio/radio",
-    "pages/keyboard/keyboard",
-    "pages/phoneNumberInput/phoneNumberInput",
-    "pages/smsCodeInput/smsCodeInput",
-    "pages/drawer/drawer",
-    "pages/navigationBar/navigationBar",
-    "pages/tabs/tabs",
-    "pages/toast/toast",
-    "pages/popover/popover",
-    "pages/timePicker/timePicker",
-    "pages/popup/popup",
-    "pages/flyToCart/flyToCart",
-    "pages/rate/rate",
-    "pages/leftSlider/leftSlider",
-    "pages/popupMenu/popupMenu",
-    "pages/actionSheet/actionSheet",
-    "pages/customTabBar/customTabBar",
-    "pages/modal/modal",
-    "pages/switch/switch"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#00A19C",
-    "navigationBarTitleText": "dym-ui",
-    "navigationBarTextStyle": "white"
-  },
-  "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "color": "#D4F2F1",
-    "selectedColor": "#00A19C",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "组件",
-        "iconPath": "/images/tab-component.png",
-        "selectedIconPath": "/images/tab-component-selected.png"
-      },
-      {
-        "pagePath": "pages/about/about",
-        "text": "关于",
-        "iconPath": "/images/tab-about.png",
-        "selectedIconPath": "/images/tab-about-selected.png"
-      }
-    ]
-  }
+    "pages": [
+        "pages/index/index",
+        "pages/about/about",
+        "pages/icon/icon",
+        "pages/tag/tag",
+        "pages/list/list",
+        "pages/loading/loading",
+        "pages/button/button",
+        "pages/radio/radio",
+        "pages/keyboard/keyboard",
+        "pages/phoneNumberInput/phoneNumberInput",
+        "pages/smsCodeInput/smsCodeInput",
+        "pages/drawer/drawer",
+        "pages/navigationBar/navigationBar",
+        "pages/tabs/tabs",
+        "pages/toast/toast",
+        "pages/popover/popover",
+        "pages/timePicker/timePicker",
+        "pages/popup/popup",
+        "pages/flyToCart/flyToCart",
+        "pages/rate/rate",
+        "pages/leftSlider/leftSlider",
+        "pages/popupMenu/popupMenu",
+        "pages/actionSheet/actionSheet",
+        "pages/customTabBar/customTabBar",
+        "pages/modal/modal",
+        "pages/switch/switch",
+        "pages/message/message"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#00A19C",
+        "navigationBarTitleText": "dym-ui",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#D4F2F1",
+        "selectedColor": "#00A19C",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "组件",
+                "iconPath": "/images/tab-component.png",
+                "selectedIconPath": "/images/tab-component-selected.png"
+            },
+            {
+                "pagePath": "pages/about/about",
+                "text": "关于",
+                "iconPath": "/images/tab-about.png",
+                "selectedIconPath": "/images/tab-about-selected.png"
+            }
+        ]
+    }
 }

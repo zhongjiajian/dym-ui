@@ -1,12 +1,15 @@
 <view class="d-loading-fullScreen" wx:if="{{show}}">
-	<view  class="content" style="z-index:{{zIndex - 1}};">
+	<view  class="content {{type==''?'use-slot':''}}" style="z-index:{{zIndex - 1}};">
 		<d-loading
-		 type="flower"
+		 type="{{type}}"
 		 color="#fcfcfc"
 		 backgroundColor="#535353"
-		 title="{{title}}"
+		 title="{{ type==''?'':title}}"
 		 titleStyle="width:196rpx;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;"
-		/>
+		 size="{{type==''?size:72}}"
+		>
+		<slot />
+		</d-loading>
 	</view>
 	<view
 	 wx:if="{{mask}}"

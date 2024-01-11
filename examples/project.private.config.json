@@ -4,6 +4,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "message",
+          "pathName": "pages/message/message",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "icon",
           "pathName": "pages/icon/icon",
           "query": "",

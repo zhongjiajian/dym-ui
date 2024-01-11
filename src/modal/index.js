@@ -9,6 +9,7 @@ const defaultOptions = {
     cancelColor: '#000',
     confirmText: '确定',
     confirmColor: '#576B95',
+    position: 'center', //options:['center','bottom']
 };
 Component({
     properties: {

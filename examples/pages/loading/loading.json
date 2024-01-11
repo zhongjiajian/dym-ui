@@ -1,9 +1,10 @@
 {
-  "usingComponents": {
-    "pageCard": "/components/pageCard/index",
-    "exampleCard": "/components/exampleCard/index",
-    "d-loading": "/dist/loading/index",
-    "d-loading-fullScreen": "/dist/loading-fullScreen/index",
-    "d-button": "/dist/button/index"
-  }
+    "usingComponents": {
+        "pageCard": "/components/pageCard/index",
+        "exampleCard": "/components/exampleCard/index",
+        "d-loading": "/dist/loading/index",
+        "d-loading-fullScreen": "/dist/loading-fullScreen/index",
+        "d-button": "/dist/button/index",
+        "space": "/components/space"
+    }
 }

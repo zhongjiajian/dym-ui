@@ -7,6 +7,9 @@ CustomPage({
     list =  [ ]      (类似于app.json中的tabBar.list)
     color = '#D4F2F1'
     selectedColor = '#00A19C'
+    direction = 'direction' || 'row'(icon与text的排列方向)
+    iconStyle = ''(icon样式)
+    textStyle = ''(按钮文字样式)
       list属性:
       pagePath	页面路径
       text	按钮文字
